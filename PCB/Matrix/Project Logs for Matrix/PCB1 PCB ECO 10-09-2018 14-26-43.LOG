@@ -1,0 +1,19 @@
+Change Component Designator: OldDesignator=P? NewDesignator=P1
+Change Component Designator: OldDesignator=P? NewDesignator=P2
+Added Pin To Net: NetName=CA2 Pin=C1-1-1
+Added Pin To Net: NetName=CB2 Pin=C1-9-1
+Added Pin To Net: NetName=CA2 Pin=C3-2-1
+Added Pin To Net: NetName=CB2 Pin=C3-10-1
+Added Pin To Net: NetName=CA2 Pin=C4-2-1
+Added Pin To Net: NetName=CB2 Pin=C4-10-1
+Added Pin To Net: NetName=CA2 Pin=C5-2-1
+Added Pin To Net: NetName=CB2 Pin=C5-10-1
+Added Pin To Net: NetName=CA2 Pin=C6-2-1
+Added Pin To Net: NetName=CB2 Pin=C6-10-1
+Added Pin To Net: NetName=CA2 Pin=C7-2-1
+Added Pin To Net: NetName=CB2 Pin=C7-10-1
+Added Pin To Net: NetName=CA2 Pin=C8-2-1
+Added Pin To Net: NetName=CB2 Pin=C8-10-1
+Added Pin To Net: NetName=CA2 Pin=C9-2-1
+Added Pin To Net: NetName=CB2 Pin=C9-10-1
+Added Member To Class: ClassName=Sheet1 Member=Component P1 Header 13

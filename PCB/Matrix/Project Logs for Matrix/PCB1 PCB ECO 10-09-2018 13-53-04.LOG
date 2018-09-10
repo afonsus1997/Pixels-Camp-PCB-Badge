@@ -1,0 +1,4 @@
+Change Component Footprint: Designator=P1 Old Footprint=HDR1X13 New Footprint=HDR1X12
+Change Component Footprint: Designator=P2 Old Footprint=HDR1X13 New Footprint=HDR1X12
+Change Component Comment : Designator=P1 Old Comment=Header 13 New Comment=Header 12
+Change Component Comment : Designator=P2 Old Comment=Header 13 New Comment=Header 12
