@@ -1,0 +1,8 @@
+[ProjectGroup]
+Version=1.0
+[Project1]
+ProjectPath=Main\Main.PrjPcb
+[Project2]
+ProjectPath=Matrix\Matrix.PrjPcb
+[Project3]
+ProjectPath=Control_Board\Control_Board.PrjPcb

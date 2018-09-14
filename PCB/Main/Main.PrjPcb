@@ -71,6 +71,23 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=QRTUALHT
 
+[Document3]
+DocumentPath=Sheet3.SchDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=2
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=WQHGSRNN
+
 [Configuration1]
 Name=Sources
 ParameterCount=0
