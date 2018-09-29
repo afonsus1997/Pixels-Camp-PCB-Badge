@@ -1,8 +1,8 @@
 [ProjectGroup]
 Version=1.0
 [Project1]
-ProjectPath=Main\Main.PrjPcb
+ProjectPath=..\..\..\..\Google Drive\Técnico\N3E\Workshop soldadura\PCB\PCB_Project.PrjPcb
 [Project2]
-ProjectPath=Matrix\Matrix.PrjPcb
+ProjectPath=..\..\..\..\Google Drive\Técnico\3ºAno\2o Semestre\IAS\Projecto\PCB\IAS_Medidor_de_Impedancias.PrjPcb
 [Project3]
-ProjectPath=Control_Board\Control_Board.PrjPcb
+ProjectPath=..\..\..\..\Google Drive\Técnico\3ºAno\2o Semestre\IAS\Projecto\PCB2\IAS_Medidor_de_Impedancias.PrjPcb
