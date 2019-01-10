@@ -1,0 +1,26 @@
+Output: Gerber Files
+Type  : Gerber
+From  : Variant [[No Variations]] of Project [Matrix2.PrjPCB]
+   Generated File[PCB2.GTO]
+   Generated File[PCB2.GTP]
+   Generated File[PCB2.GTS]
+   Generated File[PCB2.GTL]
+   Generated File[PCB2.GBL]
+   Generated File[PCB2.GBS]
+   Generated File[PCB2.GBP]
+   Generated File[PCB2.GBO]
+   Generated File[PCB2.GM1]
+   Generated File[PCB2.GM4]
+   Generated File[PCB2.GM13]
+   Generated File[PCB2.GM14]
+   Generated File[PCB2.GM15]
+   Generated File[PCB2.GKO]
+   Generated File[PCB2.RUL]
+   Generated File[PCB2.EXTREP]
+   Generated File[PCB2.REP]
+
+
+Files Generated   : 17
+Documents Printed : 0
+
+Finished Output Generation At 20:17:15 On 10/01/2019

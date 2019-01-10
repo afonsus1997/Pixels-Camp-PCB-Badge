@@ -1,0 +1,13 @@
+Removed Pin From Net: NetName=SW1 Pin=U1-16
+Removed Member From Class: ClassName=Sheet4_Matrix Member=U1
+Change Component Footprint: Designator=P1 Old Footprint=HDR1X25 New Footprint=HDR1X9
+Change Component Comment : Designator=P1 Old Comment=Header 25 New Comment=Header 9
+Added Pin To Net: NetName=SW1 Pin=P1-1
+Added Pin To Net: NetName=SW2 Pin=P1-2
+Added Pin To Net: NetName=SW3 Pin=P1-3
+Added Pin To Net: NetName=SW4 Pin=P1-4
+Added Pin To Net: NetName=SW5 Pin=P1-5
+Added Pin To Net: NetName=SW6 Pin=P1-6
+Added Pin To Net: NetName=SW7 Pin=P1-7
+Added Pin To Net: NetName=SW8 Pin=P1-8
+Added Pin To Net: NetName=SW9 Pin=P1-9

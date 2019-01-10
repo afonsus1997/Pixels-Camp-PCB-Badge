@@ -1,0 +1,53 @@
+Added Pin To Net: NetName=CA1 Pin=P3-1
+Added Pin To Net: NetName=CA1 Pin=U2-21
+Added Net: Name=CA1
+Added Pin To Net: NetName=CA2 Pin=P3-2
+Added Pin To Net: NetName=CA2 Pin=U2-22
+Added Net: Name=CA2
+Added Pin To Net: NetName=CA3 Pin=P3-3
+Added Pin To Net: NetName=CA3 Pin=U2-23
+Added Net: Name=CA3
+Added Pin To Net: NetName=CA4 Pin=P3-4
+Added Pin To Net: NetName=CA4 Pin=U2-24
+Added Net: Name=CA4
+Added Pin To Net: NetName=CA5 Pin=P3-5
+Added Pin To Net: NetName=CA5 Pin=U2-25
+Added Net: Name=CA5
+Added Pin To Net: NetName=CA6 Pin=P3-6
+Added Pin To Net: NetName=CA6 Pin=U2-26
+Added Net: Name=CA6
+Added Pin To Net: NetName=CA7 Pin=P3-7
+Added Pin To Net: NetName=CA7 Pin=U2-27
+Added Net: Name=CA7
+Added Pin To Net: NetName=CA8 Pin=P3-8
+Added Pin To Net: NetName=CA8 Pin=U2-28
+Added Net: Name=CA8
+Added Pin To Net: NetName=CA9 Pin=P3-9
+Added Pin To Net: NetName=CA9 Pin=U2-1
+Added Net: Name=CA9
+Added Pin To Net: NetName=CB1 Pin=P5-1
+Added Pin To Net: NetName=CB1 Pin=U2-7
+Added Net: Name=CB1
+Added Pin To Net: NetName=CB2 Pin=P5-2
+Added Pin To Net: NetName=CB2 Pin=U2-8
+Added Net: Name=CB2
+Added Pin To Net: NetName=CB3 Pin=P5-3
+Added Pin To Net: NetName=CB3 Pin=U2-9
+Added Net: Name=CB3
+Added Pin To Net: NetName=CB4 Pin=P5-4
+Added Pin To Net: NetName=CB4 Pin=U2-10
+Added Net: Name=CB4
+Added Pin To Net: NetName=CB5 Pin=P5-5
+Added Pin To Net: NetName=CB5 Pin=U2-11
+Added Net: Name=CB5
+Added Pin To Net: NetName=CB6 Pin=P5-6
+Added Pin To Net: NetName=CB6 Pin=U2-12
+Added Net: Name=CB6
+Added Pin To Net: NetName=CB7 Pin=P5-7
+Added Pin To Net: NetName=CB7 Pin=U2-13
+Added Net: Name=CB7
+Added Pin To Net: NetName=CB8 Pin=P5-8
+Added Pin To Net: NetName=CB8 Pin=U2-14
+Added Net: Name=CB8
+Added Pin To Net: NetName=CB9 Pin=P5-9
+Added Net: Name=CB9

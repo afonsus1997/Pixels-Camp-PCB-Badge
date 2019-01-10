@@ -1,0 +1,27 @@
+Added Component: Designator=S2(DTSM-6)
+Add component. Clean all parameters for all variants
+Added Component: Designator=S3(DTSM-6)
+Add component. Clean all parameters for all variants
+Added Component: Designator=S4(DTSM-6)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=GND Pin=S2-1
+Added Pin To Net: NetName=GND Pin=S2-2
+Added Pin To Net: NetName=GND Pin=S3-1
+Added Pin To Net: NetName=GND Pin=S3-2
+Added Pin To Net: NetName=GND Pin=S4-1
+Added Pin To Net: NetName=GND Pin=S4-2
+Added Pin To Net: NetName=SW1 Pin=S2-3
+Added Pin To Net: NetName=SW1 Pin=S2-4
+Added Pin To Net: NetName=SW1 Pin=U1-13
+Added Net: Name=SW1
+Added Pin To Net: NetName=SW2 Pin=S3-3
+Added Pin To Net: NetName=SW2 Pin=S3-4
+Added Pin To Net: NetName=SW2 Pin=U1-14
+Added Net: Name=SW2
+Added Pin To Net: NetName=SW3 Pin=S4-3
+Added Pin To Net: NetName=SW3 Pin=S4-4
+Added Pin To Net: NetName=SW3 Pin=U1-15
+Added Net: Name=SW3
+Added Member To Class: ClassName=Sheet2 Member=Component S2 DTSM-6
+Added Member To Class: ClassName=Sheet2 Member=Component S3 DTSM-6
+Added Member To Class: ClassName=Sheet2 Member=Component S4 DTSM-6

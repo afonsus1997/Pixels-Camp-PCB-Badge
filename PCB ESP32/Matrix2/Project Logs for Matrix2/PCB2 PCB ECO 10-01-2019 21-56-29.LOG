@@ -1,0 +1,46 @@
+Added Component: Designator=P3(HDR1X14)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=CS34 Pin=U1-1
+Added Pin To Net: NetName=CS35 Pin=U1-2
+Added Pin To Net: NetName=CS36 Pin=U1-3
+Added Pin To Net: NetName=CS37 Pin=U1-4
+Added Pin To Net: NetName=CS38 Pin=U1-5
+Added Pin To Net: NetName=CS39 Pin=U1-6
+Added Pin To Net: NetName=SW1 Pin=U1-16
+Added Pin To Net: NetName=CS1 Pin=U1-26
+Added Pin To Net: NetName=CS2 Pin=U1-27
+Added Pin To Net: NetName=CS3 Pin=U1-28
+Added Pin To Net: NetName=CS4 Pin=U1-29
+Added Pin To Net: NetName=CS5 Pin=U1-30
+Added Pin To Net: NetName=CS6 Pin=U1-31
+Added Pin To Net: NetName=CS7 Pin=U1-32
+Added Pin To Net: NetName=CS8 Pin=U1-33
+Added Pin To Net: NetName=CS9 Pin=U1-34
+Added Pin To Net: NetName=CS10 Pin=U1-35
+Added Pin To Net: NetName=CS11 Pin=U1-37
+Added Pin To Net: NetName=CS12 Pin=U1-38
+Added Pin To Net: NetName=CS13 Pin=U1-39
+Added Pin To Net: NetName=CS14 Pin=U1-40
+Added Pin To Net: NetName=CS15 Pin=U1-41
+Added Pin To Net: NetName=CS16 Pin=U1-42
+Added Pin To Net: NetName=CS17 Pin=U1-43
+Added Pin To Net: NetName=CS18 Pin=U1-44
+Added Pin To Net: NetName=CS19 Pin=U1-45
+Added Pin To Net: NetName=CS20 Pin=U1-46
+Added Pin To Net: NetName=CS21 Pin=U1-47
+Added Pin To Net: NetName=CS22 Pin=U1-48
+Added Pin To Net: NetName=CS23 Pin=U1-49
+Added Pin To Net: NetName=CS24 Pin=U1-50
+Added Pin To Net: NetName=CS25 Pin=U1-51
+Added Pin To Net: NetName=CS26 Pin=U1-52
+Added Pin To Net: NetName=CS27 Pin=U1-53
+Added Pin To Net: NetName=CS28 Pin=U1-54
+Added Pin To Net: NetName=CS29 Pin=U1-56
+Added Pin To Net: NetName=CS30 Pin=U1-57
+Added Pin To Net: NetName=CS31 Pin=U1-58
+Added Pin To Net: NetName=CS32 Pin=U1-59
+Added Pin To Net: NetName=CS33 Pin=U1-60
+Added Member To Class: ClassName=Sheet4_Matrix Member=Component P3 Header 14
