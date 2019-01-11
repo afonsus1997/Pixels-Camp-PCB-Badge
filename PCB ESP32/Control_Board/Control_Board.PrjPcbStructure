@@ -1,3 +1,1 @@
-Record=TopLevelDocument|FileName=Conns.SchDoc
-Record=SheetSymbol|SourceDocument=Conns.SchDoc|Designator=U_Sheet2|SchDesignator=U_Sheet2|FileName=Sheet2.SchDoc|SymbolType=Normal|RawFileName=Sheet2.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
-Record=SheetSymbol|SourceDocument=Conns.SchDoc|Designator=U_Sheet3|SchDesignator=U_Sheet3|FileName=Sheet3.SchDoc|SymbolType=Normal|RawFileName=Sheet3.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=TopLevelDocument|FileName=Sheet2.SchDoc
