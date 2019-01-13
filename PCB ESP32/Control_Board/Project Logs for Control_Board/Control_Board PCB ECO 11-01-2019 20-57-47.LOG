@@ -1,0 +1,16 @@
+Removed Pin From Net: NetName=SW3 Pin=S2-3
+Removed Pin From Net: NetName=SW3 Pin=S2-4
+Removed Pin From Net: NetName=SW2 Pin=S3-3
+Removed Pin From Net: NetName=SW2 Pin=S3-4
+Removed Pin From Net: NetName=SW1 Pin=S4-3
+Removed Pin From Net: NetName=SW1 Pin=S4-4
+Added Pin To Net: NetName=ESP_SW1 Pin=S4-3
+Added Pin To Net: NetName=ESP_SW1 Pin=S4-4
+Added Net: Name=ESP_SW1
+Added Pin To Net: NetName=ESP_SW2 Pin=S3-3
+Added Pin To Net: NetName=ESP_SW2 Pin=S3-4
+Added Net: Name=ESP_SW2
+Added Pin To Net: NetName=ESP_SW3 Pin=S2-3
+Added Pin To Net: NetName=ESP_SW3 Pin=S2-4
+Added Net: Name=ESP_SW3
+Added Member To Class: ClassName=Sheet2 Member=Component R4 Res1

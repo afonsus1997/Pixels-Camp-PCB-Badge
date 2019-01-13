@@ -1,0 +1,54 @@
+Added Component: Designator=J1(HIRO-FH12A-40S-0.5SH(55)_V)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Datasheet URL"; Value = "https://datasheet.ciiva.com/14667/0900766b80806912-14667338.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Version"; Value = "10/2006"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Hirose Electric"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer URL"; Value = "https://www.hirose.com"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = "SurfaceMount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "No of Positions"; Value = "40"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Description"; Value = "Female Header, Pitch 0.5 mm, 1 x 40 Position, Height 2 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Reference"; Value = "FH12A-40S-0.5SH(55)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pitch"; Value = "0.5mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Style/Orientation"; Value = "RightAngleSocket/Receptacle"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination"; Value = "Solder"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "FFC/FPC"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=CS1 Pin=J1-1
+Added Pin To Net: NetName=CS2 Pin=J1-2
+Added Pin To Net: NetName=CS3 Pin=J1-3
+Added Pin To Net: NetName=CS4 Pin=J1-4
+Added Pin To Net: NetName=CS5 Pin=J1-5
+Added Pin To Net: NetName=CS6 Pin=J1-6
+Added Pin To Net: NetName=CS7 Pin=J1-7
+Added Pin To Net: NetName=CS8 Pin=J1-8
+Added Pin To Net: NetName=CS9 Pin=J1-9
+Added Pin To Net: NetName=CS10 Pin=J1-10
+Added Pin To Net: NetName=CS11 Pin=J1-11
+Added Pin To Net: NetName=CS12 Pin=J1-12
+Added Pin To Net: NetName=CS13 Pin=J1-13
+Added Pin To Net: NetName=CS14 Pin=J1-14
+Added Pin To Net: NetName=CS15 Pin=J1-15
+Added Pin To Net: NetName=CS16 Pin=J1-16
+Added Pin To Net: NetName=CS17 Pin=J1-17
+Added Pin To Net: NetName=CS18 Pin=J1-18
+Added Pin To Net: NetName=CS19 Pin=J1-19
+Added Pin To Net: NetName=CS20 Pin=J1-20
+Added Pin To Net: NetName=CS21 Pin=J1-21
+Added Pin To Net: NetName=CS22 Pin=J1-22
+Added Pin To Net: NetName=CS23 Pin=J1-23
+Added Pin To Net: NetName=CS24 Pin=J1-24
+Added Pin To Net: NetName=CS25 Pin=J1-25
+Added Pin To Net: NetName=CS26 Pin=J1-26
+Added Pin To Net: NetName=CS27 Pin=J1-27
+Added Pin To Net: NetName=CS28 Pin=J1-28
+Added Pin To Net: NetName=CS29 Pin=J1-29
+Added Pin To Net: NetName=CS30 Pin=J1-30
+Added Pin To Net: NetName=CS31 Pin=J1-31
+Added Pin To Net: NetName=CS32 Pin=J1-32
+Added Pin To Net: NetName=CS33 Pin=J1-33
+Added Pin To Net: NetName=CS34 Pin=J1-34
+Added Pin To Net: NetName=CS35 Pin=J1-35
+Added Pin To Net: NetName=CS36 Pin=J1-36
+Added Pin To Net: NetName=CS37 Pin=J1-37
+Added Pin To Net: NetName=CS38 Pin=J1-38
+Added Pin To Net: NetName=CS39 Pin=J1-39
+Added Member To Class: ClassName=Sheet4_Matrix Member=Component J1 FH12A-40S-0.5SH(55)

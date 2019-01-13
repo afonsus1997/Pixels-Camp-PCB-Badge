@@ -1,0 +1,67 @@
+Added Component: Designator=T1(SOT95P237X112-3N)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Author"; Value = "CERN DEM JLC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Bonding"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case"; Value = "SOT23-3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentHeight"; Value = "1.12mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Component Type"; Value = "Standard"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CreateDate"; Value = "03/03/2011"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Device"; Value = "Si2333CDS-T1-GE3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HelpURL"; Value = "\\cern.ch\dfs\Applications\Altium\Datasheets\Si2333CDS-T1-GE3.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "02/05/2011"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "VISHAY SILICONIX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "Si2333CDS-T1-GE3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounted"; Value = "Yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "SOT, 0.95mm, pitch; 3 pin,1.30mm W X 2.92mm L X 1.12mm H body, IPC Medium Density"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Description"; Value = "-12V -5.1A P-Channel  TrenchFET® Power MOSFET"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "Si2333CDS-T1-GE3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pin Count"; Value = "3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PressFit"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Sense"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SMD"; Value = "Yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Socket"; Value = "No"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=CS1 Pin=P1-1
+Added Pin To Net: NetName=CS2 Pin=P1-2
+Added Pin To Net: NetName=CS3 Pin=P1-3
+Added Pin To Net: NetName=CS4 Pin=P1-4
+Added Pin To Net: NetName=CS5 Pin=P1-5
+Added Pin To Net: NetName=CS6 Pin=P1-6
+Added Pin To Net: NetName=CS7 Pin=P1-7
+Added Pin To Net: NetName=CS8 Pin=P1-8
+Added Pin To Net: NetName=CS9 Pin=P1-9
+Added Pin To Net: NetName=CS10 Pin=P1-10
+Added Pin To Net: NetName=CS11 Pin=P1-11
+Added Pin To Net: NetName=CS12 Pin=P1-12
+Added Pin To Net: NetName=CS13 Pin=P1-13
+Added Pin To Net: NetName=CS14 Pin=P1-14
+Added Pin To Net: NetName=CS15 Pin=P1-15
+Added Pin To Net: NetName=CS16 Pin=P1-16
+Added Pin To Net: NetName=CS17 Pin=P1-17
+Added Pin To Net: NetName=CS18 Pin=P1-18
+Added Pin To Net: NetName=CS19 Pin=P1-19
+Added Pin To Net: NetName=CS20 Pin=P1-20
+Added Pin To Net: NetName=CS21 Pin=P1-21
+Added Pin To Net: NetName=CS22 Pin=P1-22
+Added Pin To Net: NetName=CS23 Pin=P1-23
+Added Pin To Net: NetName=CS24 Pin=P1-24
+Added Pin To Net: NetName=CS25 Pin=P1-25
+Added Pin To Net: NetName=CS26 Pin=P2-1
+Added Pin To Net: NetName=CS27 Pin=P2-2
+Added Pin To Net: NetName=CS28 Pin=P2-3
+Added Pin To Net: NetName=CS29 Pin=P2-4
+Added Pin To Net: NetName=CS30 Pin=P2-5
+Added Pin To Net: NetName=CS31 Pin=P2-6
+Added Pin To Net: NetName=CS32 Pin=P2-7
+Added Pin To Net: NetName=CS33 Pin=P2-8
+Added Pin To Net: NetName=CS34 Pin=P2-9
+Added Pin To Net: NetName=CS35 Pin=P2-10
+Added Pin To Net: NetName=CS36 Pin=P2-11
+Added Pin To Net: NetName=CS37 Pin=P2-12
+Added Pin To Net: NetName=CS38 Pin=P2-13
+Added Pin To Net: NetName=CS39 Pin=P2-14
+Added Pin To Net: NetName=VBus Pin=T1-1
+Added Pin To Net: NetName=NetD1_2 Pin=T1-2
+Added Pin To Net: NetName=Vbat Pin=T1-3
+Added Member To Class: ClassName=Sheet2 Member=Component P1 Header 25
+Added Member To Class: ClassName=Sheet2 Member=Component P2 Header 14
+Added Member To Class: ClassName=Sheet2 Member=Component T1 DMP2045U

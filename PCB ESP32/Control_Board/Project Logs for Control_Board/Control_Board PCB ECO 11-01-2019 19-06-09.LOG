@@ -1,0 +1,7 @@
+Added Component: Designator=L1(OLED I2C 0.91)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=GND Pin=L1-1
+Added Pin To Net: NetName=VCC3V3 Pin=L1-2
+Added Pin To Net: NetName=SCL_ESP Pin=L1-3
+Added Pin To Net: NetName=SDA_ESP Pin=L1-4
+Added Member To Class: ClassName=Sheet2 Member=Component L1 OLED I2C 0.96' 128X64

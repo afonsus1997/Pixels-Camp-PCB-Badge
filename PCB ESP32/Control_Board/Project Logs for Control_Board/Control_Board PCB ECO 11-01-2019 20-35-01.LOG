@@ -1,0 +1,17 @@
+Removed Pin From Net: NetName=SW9 Pin=P3-1
+Removed Pin From Net: NetName=SW8 Pin=P3-2
+Removed Pin From Net: NetName=SW7 Pin=P3-3
+Removed Pin From Net: NetName=SW6 Pin=P3-4
+Removed Pin From Net: NetName=SW4 Pin=P3-6
+Removed Pin From Net: NetName=SW3 Pin=P3-7
+Removed Pin From Net: NetName=SW2 Pin=P3-8
+Removed Pin From Net: NetName=SW1 Pin=P3-9
+Added Pin To Net: NetName=SW1 Pin=P3-1
+Added Pin To Net: NetName=SW2 Pin=P3-2
+Added Pin To Net: NetName=SW3 Pin=P3-3
+Added Pin To Net: NetName=SW4 Pin=P3-4
+Added Pin To Net: NetName=SW6 Pin=P3-6
+Added Pin To Net: NetName=SW7 Pin=P3-7
+Added Pin To Net: NetName=SW8 Pin=P3-8
+Added Pin To Net: NetName=SW9 Pin=P3-9
+Added Member To Class: ClassName=Sheet2 Member=Component P3 Header 9

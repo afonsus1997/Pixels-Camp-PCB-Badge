@@ -2,93 +2,6 @@
 FileName = PCB2.GBR
 AutoAperture = True
 *************************************************************
-Generating : Mechanical 4
-      File : PCB2.GM4
-
-    Adding Layer      : Mechanical 4
-
-    Adding Layer      : Mechanical 14
-
-
-Used DCodes :
-    D12
-*************************************************************
-
-*************************************************************
-Generating : Bottom Overlay
-      File : PCB2.GBO
-
-    Adding Layer      : Bottom Overlay
-
-    Adding Layer      : Mechanical 14
-
-
-Used DCodes :
-    D12
-*************************************************************
-
-*************************************************************
-Generating : Top Overlay
-      File : PCB2.GTO
-
-    Adding Layer      : Top Overlay
-
-    Adding Layer      : Mechanical 14
-
-
-Used DCodes :
-    D10
-    D11
-    D12
-*************************************************************
-
-*************************************************************
-Generating : Mechanical 15
-      File : PCB2.GM15
-
-    Adding Layer      : Mechanical 15
-
-    Adding Layer      : Mechanical 14
-
-
-Used DCodes :
-    D12
-*************************************************************
-
-*************************************************************
-Generating : Top Layer
-      File : PCB2.GTL
-
-    Adding Layer      : Top Layer
-
-    Adding Layer      : Mechanical 14
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D12
-    D13
-    D19
-    D20
-    D21
-    D22
-*************************************************************
-
-*************************************************************
-Generating : Mechanical 14
-      File : PCB2.GM14
-
-    Adding Layer      : Mechanical 14
-
-    Adding Layer      : Mechanical 14
-
-
-Used DCodes :
-    D12
-*************************************************************
-
-*************************************************************
 Generating : Top Solder
       File : PCB2.GTS
 
@@ -111,28 +24,38 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
-Generating : Top Paste
-      File : PCB2.GTP
+Generating : Top Overlay
+      File : PCB2.GTO
 
-    Adding Layer      : Top Paste
+    Adding Layer      : Top Overlay
 
     Adding Layer      : Mechanical 14
 
-    Adding Layer      : Top Layer
 
-    Adding Layer      : Multi-Layer
+Used DCodes :
+    D10
+    D11
+    D12
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 14
+      File : PCB2.GM14
+
+    Adding Layer      : Mechanical 14
+
+    Adding Layer      : Mechanical 14
 
 
 Used DCodes :
     D12
-    D13
 *************************************************************
 
 *************************************************************
-Generating : Keep-Out Layer
-      File : PCB2.GKO
+Generating : Bottom Overlay
+      File : PCB2.GBO
 
-    Adding Layer      : Keep-Out Layer
+    Adding Layer      : Bottom Overlay
 
     Adding Layer      : Mechanical 14
 
@@ -199,6 +122,52 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
+Generating : Mechanical 15
+      File : PCB2.GM15
+
+    Adding Layer      : Mechanical 15
+
+    Adding Layer      : Mechanical 14
+
+
+Used DCodes :
+    D12
+*************************************************************
+
+*************************************************************
+Generating : Keep-Out Layer
+      File : PCB2.GKO
+
+    Adding Layer      : Keep-Out Layer
+
+    Adding Layer      : Mechanical 14
+
+
+Used DCodes :
+    D12
+*************************************************************
+
+*************************************************************
+Generating : Top Layer
+      File : PCB2.GTL
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Mechanical 14
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D12
+    D13
+    D19
+    D20
+    D21
+    D22
+*************************************************************
+
+*************************************************************
 Generating : Mechanical 16
       File : PCB2.GM16
 
@@ -209,5 +178,36 @@ Generating : Mechanical 16
 
 Used DCodes :
     D12
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 4
+      File : PCB2.GM4
+
+    Adding Layer      : Mechanical 4
+
+    Adding Layer      : Mechanical 14
+
+
+Used DCodes :
+    D12
+*************************************************************
+
+*************************************************************
+Generating : Top Paste
+      File : PCB2.GTP
+
+    Adding Layer      : Top Paste
+
+    Adding Layer      : Mechanical 14
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D12
+    D13
 *************************************************************
 

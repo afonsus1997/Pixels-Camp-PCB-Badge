@@ -1,0 +1,56 @@
+Removed Pin From Net: NetName=NetD1_2 Pin=U3-1
+Change Component Designator: OldDesignator=C145 NewDesignator=C1
+Change Component Designator: OldDesignator=C146 NewDesignator=C2
+Change Component Designator: OldDesignator=C147 NewDesignator=C3
+Change Component Designator: OldDesignator=C148 NewDesignator=C6
+Change Component Designator: OldDesignator=C149 NewDesignator=C7
+Change Component Designator: OldDesignator=C150 NewDesignator=C4
+Change Component Designator: OldDesignator=C151 NewDesignator=C8
+Change Component Designator: OldDesignator=P3 NewDesignator=P4
+Change Component Designator: OldDesignator=P4 NewDesignator=P5
+Change Component Designator: OldDesignator=P5 NewDesignator=P3
+Change Component Designator: OldDesignator=R2 NewDesignator=R10
+Change Component Designator: OldDesignator=R3 NewDesignator=R11
+Change Component Designator: OldDesignator=R4 NewDesignator=R2
+Change Component Designator: OldDesignator=R5 NewDesignator=R13
+Change Component Designator: OldDesignator=R6 NewDesignator=R12
+Change Component Designator: OldDesignator=R7 NewDesignator=R6
+Change Component Designator: OldDesignator=R9 NewDesignator=R7
+Change Component Designator: OldDesignator=R10 NewDesignator=R9
+Change Component Designator: OldDesignator=R11 NewDesignator=R3
+Change Component Designator: OldDesignator=R12 NewDesignator=R5
+Change Component Designator: OldDesignator=S1 NewDesignator=S2
+Change Component Designator: OldDesignator=S2 NewDesignator=S3
+Change Component Designator: OldDesignator=S3 NewDesignator=S4
+Change Component Designator: OldDesignator=S4 NewDesignator=S1
+Change Component Designator: OldDesignator=U2 NewDesignator=U3
+Change Component Designator: OldDesignator=U3 NewDesignator=U2
+Added Component: Designator=3(MSK-12C02)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C5(LED 0603(2))
+Add component. Clean all parameters for all variants
+Added Component: Designator=R4(C 0603 / 1608)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "Axial Device, Thru-Hole; 2 Leads; 0.3 in Pin Spacing"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "AXIAL-0.3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "1k"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetD1_2 Pin=3-L2
+Added Pin To Net: NetName=VCC3V3 Pin=C5-1
+Added Pin To Net: NetName=GND Pin=R4-2
+Change Net Name : Old Net Name=NetC145_2 New Net Name=NetC1_2
+Change Net Name : Old Net Name=NetC149_2 New Net Name=NetC7_2
+Change Net Name : Old Net Name=NetD1_2 New Net Name=Net3_L2
+Change Net Name : Old Net Name=NetR7_2 New Net Name=NetR6_2
+Added Pin To Net: NetName=Net3_COM Pin=3-COM
+Added Pin To Net: NetName=Net3_COM Pin=U2-1
+Added Net: Name=Net3_COM
+Added Pin To Net: NetName=NetC5_2 Pin=C5-2
+Added Pin To Net: NetName=NetC5_2 Pin=R4-1
+Added Net: Name=NetC5_2
+Added Member To Class: ClassName=Sheet2 Member=Component 3 Footprint of the VIMEX MSK-12C02 SPDT SMD Switch Created by mzst on 17-Jan-2016
+Added Member To Class: ClassName=Sheet2 Member=Component C5 LED
+Added Member To Class: ClassName=Sheet2 Member=Component R13 Res1
