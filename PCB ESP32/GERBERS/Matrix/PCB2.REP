@@ -15,82 +15,10 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
-Generating : Top Solder
-      File : PCB2.GTS
-
-    Adding Layer      : Top Solder
-
-    Adding Layer      : Mechanical 14
-
-    Adding Layer      : Top Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D12
-    D14
-    D15
-    D16
-    D17
-    D18
-*************************************************************
-
-*************************************************************
-Generating : Bottom Layer
-      File : PCB2.GBL
-
-    Adding Layer      : Bottom Layer
-
-    Adding Layer      : Mechanical 14
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D12
-    D19
-    D20
-    D21
-    D22
-*************************************************************
-
-*************************************************************
 Generating : Keep-Out Layer
       File : PCB2.GKO
 
     Adding Layer      : Keep-Out Layer
-
-    Adding Layer      : Mechanical 14
-
-
-Used DCodes :
-    D12
-*************************************************************
-
-*************************************************************
-Generating : Top Paste
-      File : PCB2.GTP
-
-    Adding Layer      : Top Paste
-
-    Adding Layer      : Mechanical 14
-
-    Adding Layer      : Top Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D12
-    D13
-*************************************************************
-
-*************************************************************
-Generating : Mechanical 4
-      File : PCB2.GM4
-
-    Adding Layer      : Mechanical 4
 
     Adding Layer      : Mechanical 14
 
@@ -133,10 +61,82 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
+Generating : Top Paste
+      File : PCB2.GTP
+
+    Adding Layer      : Top Paste
+
+    Adding Layer      : Mechanical 14
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D12
+    D13
+*************************************************************
+
+*************************************************************
 Generating : Mechanical 14
       File : PCB2.GM14
 
     Adding Layer      : Mechanical 14
+
+    Adding Layer      : Mechanical 14
+
+
+Used DCodes :
+    D12
+*************************************************************
+
+*************************************************************
+Generating : Top Solder
+      File : PCB2.GTS
+
+    Adding Layer      : Top Solder
+
+    Adding Layer      : Mechanical 14
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D12
+    D14
+    D15
+    D16
+    D17
+    D18
+*************************************************************
+
+*************************************************************
+Generating : Bottom Layer
+      File : PCB2.GBL
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Mechanical 14
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D12
+    D19
+    D20
+    D21
+    D22
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 4
+      File : PCB2.GM4
+
+    Adding Layer      : Mechanical 4
 
     Adding Layer      : Mechanical 14
 

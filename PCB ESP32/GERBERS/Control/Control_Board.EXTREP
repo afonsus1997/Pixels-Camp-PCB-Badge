@@ -1,5 +1,5 @@
 ------------------------------------------------------------------------------------------
-Gerber File Extension Report For: Control_Board.GBR   14/01/2019  11:50:28
+Gerber File Extension Report For: Control_Board.GBR   14/01/2019  23:34:31
 ------------------------------------------------------------------------------------------
 
 
@@ -14,8 +14,11 @@ Layer Extension     Layer Description
 .GBS                Bottom Solder                           
 .GBP                Bottom Paste                            
 .GBO                Bottom Overlay                          
+.GM1                Mechanical 1                            
 .GM2                Mechanical 2                            
 .GM4                Mechanical 4                            
+.GM8                Mechanical 8                            
+.GM13               Mechanical 13                           
 .GM14               Mechanical 14                           
 .GM15               Mechanical 15                           
 .GM16               Mechanical 16                           

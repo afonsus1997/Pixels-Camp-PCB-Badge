@@ -88,6 +88,82 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
+[GeneratedDocument1]
+DocumentPath=..\GERBERS\Matrix\PCB2.DRR
+DItemRevisionGUID=
+
+[GeneratedDocument2]
+DocumentPath=..\GERBERS\Matrix\PCB2.EXTREP
+DItemRevisionGUID=
+
+[GeneratedDocument3]
+DocumentPath=..\GERBERS\Matrix\PCB2.GBL
+DItemRevisionGUID=
+
+[GeneratedDocument4]
+DocumentPath=..\GERBERS\Matrix\PCB2.GBO
+DItemRevisionGUID=
+
+[GeneratedDocument5]
+DocumentPath=..\GERBERS\Matrix\PCB2.GBP
+DItemRevisionGUID=
+
+[GeneratedDocument6]
+DocumentPath=..\GERBERS\Matrix\PCB2.GBS
+DItemRevisionGUID=
+
+[GeneratedDocument7]
+DocumentPath=..\GERBERS\Matrix\PCB2.GKO
+DItemRevisionGUID=
+
+[GeneratedDocument8]
+DocumentPath=..\GERBERS\Matrix\PCB2.GM4
+DItemRevisionGUID=
+
+[GeneratedDocument9]
+DocumentPath=..\GERBERS\Matrix\PCB2.GM14
+DItemRevisionGUID=
+
+[GeneratedDocument10]
+DocumentPath=..\GERBERS\Matrix\PCB2.GM15
+DItemRevisionGUID=
+
+[GeneratedDocument11]
+DocumentPath=..\GERBERS\Matrix\PCB2.GM16
+DItemRevisionGUID=
+
+[GeneratedDocument12]
+DocumentPath=..\GERBERS\Matrix\PCB2.GTL
+DItemRevisionGUID=
+
+[GeneratedDocument13]
+DocumentPath=..\GERBERS\Matrix\PCB2.GTO
+DItemRevisionGUID=
+
+[GeneratedDocument14]
+DocumentPath=..\GERBERS\Matrix\PCB2.GTP
+DItemRevisionGUID=
+
+[GeneratedDocument15]
+DocumentPath=..\GERBERS\Matrix\PCB2.GTS
+DItemRevisionGUID=
+
+[GeneratedDocument16]
+DocumentPath=..\GERBERS\Matrix\PCB2.LDP
+DItemRevisionGUID=
+
+[GeneratedDocument17]
+DocumentPath=..\GERBERS\Matrix\PCB2.REP
+DItemRevisionGUID=
+
+[GeneratedDocument18]
+DocumentPath=..\GERBERS\Matrix\PCB2.RUL
+DItemRevisionGUID=
+
+[GeneratedDocument19]
+DocumentPath=..\GERBERS\Matrix\PCB2.TXT
+DItemRevisionGUID=
+
 [Configuration1]
 Name=Sources
 ParameterCount=0
@@ -686,6 +762,36 @@ OutputName9=Specctra Design PCB
 OutputDocumentPath9=
 OutputVariantName9=
 OutputDefault9=0
+OutputType10=Ansoft Neutral
+OutputName10=Ansoft Neutral (AutoPCB)
+OutputDocumentPath10=
+OutputVariantName10=
+OutputDefault10=0
+OutputType11=HyperLynx
+OutputName11=HyperLynx (AutoPCB)
+OutputDocumentPath11=
+OutputVariantName11=
+OutputDefault11=0
+OutputType12=Orcad v7 Capture Design
+OutputName12=Orcad v7 Capture Design (AutoSCH)
+OutputDocumentPath12=
+OutputVariantName12=
+OutputDefault12=0
+OutputType13=P-CAD ASCII
+OutputName13=P-CAD ASCII (AutoPCB)
+OutputDocumentPath13=
+OutputVariantName13=
+OutputDefault13=0
+OutputType14=P-CAD V16 Schematic Design
+OutputName14=P-CAD V16 Schematic Design (AutoSCH)
+OutputDocumentPath14=
+OutputVariantName14=
+OutputDefault14=0
+OutputType15=SiSoft
+OutputName15=SiSoft (AutoPCB)
+OutputDocumentPath15=
+OutputVariantName15=
+OutputDefault15=0
 
 [OutputGroup10]
 Name=PostProcess Outputs
