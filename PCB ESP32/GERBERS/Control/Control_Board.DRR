@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------------------------------------------------------------------
-NCDrill File Report For: Control_Board.PcbDoc   12/01/2019  20:59:27
+NCDrill File Report For: Control_Board.PcbDoc   14/01/2019  11:50:29
 ----------------------------------------------------------------------------------------------------------------------------------
 
 Layer Pair : Top Layer to Bottom Layer
@@ -9,14 +9,14 @@ ASCII SlotHoles File : Control_Board-SlotHoles.TXT
 Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
 ----------------------------------------------------------------------------------------------------------------------------------
 T1      0.1mm (4mil)                                              Round             4         PTH        0.00mm (0.00inch)
-T2      0.2mm (8mil)                                              Round             5         PTH        0.00mm (0.00inch)
-T3      0.3mm (12mil)                                             Round             42        PTH        0.00mm (0.00inch)
+T2      0.2mm (8mil)                                              Round             34        PTH        0.00mm (0.00inch)
+T3      0.3mm (12mil)                                             Round             43        PTH        0.00mm (0.00inch)
 T4      0.5mm (20mil)                                             Slot              4         PTH        0.00mm (0.00inch)
 T5      0.6mm (24mil)                                             Slot              2         PTH        0.00mm (0.00inch)
 T6      0.8mm (32mil)                                             Round             6         PTH        0.00mm (0.00inch)
-T7      0.9mm (35mil)                                             Round             53        PTH        0.00mm (0.00inch)
+T7      0.9mm (35mil)                                             Round             52        PTH        0.00mm (0.00inch)
 T8      3mm (118mil)                                              Round             4         PTH        0.00mm (0.00inch)
 ----------------------------------------------------------------------------------------------------------------------------------
-Totals                                                                              120
+Totals                                                                              149
 
 Total Processing Time (hh:mm:ss) : 00:00:00

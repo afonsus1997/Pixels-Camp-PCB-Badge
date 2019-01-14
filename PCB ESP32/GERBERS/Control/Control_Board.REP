@@ -2,17 +2,105 @@
 FileName = Control_Board.GBR
 AutoAperture = True
 *************************************************************
-Generating : Mechanical 14
-      File : Control_Board.GM14
+Generating : Mechanical 15
+      File : Control_Board.GM15
 
-    Adding Layer      : Mechanical 14
+    Adding Layer      : Mechanical 15
 
     Adding Layer      : Mechanical 14
 
 
 Used DCodes :
+    D14
+    D17
+    D92
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 4
+      File : Control_Board.GM4
+
+    Adding Layer      : Mechanical 4
+
+    Adding Layer      : Mechanical 14
+
+
+Used DCodes :
+    D14
     D15
     D17
+    D91
+    D92
+*************************************************************
+
+*************************************************************
+Generating : Keep-Out Layer
+      File : Control_Board.GKO
+
+    Adding Layer      : Keep-Out Layer
+
+    Adding Layer      : Mechanical 14
+
+
+Used DCodes :
+    D14
+    D17
+*************************************************************
+
+*************************************************************
+Generating : Bottom Layer
+      File : Control_Board.GBL
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Mechanical 14
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+    D14
+    D15
+    D17
+    D18
+    D20
+    D59
+    D62
+    D63
+    D64
+    D65
+    D66
+    D67
+    D68
+    D69
+    D70
+    D71
+    D72
+    D73
+    D74
+    D75
+    D76
+    D77
+    D78
+    D79
+    D80
+    D81
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 16
+      File : Control_Board.GM16
+
+    Adding Layer      : Mechanical 16
+
+    Adding Layer      : Mechanical 14
+
+
+Used DCodes :
+    D14
+    D17
+    D92
 *************************************************************
 
 *************************************************************
@@ -29,10 +117,14 @@ Generating : Bottom Paste
 
 
 Used DCodes :
-    D15
+    D14
     D17
     D18
-    D25
+    D20
+    D73
+    D74
+    D75
+    D76
     D77
     D78
     D79
@@ -54,7 +146,7 @@ Generating : Top Paste
 
 
 Used DCodes :
-    D15
+    D14
     D17
     D18
     D19
@@ -71,38 +163,40 @@ Used DCodes :
     D30
     D31
     D32
-    D33
-    D34
-    D35
 *************************************************************
 
 *************************************************************
-Generating : Mechanical 16
-      File : Control_Board.GM16
+Generating : Mechanical 18
+      File : Control_Board.GM18
 
-    Adding Layer      : Mechanical 16
+    Adding Layer      : Mechanical 18
 
     Adding Layer      : Mechanical 14
 
 
 Used DCodes :
-    D15
+    D11
+    D14
     D17
-    D88
+    D93
 *************************************************************
 
 *************************************************************
-Generating : Keep-Out Layer
-      File : Control_Board.GKO
+Generating : Bottom Overlay
+      File : Control_Board.GBO
 
-    Adding Layer      : Keep-Out Layer
+    Adding Layer      : Bottom Overlay
 
     Adding Layer      : Mechanical 14
 
 
 Used DCodes :
+    D10
+    D13
+    D14
     D15
     D17
+    D91
 *************************************************************
 
 *************************************************************
@@ -119,8 +213,11 @@ Generating : Top Solder
 
 
 Used DCodes :
-    D15
+    D14
     D17
+    D33
+    D34
+    D35
     D36
     D37
     D38
@@ -144,12 +241,6 @@ Used DCodes :
     D56
     D57
     D58
-    D59
-    D60
-    D61
-    D62
-    D63
-    D64
 *************************************************************
 
 *************************************************************
@@ -173,36 +264,17 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
-Generating : Mechanical 18
-      File : Control_Board.GM18
+Generating : Mechanical 14
+      File : Control_Board.GM14
 
-    Adding Layer      : Mechanical 18
+    Adding Layer      : Mechanical 14
 
     Adding Layer      : Mechanical 14
 
 
 Used DCodes :
-    D12
-    D15
+    D14
     D17
-    D89
-*************************************************************
-
-*************************************************************
-Generating : Mechanical 4
-      File : Control_Board.GM4
-
-    Adding Layer      : Mechanical 4
-
-    Adding Layer      : Mechanical 14
-
-
-Used DCodes :
-    D13
-    D15
-    D17
-    D87
-    D88
 *************************************************************
 
 *************************************************************
@@ -215,77 +287,9 @@ Generating : Mechanical 2
 
 
 Used DCodes :
-    D12
-    D15
-    D17
-*************************************************************
-
-*************************************************************
-Generating : Bottom Overlay
-      File : Control_Board.GBO
-
-    Adding Layer      : Bottom Overlay
-
-    Adding Layer      : Mechanical 14
-
-
-Used DCodes :
-    D13
-    D15
-    D17
-    D87
-*************************************************************
-
-*************************************************************
-Generating : Bottom Layer
-      File : Control_Board.GBL
-
-    Adding Layer      : Bottom Layer
-
-    Adding Layer      : Mechanical 14
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
     D11
-    D13
-    D15
+    D14
     D17
-    D18
-    D25
-    D65
-    D66
-    D67
-    D68
-    D69
-    D70
-    D71
-    D72
-    D73
-    D74
-    D75
-    D76
-    D77
-    D78
-    D79
-    D80
-    D81
-*************************************************************
-
-*************************************************************
-Generating : Mechanical 15
-      File : Control_Board.GM15
-
-    Adding Layer      : Mechanical 15
-
-    Adding Layer      : Mechanical 14
-
-
-Used DCodes :
-    D15
-    D17
-    D88
 *************************************************************
 
 *************************************************************
@@ -302,26 +306,30 @@ Generating : Bottom Solder
 
 
 Used DCodes :
-    D15
+    D14
     D17
-    D36
-    D43
+    D33
+    D35
+    D48
+    D49
+    D50
+    D51
+    D52
+    D53
     D54
     D55
     D56
     D57
     D58
-    D59
-    D60
-    D61
-    D62
-    D63
-    D64
     D82
     D83
     D84
     D85
     D86
+    D87
+    D88
+    D89
+    D90
 *************************************************************
 
 *************************************************************
@@ -336,8 +344,8 @@ Generating : Top Layer
 
 
 Used DCodes :
-    D11
-    D13
+    D10
+    D14
     D15
     D17
     D18
@@ -355,9 +363,12 @@ Used DCodes :
     D30
     D31
     D32
-    D33
-    D34
-    D35
+    D59
+    D60
+    D61
+    D62
+    D63
+    D64
     D65
     D66
     D67
@@ -366,9 +377,5 @@ Used DCodes :
     D70
     D71
     D72
-    D73
-    D74
-    D75
-    D76
 *************************************************************
 

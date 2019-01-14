@@ -1,0 +1,15 @@
+Removed Pin From Net: NetName=VCC3V3 Pin=P2-2
+Removed Pin From Net: NetName=SCL_ESP Pin=P2-3
+Removed Pin From Net: NetName=SDA_ESP Pin=P2-4
+Removed Pin From Net: NetName=GND Pin=P2-5
+Removed Pin From Net: NetName=SCL_ESP Pin=R13-2
+Removed Pin From Net: NetName=SDA_ESP Pin=R15-2
+Removed Pin From Net: NetName=GND Pin=U5-61
+Removed Member From Class: ClassName=Sheet2 Member=R13
+Removed Member From Class: ClassName=Sheet2 Member=R15
+Change Component Footprint: Designator=P2 Old Footprint=HDR1X5 New Footprint=HDR1X4
+Change Component Comment : Designator=P2 Old Comment=Header 5 New Comment=Header 4
+Added Pin To Net: NetName=VCC3V3 Pin=P2-1
+Added Pin To Net: NetName=SCL_ESP Pin=P2-2
+Added Pin To Net: NetName=SDA_ESP Pin=P2-3
+Added Pin To Net: NetName=GND Pin=P2-4
