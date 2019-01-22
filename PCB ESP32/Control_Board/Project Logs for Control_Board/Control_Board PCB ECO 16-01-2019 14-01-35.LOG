@@ -1,0 +1,13 @@
+Removed Pin From Net: NetName=GND Pin=S1-1
+Removed Pin From Net: NetName=GND Pin=S1-2
+Removed Pin From Net: NetName=RESET Pin=S1-3
+Removed Pin From Net: NetName=RESET Pin=S1-4
+Removed Member From Class: ClassName=Sheet2 Member=S1
+Added Component: Designator=S?(PUSH_SMD_3x4)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DIGIKEY"; Value = "SW1020CT-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MANUFACTURER"; Value = "Omron"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MPN"; Value = "B3U-1000P"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=S?-1
+Added Pin To Net: NetName=RESET Pin=S?-2
+Added Member To Class: ClassName=Sheet2 Member=Component S? Switch

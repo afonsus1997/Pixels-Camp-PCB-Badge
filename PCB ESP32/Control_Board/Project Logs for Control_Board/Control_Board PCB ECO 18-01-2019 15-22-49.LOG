@@ -1,0 +1,20 @@
+Removed Pin From Net: NetName=NetTP1_TP Pin=U1-17
+Removed Pin From Net: NetName=NetTP3_TP Pin=U1-18
+Change Component Designator: OldDesignator=to_reg NewDesignator=TP5
+Change Component Designator: OldDesignator=VBat NewDesignator=TP2
+Change Component Designator: OldDesignator=VBus NewDesignator=TP4
+Change Component Designator: OldDesignator=VCC3V3 NewDesignator=TP6
+Added Component: Designator=TP7(TP20R)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TP8(TP20R)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=NetTP1_TP Pin=U1-20
+Added Pin To Net: NetName=NetTP3_TP Pin=U1-21
+Added Pin To Net: NetName=NetTP7_TP Pin=TP7-TP
+Added Pin To Net: NetName=NetTP7_TP Pin=U1-19
+Added Net: Name=NetTP7_TP
+Added Pin To Net: NetName=NetTP8_TP Pin=TP8-TP
+Added Pin To Net: NetName=NetTP8_TP Pin=U1-22
+Added Net: Name=NetTP8_TP
+Added Member To Class: ClassName=Sheet2 Member=Component TP7 Test pad
+Added Member To Class: ClassName=Sheet2 Member=Component TP8 Test pad

@@ -1,0 +1,29 @@
+Change Component Designator: OldDesignator=S? NewDesignator=S1
+Added Component: Designator=TP1(TP20R)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TP2(TP20R)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TP3(TP20R)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TP4(TP20R)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TP5(TP20R)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TP6(TP20R)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=Vbat Pin=TP2-TP
+Added Pin To Net: NetName=VBus Pin=TP4-TP
+Added Pin To Net: NetName=Net3_L2 Pin=TP5-TP
+Added Pin To Net: NetName=VCC3V3 Pin=TP6-TP
+Added Pin To Net: NetName=NetTP1_TP Pin=TP1-TP
+Added Pin To Net: NetName=NetTP1_TP Pin=U1-17
+Added Net: Name=NetTP1_TP
+Added Pin To Net: NetName=NetTP3_TP Pin=TP3-TP
+Added Pin To Net: NetName=NetTP3_TP Pin=U1-18
+Added Net: Name=NetTP3_TP
+Added Member To Class: ClassName=Sheet2 Member=Component TP1 Test pad
+Added Member To Class: ClassName=Sheet2 Member=Component TP2 Test pad
+Added Member To Class: ClassName=Sheet2 Member=Component TP3 Test pad
+Added Member To Class: ClassName=Sheet2 Member=Component TP4 Test pad
+Added Member To Class: ClassName=Sheet2 Member=Component TP5 Test pad
+Added Member To Class: ClassName=Sheet2 Member=Component TP6 Test pad
