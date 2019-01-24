@@ -21,7 +21,7 @@ Used ICs:
     * [Datasheet](https://www.sparkfun.com/datasheets/Prototyping/Batteries/MCP73831T.pdf)
 
 #### Digital and logic
-The microcontroller used is the ESP32 with WIFI and bluetooth built-in. The LED metrix is driven by the IS31FL3741 IC. The usb to serial conversion in handled by the CH340G (with auto-reset DTR capabilities).
+The microcontroller used is the ESP32 with WIFI and bluetooth built-in. The LED matrix is driven by the IS31FL3741 IC. The usb to serial conversion in handled by the CH340G (with auto-reset DTR capabilities).
 
 Used ICs:
 * uC: ESP32

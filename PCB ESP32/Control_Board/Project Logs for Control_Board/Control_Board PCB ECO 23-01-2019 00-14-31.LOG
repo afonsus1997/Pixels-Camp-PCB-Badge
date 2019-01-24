@@ -1,0 +1,17 @@
+Change Component Designator: OldDesignator=SCL/CLK NewDesignator=TP1
+Change Component Designator: OldDesignator=SCS/CMD NewDesignator=TP7
+Change Component Designator: OldDesignator=SDI/SD1 NewDesignator=TP8
+Change Component Designator: OldDesignator=SDO NewDesignator=TP3
+Change Component Designator: OldDesignator=ToReg NewDesignator=TP5
+Change Component Designator: OldDesignator=VBat NewDesignator=TP2
+Change Component Designator: OldDesignator=Vbus NewDesignator=TP4
+Added Component: Designator=J2(FCI_10103594-0001LF_10103594-0001LF(Primary))
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Amphenol ICC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "10103594-0001LF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/10103594-0001LF/Amphenol%20ICC/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Member To Class: ClassName=Sheet2 Member=Component J2 MicroUsb
