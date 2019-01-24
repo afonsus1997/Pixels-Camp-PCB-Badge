@@ -1,5 +1,9 @@
 # Pixels Camp PCB Badge
 
+## Latest Updates
+* Waiting for parts
+* Waiting for devboard
+
 ## Info
 This is a PCB badge for the 2019 edition of pixels camp. The project consists on a 39x9 (351) LED matrix display driven by the IS31FL3741 IC and controlled by an ESP32, making it wifi-connected. The board can be powered by usb and/or a 1s lipo battery (charges with usb).
 
