@@ -1,5 +1,0 @@
-Added Pin To Net: NetName=NetIC1_2 Pin=U1-24
-Change Net Name : Old Net Name=NetC4_2 New Net Name=VCC5V
-Change Net Name : Old Net Name=NetIC1_2 New Net Name=VCC3V3
-Change Class Name : Old Net Name=Sheet2 New Net Name=U_Sheet2
-Change Class Name : Old Net Name=Sheet3 New Net Name=U_Sheet3

@@ -1,0 +1,6 @@
+Added Component: Designator=AMS1117(SOT-223-3)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=GND Pin=AMS1117-1
+Added Pin To Net: NetName=VCC3V3 Pin=AMS1117-2
+Added Pin To Net: NetName=NetAMS1117_3 Pin=AMS1117-3
+Added Member To Class: ClassName=Sheet2 Member=Component AMS1117

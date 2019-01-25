@@ -1,0 +1,18 @@
+Added Component: Designator=AMS1117(SOT-223-3)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TP1(TP06SQ)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TP2(TP06SQ)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TP3(TP06SQ)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=NetAMS1117_1 Pin=AMS1117-1
+Added Pin To Net: NetName=NetAMS1117_1 Pin=TP3-TP
+Added Net: Name=NetAMS1117_1
+Added Pin To Net: NetName=NetAMS1117_2 Pin=AMS1117-2
+Added Pin To Net: NetName=NetAMS1117_2 Pin=TP2-TP
+Added Net: Name=NetAMS1117_2
+Added Pin To Net: NetName=NetAMS1117_3 Pin=AMS1117-3
+Added Pin To Net: NetName=NetAMS1117_3 Pin=TP1-TP
+Added Net: Name=NetAMS1117_3
+Added Class: Name=Sheet1
