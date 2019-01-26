@@ -24,6 +24,14 @@ Used ICs:
 * Lipo charger: MCP73831T-2ADI/OT
     * [Datasheet](https://www.sparkfun.com/datasheets/Prototyping/Batteries/MCP73831T.pdf)
 
+##### Circuit
+
+![Circuit](https://i.imgur.com/B1ekE77.png)
+
+The circuit can be powered by usb and/or 1s lipo. T1 is disabled when usb is present and vice-versa.There is also a main power switch that toggles T2.
+
+
+
 #### Digital and logic
 The microcontroller used is the ESP32 with WIFI and bluetooth built-in. The LED matrix is driven by the IS31FL3741 IC. The usb to serial conversion in handled by the CH340G (with auto-reset DTR capabilities).
 
