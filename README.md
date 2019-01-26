@@ -21,7 +21,8 @@ Power is supplied by usb and/or 1s lipo, with usb charging capabilities.
 
 ![Circuit](https://i.imgur.com/B1ekE77.png)
 
-The circuit can be powered by usb and/or 1s lipo. T1 is disabled when usb is present and vice-versa.There is also a main power switch that toggles T2.
+The circuit can be powered by usb and/or 1s lipo. T1 is disabled when usb is present and vice-versa. There is also a main power switch that toggles T2.
+An LTSpice simulation is present in the [Simulations](https://github.com/afonsus1997/Pixels-Camp-PCB-Badge/tree/master/PCB%20ESP32/Simulations) folder.
 
 
 Used ICs:
