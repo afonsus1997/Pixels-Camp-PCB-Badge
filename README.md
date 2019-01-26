@@ -18,17 +18,18 @@ The main goal is to make a web connected scrolling text display, although anyone
 #### Power
 Power is supplied by usb and/or 1s lipo, with usb charging capabilities.
 
+
+![Circuit](https://i.imgur.com/B1ekE77.png)
+
+The circuit can be powered by usb and/or 1s lipo. T1 is disabled when usb is present and vice-versa.There is also a main power switch that toggles T2.
+
+
 Used ICs:
 * Voltage Regulator: NCP708
     * [Datasheet](https://www.onsemi.com/pub/Collateral/NCP708-D.PDF)
 * Lipo charger: MCP73831T-2ADI/OT
     * [Datasheet](https://www.sparkfun.com/datasheets/Prototyping/Batteries/MCP73831T.pdf)
 
-##### Circuit
-
-![Circuit](https://i.imgur.com/B1ekE77.png)
-
-The circuit can be powered by usb and/or 1s lipo. T1 is disabled when usb is present and vice-versa.There is also a main power switch that toggles T2.
 
 
 
