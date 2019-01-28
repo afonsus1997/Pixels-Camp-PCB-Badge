@@ -45,6 +45,8 @@ Used ICs:
     * [Datasheet](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Other/CH340DS1.PDF)
 * LED driver: IS31FL3741
     * [Datasheet](http://ams.issi.com/WW/pdf/IS31FL3741.pdf)
+    * [Dev Board](http://ams.issi.com/WW/pdf/IS31FL3741_EB.pdf)
+    
 
 ### PCBs
 The PCBs was designed in Altium Designer and the most recent GERBERs and schematics are available in their respective repo folders. The Badge consists of 2 stackable PCBs, one for the matrix and one for the power and logic. Each PCB is 126x36mm and there is a panel PCB with both of the PCBs held by cuttable tabs. The panel is 140x91mm.
