@@ -2,7 +2,7 @@
 
 ## Latest Updates
 * Waiting for parts
-* Waiting for devboard
+* Devboard has arrived
 * Working on new control board design
 
 ## Info
