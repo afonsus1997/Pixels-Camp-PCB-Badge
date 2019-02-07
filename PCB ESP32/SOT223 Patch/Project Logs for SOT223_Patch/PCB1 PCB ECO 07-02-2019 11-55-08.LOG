@@ -1,0 +1,45 @@
+Added Component: Designator=C1(C 0603 / 1608)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C2(C 0603 / 1608)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TP4(TP20SQ)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TP5(TP20SQ)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Y1(HC49US)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = "PTH-HC49US"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "CRYSTAL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "SparkFun-Clocks"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "HC49US"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "CRYSTAL"; VariantName = "[No Variations]"
+Added Component: Designator=Y2(HC49US)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = "PTH-HC49US"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "CRYSTAL-16MHZ"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "SparkFun-Clocks"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "HC49US"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PROD_ID"; Value = "XTAL-08181"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SF_ID"; Value = "COM-00536"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "CRYSTAL"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetAMS1117_1 Pin=C1-1
+Added Pin To Net: NetName=NetAMS1117_1 Pin=C2-1
+Added Pin To Net: NetName=NetC1_2 Pin=C1-2
+Added Pin To Net: NetName=NetC1_2 Pin=TP4-TP
+Added Pin To Net: NetName=NetC1_2 Pin=Y1-1
+Added Pin To Net: NetName=NetC1_2 Pin=Y2-1
+Added Net: Name=NetC1_2
+Added Pin To Net: NetName=NetC2_2 Pin=C2-2
+Added Pin To Net: NetName=NetC2_2 Pin=TP5-TP
+Added Pin To Net: NetName=NetC2_2 Pin=Y1-2
+Added Pin To Net: NetName=NetC2_2 Pin=Y2-2
+Added Net: Name=NetC2_2
+Added Member To Class: ClassName=Sheet1 Member=Component C1 100nF
+Added Member To Class: ClassName=Sheet1 Member=Component C2 100nF
+Added Member To Class: ClassName=Sheet1 Member=Component TP4 Test pad
+Added Member To Class: ClassName=Sheet1 Member=Component TP5 Test pad
+Added Member To Class: ClassName=Sheet1 Member=Component Y1 Crystals (Generic)These are passive quartz crystals, which can be used as a clock source for a microcontroller.Crystal's are two-terminal devices. They require external "load" capacitors to generate an oscillating signal.
+Added Member To Class: ClassName=Sheet1 Member=Component Y2 16MHz CrystalDigikey ExampleSparkFun Products:
+Added Room: Name=Sheet1

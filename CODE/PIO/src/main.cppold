@@ -1,0 +1,99 @@
+
+#include <SPIFFS.h>
+
+#include <WiFi.h>
+#include <WiFiClient.h>
+#include <WiFiServer.h>
+#include <WiFiUdp.h>
+#include <ESPAsyncWebServer.h>
+#include <AsyncTCP.h>
+#include <WiFiAP.h>
+#include "react.h"
+const char *ssid = "LHD-React"; // The name of the Wi-Fi network that will be created
+const char *password = "1234567890";   // The password required to connect to it, leave blank for an open network
+
+extern int reactTime();
+
+AsyncWebServer server(80);
+
+
+
+
+int reactStart(){
+    //tell user to get ready
+    long timedif;
+    long randNumber;
+    int btnState;
+    randomSeed(analogRead(0));
+    randNumber = random(5,15)*1000;
+    delay(randNumber);
+    long startTime = millis();
+    //Serial.print(startTime);
+    digitalWrite(LEDPIN, 1);
+
+    while(1){
+      btnState = (digitalRead(SWPIN));
+     if(!btnState){
+       break;
+     }
+     else
+     delay(10);
+    }
+
+    int pressedTime = millis();
+    timedif = pressedTime - startTime;
+    return timedif;
+    //randomize a wait time
+
+}
+
+
+
+void setup() {
+  pinMode(LEDPIN, OUTPUT);
+  pinMode(SWPIN, INPUT_PULLUP);
+
+
+  Serial.begin(115200);
+  delay(10);
+  Serial.println('\n');
+
+  WiFi.softAP(ssid, password);             // Start the access point
+  Serial.print("Access Point \"");
+  Serial.print(ssid);
+  Serial.println("\" started");
+
+  Serial.print("IP address:\t");
+  Serial.println(WiFi.softAPIP());         // Send the IP address of the ESP8266 to the computer
+
+  if(!SPIFFS.begin()){
+        Serial.println("An Error has occurred while mounting SPIFFS");
+        return;
+  }
+
+  Serial.print(SPIFFS.exists("/js"));
+
+  server.on("/", HTTP_GET, [](AsyncWebServerRequest *request){
+    request->send(SPIFFS, "/index.html", "text/html");
+    Serial.println("Got request");
+  });
+
+  server.on("/heap", HTTP_GET, [](AsyncWebServerRequest *request){
+    request->send(200, "text/plain", String(ESP.getFreeHeap()));
+  });
+  
+
+  server.on("/StringState", HTTP_GET, [](AsyncWebServerRequest *request){
+    //request->send(SPIFFS, "/index.html", "text/html");
+    Serial.println("Button Pressed\n");
+  });
+ 
+  server.begin();
+
+
+  Serial.print("TIME: "); Serial.println(reactStart()); 
+  
+
+}
+
+void loop() { }

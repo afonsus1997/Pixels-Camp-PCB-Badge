@@ -1,0 +1,37 @@
+Removed Member From Class: ClassName=ResistorPatch1 Member=P3
+Removed Member From Class: ClassName=ResistorPatch1 Member=P4
+Removed Member From Class: ClassName=ResistorPatch1 Member=R10
+Removed Member From Class: ClassName=ResistorPatch1 Member=R11
+Removed Member From Class: ClassName=ResistorPatch1 Member=R12
+Removed Member From Class: ClassName=ResistorPatch1 Member=R13
+Removed Member From Class: ClassName=ResistorPatch1 Member=R14
+Removed Member From Class: ClassName=ResistorPatch1 Member=R15
+Removed Member From Class: ClassName=ResistorPatch1 Member=R16
+Removed Member From Class: ClassName=ResistorPatch1 Member=R17
+Removed Member From Class: ClassName=ResistorPatch1 Member=R18
+Removed Member From Class: ClassName=ResistorPatch1 Member=R19
+Removed Member From Class: ClassName=ResistorPatch1 Member=R20
+Removed Member From Class: ClassName=ResistorPatch1 Member=R21
+Removed Member From Class: ClassName=ResistorPatch1 Member=R22
+Removed Member From Class: ClassName=ResistorPatch1 Member=R23
+Removed Member From Class: ClassName=ResistorPatch1 Member=R24
+Removed Member From Class: ClassName=ResistorPatch1 Member=R25
+Removed Member From Class: ClassName=ResistorPatch1 Member=R26
+Removed Member From Class: ClassName=ResistorPatch1 Member=R27
+Removed Member From Class: ClassName=ResistorPatch1 Member=R28
+Removed Member From Class: ClassName=ResistorPatch1 Member=R29
+Removed Member From Class: ClassName=ResistorPatch1 Member=R30
+Removed Member From Class: ClassName=ResistorPatch1 Member=R31
+Removed Member From Class: ClassName=ResistorPatch1 Member=R32
+Removed Member From Class: ClassName=ResistorPatch1 Member=R33
+Removed Member From Class: ClassName=ResistorPatch1 Member=R34
+Removed Member From Class: ClassName=ResistorPatch1 Member=R35
+Removed Member From Class: ClassName=ResistorPatch1 Member=R36
+Removed Member From Class: ClassName=ResistorPatch1 Member=R37
+Removed Member From Class: ClassName=ResistorPatch1 Member=R38
+Removed Member From Class: ClassName=ResistorPatch1 Member=R39
+Change Component Footprint: Designator=P1 Old Footprint=HDR1X25 New Footprint=HDR1X9
+Change Component Footprint: Designator=P2 Old Footprint=HDR1X25H New Footprint=HDR1X9H
+Change Component Comment : Designator=P1 Old Comment=Header 25 New Comment=Header 9
+Change Component Comment : Designator=P2 Old Comment=Header 25 New Comment=Header 9H
+Change Class Name : Old Net Name=ResistorPatch1 New Net Name=ResistorPatch2

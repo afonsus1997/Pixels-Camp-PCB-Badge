@@ -1,0 +1,13 @@
+body{
+    background: #999;
+    font-family: Arial, Helvetica, sans-serif, Glyphicons Halflings;
+
+    
+
+}
+
+
+@font-face{
+    font-family:'Glyphicons Halflings';
+    src:url(../fonts/glyphicons-halflings-regular.eot);
+}
