@@ -1,21 +1,4 @@
-Skip to content
- 
-Search or jump to…
 
-Pull requests
-Issues
-Marketplace
-Explore
- @afonsus1997 Sign out
-86
-597 150 me-no-dev/ESPAsyncWebServer
- Code  Issues 150  Pull requests 11  Projects 0  Wiki  Insights
-ESPAsyncWebServer/src/ESPAsyncWebServer.h
-63b5303  on Nov 16, 2017
-@luc-github luc-github Allow callback when request disconnects (#284)
-@me-no-dev @trygvis @nut-code-monkey @me21 @hagai-shatz @tuanpmt @probonopd @luc-github @tetious @sticilface
-      
-452 lines (375 sloc)  17.7 KB
 /*
   Asynchronous WebServer library for Espressif MCUs
   Copyright (c) 2016 Hristo Gochkov. All rights reserved.
