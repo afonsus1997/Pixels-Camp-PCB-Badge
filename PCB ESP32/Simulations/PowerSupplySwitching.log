@@ -1,0 +1,92 @@
+Circuit: * C:\Users\Afonso Muralha\Documents\GitHub\0603-Led-Matrix\PCB ESP32\Simulations\PowerSupplySwitching.asc
+
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+Gmin = 0.000142725
+Gmin = 1.5325e-005
+Gmin = 1.6455e-006
+vernier = 0.5
+vernier = 0.25
+Gmin = 1.08019e-006
+vernier = 0.333333
+vernier = 0.444444
+Gmin = 4.38429e-007
+vernier = 0.592592
+vernier = 0.790123
+Gmin = 1.081e-007
+vernier = 1
+Gmin = 1.3779e-008
+Gmin = 1.47951e-009
+Gmin = 1.58861e-010
+Gmin = 1.70576e-011
+Gmin = 1.83154e-012
+Gmin = 1.9666e-013
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+Semiconductor Device Operating Points:
+                        --- Diodes ---
+Name:    d:u1:3      d:u1:1        d1
+Model:    u1:d        u1:d          d
+Id:      8.65e-06   -2.58e-13   -4.01e-12
+Vd:      8.65e-06   -1.29e-01   -4.00e+00
+Req:     1.00e+00    1.00e-12    1.00e+12
+CAP:     0.00e+00    0.00e+00    0.00e+00
+
+                        --- Bipolar Transistors ---
+Name:     q:u1:12     q:u1:7      q:u1:3      q:u1:1
+Model:     u1:pa       u1:na       u1:np       u1:n
+Ib:      -8.43e-09    7.94e-07    1.03e-05    3.64e-07
+Ic:      -6.74e-07    9.92e-05    6.18e-03    4.56e-05
+Vbe:     -5.85e-01    7.14e-01    8.21e-01    6.94e-01
+Vbc:      2.36e-01    8.65e-06   -1.29e-01   -9.50e-01
+Vce:     -8.21e-01    7.14e-01    9.50e-01    1.64e+00
+BetaDC:   8.00e+01    1.25e+02    6.00e+02    1.25e+02
+Gm:       2.61e-05    3.84e-03    2.39e-01    1.76e-03
+Rpi:      3.07e+06    3.26e+04    2.51e+03    7.10e+04
+Rx:       0.00e+00    0.00e+00    0.00e+00    0.00e+00
+Ro:       2.37e+18    2.59e+14    3.81e+16    2.35e+30
+Cbe:      0.00e+00    0.00e+00    0.00e+00    0.00e+00
+Cbc:      0.00e+00    0.00e+00    0.00e+00    3.05e-11
+Cjs:      0.00e+00    0.00e+00    0.00e+00    0.00e+00
+BetaAC:   8.00e+01    1.25e+02    6.00e+02    1.25e+02
+Cbx:      0.00e+00    0.00e+00    0.00e+00    0.00e+00
+Ft:       0.00e+00    0.00e+00    0.00e+00    9.18e+06
+
+                        --- VDMOSFET Transistors ---
+Name:          m1
+Model:      si9433dy
+Id:          7.84e-03
+Vgs:        -4.00e+00
+Vds:         3.78e-04
+Vth:        -1.00e+00
+Gm:          2.61e-03
+Gds:         6.00e+01
+Cgs:         1.30e-09
+Cgd:         8.00e-10
+Cbody:       4.00e-10
+
+
+
+Date: Sat Feb 16 16:55:04 2019
+Total elapsed time: 0.239 seconds.
+
+tnom = 27
+temp = 27
+method = trap
+totiter = 725
+traniter = 0
+tranpoints = 0
+accept = 0
+rejected = 0
+matrix size = 15
+fillins = 4
+solver = Normal
+Matrix Compiler1: 1.70 KB object code size
+Matrix Compiler2: 1.44 KB object code size  1.1/0.8/[0.3]
+

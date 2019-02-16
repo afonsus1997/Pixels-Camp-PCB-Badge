@@ -9,8 +9,9 @@ extern int initWifi(char *ssid, char *password);
 /*SPIFFS INCLUDES*/
 int initSPIFFS();
 
-/*BOARD INCLUDES*/
+/*BOARD AND IO INCLUDES*/
 #include "boardpins.h"
-
+extern int initIO();
+extern float batVoltage();
 
 #endif

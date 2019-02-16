@@ -12,5 +12,6 @@
 #define SWCENTER 0
 #define SWRIGHT 0
 
+#define BATPIN 35
 
 #endif

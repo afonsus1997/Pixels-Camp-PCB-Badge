@@ -1,16 +1,19 @@
-
 /*
   Asynchronous WebServer library for Espressif MCUs
+
   Copyright (c) 2016 Hristo Gochkov. All rights reserved.
   This file is part of the esp8266 core for Arduino environment.
+
   This library is free software; you can redistribute it and/or
   modify it under the terms of the GNU Lesser General Public
   License as published by the Free Software Foundation; either
   version 2.1 of the License, or (at your option) any later version.
+
   This library is distributed in the hope that it will be useful,
   but WITHOUT ANY WARRANTY; without even the implied warranty of
   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
   Lesser General Public License for more details.
+
   You should have received a copy of the GNU Lesser General Public
   License along with this library; if not, write to the Free Software
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
@@ -48,6 +51,7 @@ class AsyncStaticWebHandler;
 class AsyncCallbackWebHandler;
 class AsyncResponseStream;
 
+#ifndef WEBSERVER_H
 typedef enum {
   HTTP_GET     = 0b00000001,
   HTTP_POST    = 0b00000010,
@@ -58,6 +62,11 @@ typedef enum {
   HTTP_OPTIONS = 0b01000000,
   HTTP_ANY     = 0b01111111,
 } WebRequestMethod;
+#endif
+
+//if this value is returned when asked for data, packet will not be sent and you will be asked for data again
+#define RESPONSE_TRY_AGAIN 0xFFFFFFFF
+
 typedef uint8_t WebRequestMethodComposite;
 typedef std::function<void(void)> ArDisconnectHandler;
 
@@ -446,16 +455,3 @@ public:
 #include "AsyncEventSource.h"
 
 #endif /* _AsyncWebServer_H_ */
-© 2018 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Press h to open a hovercard with more details.

@@ -1,0 +1,100 @@
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\config
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\bluedroid
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\bluedroid\api
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\app_trace
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\app_update
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\bootloader_support
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\bt
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\driver
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\esp32
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\esp_adc_cal
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\esp_http_client
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\esp-tls
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\ethernet
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\fatfs
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\freertos
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\heap
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\jsmn
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\log
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\mdns
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\mbedtls
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\mbedtls_port
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\newlib
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\nvs_flash
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\openssl
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\spi_flash
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\sdmmc
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\smartconfig_ack
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\spiffs
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\tcpip_adapter
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\ulp
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\vfs
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\wear_levelling
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\xtensa-debug-module
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\coap
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\console
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\expat
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\json
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\lwip
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\nghttp
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\soc
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\tools\sdk\include\wpa_supplicant
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\cores\esp32
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\variants\esp32thing
+-IC:\Users\Afonso Muralha\Documents\Arduino\libraries\AsyncTCPID1826\src
+-IC:\Users\Afonso Muralha\Documents\Arduino\libraries\ESPAsyncWebServer\src
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\libraries\FS\src
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\libraries\WiFi\src
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\libraries\SPIFFS\src
+-IC:\Users\Afonso Muralha\Documents\Arduino\libraries\Adafruit-GFX
+-IC:\Users\Afonso Muralha\Documents\Arduino\libraries\Adafruit_SSD1306
+-IC:\Users\Afonso Muralha\Documents\Arduino\libraries\DHT_sensor_library
+-IC:\Users\Afonso Muralha\Documents\Arduino\libraries\DallasTemperature
+-IC:\Users\Afonso Muralha\Documents\Arduino\libraries\LightDependentResistor
+-IC:\Users\Afonso Muralha\Documents\Arduino\libraries\OneWire
+-IC:\Users\Afonso Muralha\Documents\Arduino\libraries\SimpleDHT
+-IC:\Users\Afonso Muralha\Documents\Arduino\libraries\esp8266mdns
+-IC:\Users\Afonso Muralha\Documents\GitHub\0603-Led-Matrix\CODE\Firmware\lib\AsyncWebServer
+-IC:\Users\Afonso Muralha\Documents\GitHub\0603-Led-Matrix\CODE\Firmware\.piolibdeps\AsyncTCP_ID1826\src
+-IC:\Users\Afonso Muralha\Documents\GitHub\0603-Led-Matrix\CODE\Firmware\.piolibdeps\ESP Async WebServer_ID306\src
+-IC:\Users\Afonso Muralha\.platformio\lib\AsyncTCP_ID1826\src
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\libraries\ArduinoOTA\src
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\libraries\AsyncUDP\src
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\libraries\AzureIoT\src
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\libraries\BLE\src
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\libraries\BluetoothSerial\src
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\libraries\DNSServer\src
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\libraries\EEPROM
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\libraries\ESP32\src
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\libraries\ESPmDNS\src
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\libraries\HTTPClient\src
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\libraries\NetBIOS\src
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\libraries\Preferences\src
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\libraries\SD\src
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\libraries\SD_MMC\src
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\libraries\SPI\src
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\libraries\SimpleBLE\src
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\libraries\Ticker\src
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\libraries\Update\src
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\libraries\WebServer\src
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\libraries\WiFiClientSecure\src
+-IC:\Users\Afonso Muralha\.platformio\packages\framework-arduinoespressif32\libraries\Wire\src
+-IC:\Users\Afonso Muralha\.platformio\packages\toolchain-xtensa32\xtensa-esp32-elf\include
+-IC:\Users\Afonso Muralha\.platformio\packages\toolchain-xtensa32\xtensa-esp32-elf\include\c++\5.2.0
+-IC:\Users\Afonso Muralha\.platformio\packages\toolchain-xtensa32\xtensa-esp32-elf\include\c++\5.2.0\xtensa-esp32-elf
+-IC:\Users\Afonso Muralha\.platformio\packages\toolchain-xtensa32\lib\gcc\xtensa-esp32-elf\5.2.0\include
+-IC:\Users\Afonso Muralha\.platformio\packages\toolchain-xtensa32\lib\gcc\xtensa-esp32-elf\5.2.0\include-fixed
+-IC:\Users\Afonso Muralha\.platformio\packages\tool-unity
+-IC:\Users\Afonso Muralha\Documents\GitHub\0603-Led-Matrix\CODE\Firmware\include
+-IC:\Users\Afonso Muralha\Documents\GitHub\0603-Led-Matrix\CODE\Firmware\src
+-DPLATFORMIO=30604
+-DARDUINO_ESP32_THING
+-DESP32
+-DESP_PLATFORM
+-DF_CPU=240000000L
+-DHAVE_CONFIG_H
+-DMBEDTLS_CONFIG_FILE="mbedtls/esp_config.h"
+-DARDUINO=10805
+-DARDUINO_ARCH_ESP32
+-DARDUINO_VARIANT="esp32thing"
+-DARDUINO_BOARD="SparkFun ESP32 Thing"
