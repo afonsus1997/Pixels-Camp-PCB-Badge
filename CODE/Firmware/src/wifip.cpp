@@ -26,6 +26,21 @@ int initWebServer(){
     server.begin();
     return 1;    
 }
+/*
+int initDNS(char *hostname){
+   // Set up mDNS responder:
+    // - first argument is the domain name, in this example
+    //   the fully-qualified domain name is "esp8266.local"
+    // - second argument is the IP address to advertise
+    //   we send our IP address on the WiFi network
+    Serial.print("Initializing DNS Server...");
+    if (!MDNS.begin(hostname)) {
+        Serial.println("Error setting up MDNS responder!");
+        return 0;
+    }
+    Serial.println(" Done!");
+    return 1;
+}*/
 
 void handleString(AsyncWebServerRequest *request)
 {
@@ -47,6 +62,7 @@ int initWifi(char *ssid, char *password){
     WiFi.softAP("Pixels Camp Badger", "1234567890");
     IPAddress myIP = WiFi.softAPIP();
     Serial.println("Done!");
+    //initDNS("pixelsbadger");
     Serial.print("Initializing Webserver...");
     initWebServer();
     Serial.println("Done!");
@@ -58,5 +74,6 @@ int initWifi(char *ssid, char *password){
     Serial.println("==============");
 
 }
+
 
 
