@@ -1,4 +1,4 @@
-/*#include<Wire.h>
+#include<Wire.h>
 #include<pgmspace.h>
 #define Addr_GND 0x60
 #define R 0xFF
@@ -78,42 +78,42 @@ void Init_3741(uint8_t Rdata, uint8_t Gdata, uint8_t Bdata)
 
 void IS31FL3741_Test_mode1(void)
 {
- IS_IIC_WriteByte(Addr_GND,0xFD,0x00);//write frist frame
- for (j=0;j<64;j++)//all LED ramping up
- {
- IS_IIC_WriteByte(Addr_GND,0xfe,0xc5);//unlock
- IS_IIC_WriteByte(Addr_GND,0xfD,0x00);//write page 0
- for(i=0;i<0xB4;i++)
- {
- IS_IIC_WriteByte(Addr_GND,i,pgm_read_byte_near(&PWM_Gama64[j]));//set all PWM
- }
- IS_IIC_WriteByte(Addr_GND,0xfe,0xc5);//unlock
- IS_IIC_WriteByte(Addr_GND,0xfD,0x01);//write page 1
- for(i=0;i<0xAB;i++)
- {
- IS_IIC_WriteByte(Addr_GND,i,pgm_read_byte_near(&PWM_Gama64[j]));//set all PWM
- }
- delay(10);//10ms
- }
- delay(1000); //keep on 1s
+    IS_IIC_WriteByte(Addr_GND,0xFD,0x00);//write frist frame
+    for (j=0;j<64;j++)//all LED ramping up
+    {
+        IS_IIC_WriteByte(Addr_GND,0xfe,0xc5);//unlock
+        IS_IIC_WriteByte(Addr_GND,0xfD,0x00);//write page 0
+        for(i=0;i<0xB4;i++)
+        {
+            IS_IIC_WriteByte(Addr_GND,i,pgm_read_byte_near(&PWM_Gama64[j]));//set all PWM
+        }
+        IS_IIC_WriteByte(Addr_GND,0xfe,0xc5);//unlock
+        IS_IIC_WriteByte(Addr_GND,0xfD,0x01);//write page 1
+        for(i=0;i<0xAB;i++)
+        {
+        IS_IIC_WriteByte(Addr_GND,i,pgm_read_byte_near(&PWM_Gama64[j]));//set all PWM
+        }
+        delay(10);//10ms
+    }
+    delay(1000); //keep on 1s
 
- for (j=63;j>0;j--)//all LED ramping down
- {
- IS_IIC_WriteByte(Addr_GND,0xfe,0xc5);//unlock
- IS_IIC_WriteByte(Addr_GND,0xfD,0x00);//write page 0
- for(i=0;i<0xB4;i++)
- {
- IS_IIC_WriteByte(Addr_GND,i,pgm_read_byte_near(&PWM_Gama64[j-1]));//set all PWM
- }
- IS_IIC_WriteByte(Addr_GND,0xfe,0xc5);//unlock
- IS_IIC_WriteByte(Addr_GND,0xfD,0x01);//write page 1
- for(i=0;i<0xAB;i++)
- {
- IS_IIC_WriteByte(Addr_GND,i,pgm_read_byte_near(&PWM_Gama64[j-1]));//set all PWM
- }
- delay(10);//10ms
- }
- delay(500); //keep off 0.5s
+    for (j=63;j>0;j--)//all LED ramping down
+    {
+    IS_IIC_WriteByte(Addr_GND,0xfe,0xc5);//unlock
+    IS_IIC_WriteByte(Addr_GND,0xfD,0x00);//write page 0
+    for(i=0;i<0xB4;i++)
+    {
+    IS_IIC_WriteByte(Addr_GND,i,pgm_read_byte_near(&PWM_Gama64[j-1]));//set all PWM
+    }
+    IS_IIC_WriteByte(Addr_GND,0xfe,0xc5);//unlock
+    IS_IIC_WriteByte(Addr_GND,0xfD,0x01);//write page 1
+    for(i=0;i<0xAB;i++)
+    {
+    IS_IIC_WriteByte(Addr_GND,i,pgm_read_byte_near(&PWM_Gama64[j-1]));//set all PWM
+    }
+    delay(10);//10ms
+    }
+    delay(500); //keep off 0.5s
 } 
 
 void setup() {
@@ -127,9 +127,9 @@ void loop() {
 
 //SDA 23
 //SCL 22
-*/
 
 
+/*
 #include <Wire.h>
 #include <Arduino.h>
 #define byte uint8_t
@@ -175,7 +175,7 @@ Serial.println(x, HEX);
 
 delay(1000);
 }
-
+*/
 /*
 
 #include <Arduino.h>

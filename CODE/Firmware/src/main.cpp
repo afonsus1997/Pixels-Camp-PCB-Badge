@@ -9,15 +9,17 @@
 char *ssid = "Pixels Camp Badger";
 char *password = "1234567890";
 
+extern void initI2C();
+
 void idleLedTask( void * parameter )
 {
   for(;;){
   digitalWrite(LED3, HIGH);
   digitalWrite(LED4, HIGH);
-  delay(700);
+  delay(250);
   digitalWrite(LED3, LOW);
   digitalWrite(LED4, LOW);
-  delay(700);
+  delay(250);
   }
 }
 
@@ -39,7 +41,8 @@ void setup()
 
   initSPIFFS();
   initIO();
-  initWifi(ssid, password); 
+  initI2C();
+  //initWifi(ssid, password); 
 
   xTaskCreate(
                     idleLedTask,          /* Task function. */
