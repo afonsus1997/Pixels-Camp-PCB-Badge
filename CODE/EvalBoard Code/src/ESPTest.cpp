@@ -134,20 +134,78 @@ void loop() {
 #include <Arduino.h>
 #define byte uint8_t
 #define ADDR 0x30
-void setup() {
-Wire.begin(23,22);
-Serial.begin(9600);
-Wire.setClock(100000); // choose 400 kHz I2C rate
-Serial.println("Start i2c-test");
-}
+#define Addr_GND 0x60
 
 void IS_IIC_WriteByte(uint8_t Dev_Add,uint8_t Reg_Add,uint8_t Reg_Dat)
 {
- Wire.beginTransmission(Dev_Add); // transmit to device IS31FL373x
+ Wire.beginTransmission(Dev_Add/2); // transmit to device IS31FL373x
  Wire.write(Reg_Add); // sends regaddress
- //Wire.write(Reg_Dat); // sends regaddress
+ Wire.write(Reg_Dat); // sends regaddress
  Wire.endTransmission(); // stop transmitting
 }
+
+uint8_t x;
+
+void setup() {
+
+Wire.begin(23,22);
+Serial.begin(9600);
+Wire.setClock(400000); // choose 400 kHz I2C rate
+Serial.println("Start i2c-test");
+
+IS_IIC_WriteByte(Addr_GND, 0x01, 0xFF); //gcc
+delay(10);
+
+
+IS_IIC_WriteByte(Addr_GND, 0x00, 0x05); //config register
+delay(10);
+
+
+
+Wire.beginTransmission(ADDR);
+Wire.write((byte)0xFC);
+Wire.endTransmission();
+Wire.beginTransmission(ADDR);
+Wire.requestFrom(ADDR, (byte)1);
+x = Wire.read();
+Wire.endTransmission();
+Serial.print("Check: ");Serial.println(x, HEX);
+delay(10);
+
+Wire.beginTransmission(ADDR);
+Wire.write((byte)0x00);
+Wire.endTransmission();
+Wire.beginTransmission(ADDR);
+Wire.requestFrom(ADDR, (byte)1);
+x = Wire.read();
+Wire.endTransmission();
+Serial.print("Register: ");Serial.println(x, HEX);
+delay(10);
+
+Wire.beginTransmission(ADDR);
+Wire.write((byte)0xF1);
+Wire.endTransmission();
+Wire.beginTransmission(ADDR);
+Wire.requestFrom(ADDR, (byte)1);
+x = Wire.read();
+Wire.endTransmission();
+Serial.print("OPEN/SHORT: ");Serial.println(x, HEX);
+delay(10);
+
+Wire.beginTransmission(ADDR);
+Wire.write((byte)0x01);
+Wire.endTransmission();
+Wire.beginTransmission(ADDR);
+Wire.requestFrom(ADDR, (byte)1);
+x = Wire.read();
+Wire.endTransmission();
+Serial.print("Current: ");Serial.println(x, HEX);
+delay(10);
+
+
+}
+
+
 
 
 
@@ -157,25 +215,37 @@ byte error;
 Serial.println("Try to contact");
 uint8_t data = 0;
 //IS_IIC_WriteByte(ADDR, 0xF1, 0xFC);
-uint8_t x;
 
- 
+ Serial.println();
 
- Wire.beginTransmission(ADDR);
- Wire.write((byte)0xFC);
- Wire.endTransmission();
+ int c = 1;
 
- Wire.beginTransmission(ADDR);
- Wire.requestFrom(ADDR, (byte)1);
- x = Wire.read();
- Wire.endTransmission();
+for(uint8_t i = 0x3; i<0x30;i++){
+    Serial.print(i, HEX); Serial.print(" ");  
+    Wire.beginTransmission(ADDR);
+    //Wire.write((byte)0xFC);
+    Wire.write((byte)i);
+    Wire.endTransmission();
+    Wire.beginTransmission(ADDR);
+    Wire.requestFrom(ADDR, (byte)1);
+    x = Wire.read();
+    Wire.endTransmission();
+    Serial.println(x, HEX);//Serial.print(" ");
+    delay(50);
+    c++;
+    }
 
 
-Serial.println(x, HEX);
+Serial.println("done");
 
-delay(1000);
+while(1){
+    delay(10);
+}
+
+
 }
 */
+
 /*
 
 #include <Arduino.h>

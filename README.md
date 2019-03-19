@@ -11,6 +11,7 @@ The main goal is to make a web connected scrolling text display, although anyone
 
 
 ### Latest Updates
+* LED Matrix works!
 * Working on the firmware (freeRTOS?)
 * Working on new control board design
 
@@ -18,13 +19,12 @@ The main goal is to make a web connected scrolling text display, although anyone
 ### Known Bugs
 * Swapped pins on the regulator footprint
     * Fixed in new version (added an aditional regulator)
+* LED driver enable pin allways down!
 * USB-to-Serial (CH340G) needs external oscillator
+	* Maybe change to a CPxxxx
 
 ### TODO
 * Fix bugs
-* (Add a boot switch for convinience)
-* Test LED Matrix with devboard
-
 
 
 ## Circuit and PCB

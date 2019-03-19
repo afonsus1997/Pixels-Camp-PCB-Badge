@@ -1,5 +1,6 @@
-#define Addr_GND 0x60
-#define Addr_GND 0x60
+#define Addr_GND 0x30
+#define Addr 0x30
+
 #define R 0xFF
 #define G 0xFF
 #define B 0xFF

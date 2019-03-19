@@ -15,6 +15,8 @@ int initWebHandles(){
 
     //server.on("/StringState", handleString);
 
+    
+
     server.serveStatic("/", SPIFFS, "/").setDefaultFile("index.html");
 
     return 1;
@@ -49,13 +51,7 @@ void handleString(AsyncWebServerRequest *request)
   request->send(200);
 }
 
-void handleSendScore(AsyncWebServerRequest *request)
-{
-  Serial.print("TIME: ");
-  Serial.println("time");
-  String sendString = "{\"Score\": " + String("time") + "}";
-  request->send(200, "application/json", sendString);
-}
+
 
 int initWifi(char *ssid, char *password){
     Serial.print("Initializing Wifi...");

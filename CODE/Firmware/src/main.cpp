@@ -35,21 +35,13 @@ void idleLedTask2( void * parameter )
   }
 }
 
-void setup()
-{
-  Serial.begin(115200);
-
-  initSPIFFS();
-  initIO();
-  initI2C();
-  //initWifi(ssid, password); 
-
+void createTasks(){
   xTaskCreate(
                     idleLedTask,          /* Task function. */
                     "idleLedTask",        /* String with name of task. */
                     10000,            /* Stack size in bytes. */
                     NULL,             /* Parameter passed as input of the task */
-                    1,                /* Priority of the task. */
+                    2,                /* Priority of the task. */
                     NULL);  
   
 
@@ -58,14 +50,26 @@ void setup()
                     "idleLedTask2",        /* String with name of task. */
                     10000,            /* Stack size in bytes. */
                     NULL,             /* Parameter passed as input of the task */
-                    1,                /* Priority of the task. */
+                    2,                /* Priority of the task. */
                     NULL);  
+}
+
+void setup()
+{
+  Serial.begin(115200);
+
+  initSPIFFS();
+  initIO();
+  //initI2C();
+  initWifi(ssid, password); 
+  
+  
   
   
 }
 
 void loop()
 {
-  Serial.print("Battery Voltage: "); Serial.println(batVoltage());
-  delay(500);
+  //Serial.print("Battery Voltage: "); Serial.println(batVoltage());
+  //delay(500);
 }

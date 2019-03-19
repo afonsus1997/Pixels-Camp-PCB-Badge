@@ -1,12 +1,15 @@
 #include "../include/matrixdriver.h"
 
+#include <Arduino.h>
+
+#define byte uint8_t
 
 
 void I2CWriteByte(int Dev_Add,int Reg_Add,int Reg_Dat)
 {
- Wire.beginTransmission(Dev_Add/2); // transmit to device IS31FL373x
- Wire.write(Reg_Add); // sends regaddress
- Wire.write(Reg_Dat); // sends regaddress
+ Wire.beginTransmission(Dev_Add); // transmit to device IS31FL373x
+ Wire.write((byte)Reg_Add); // sends regaddress
+ Wire.write((byte)Reg_Dat); // sends regaddress
  Wire.endTransmission(); // stop transmitting
 }
 
@@ -63,13 +66,65 @@ void InitMatrixDriver(int PWM)
     I2CWriteByte(Addr_GND,0xfe,0xc5);//unlock
     I2CWriteByte(Addr_GND,0xfD,0x04);//write page 4
     I2CWriteByte(Addr_GND,0x01,0x7F);//global current
+    //I2CWriteByte(Addr_GND,0x01,0xFF);//global current
     I2CWriteByte(Addr_GND,0x00,0x01);//normal operation
+    /*
+    int x;
+
+    Serial.println("Start i2c-test");
+
+    I2CWriteByte(Addr_GND, 0x01, 0xFF); //gcc
+    delay(10);
+
+    I2CWriteByte(Addr_GND, 0x00, 0x8D); //config register
+    delay(10);
+
+    Wire.beginTransmission(Addr_GND);
+    Wire.write((byte)0xFC);
+    Wire.endTransmission();
+    Wire.beginTransmission(Addr_GND);
+    Wire.requestFrom(Addr_GND, 1);
+    x = Wire.read();
+    Wire.endTransmission();
+    Serial.print("Check: ");Serial.println(x, HEX);
+    delay(10);
+
+    Wire.beginTransmission(Addr_GND);
+    Wire.write((byte)0x00);
+    Wire.endTransmission();
+    Wire.beginTransmission(Addr_GND);
+    Wire.requestFrom(Addr_GND, 1);
+    x = Wire.read();
+    Wire.endTransmission();
+    Serial.print("Register: ");Serial.println(x, HEX);
+    delay(10);
+
+    Wire.beginTransmission(Addr_GND);
+    Wire.write((byte)0xF1);
+    Wire.endTransmission();
+    Wire.beginTransmission(Addr_GND);
+    Wire.requestFrom(Addr_GND, 1);
+    x = Wire.read();
+    Wire.endTransmission();
+    Serial.print("OPEN/SHORT: ");Serial.println(x, HEX);
+    delay(10);
+
+    Wire.beginTransmission(Addr_GND);
+    Wire.write((byte)0x01);
+    Wire.endTransmission();
+    Wire.beginTransmission(Addr_GND);
+    Wire.requestFrom(Addr_GND, 1);
+    x = Wire.read();
+    Wire.endTransmission();
+    Serial.print("Current: ");Serial.println(x, HEX);
+    delay(10);*/
+    
 
     
 }
 
 void matrixTest(){
-    int i;
+    /*int i;
 
     I2CWriteByte(Addr_GND,0xfe,0xc5);//unlock
     I2CWriteByte(Addr_GND,0xfD,0x00);//write page 0
@@ -86,14 +141,26 @@ void matrixTest(){
         delay(50);
 
     } //init all the PWM data to 0
+    */
+
+   //IS31FL3741_PWM_Write(0, 1, 1, 0xFF);
+
+    int i, j, k;
+    for(j=1; j<27; j++){
+        for(k=1; k<13; k++){
+            IS31FL3741_PWM_Write(i, j, k, 0x55);
+            delay(100);
+        }
+    }
 
 
+    
 }
 
 void initI2C(){
     Wire.begin(23,22);
     Wire.setClock(400000);//I2C 1MHz
     delay(500);
-    InitMatrixDriver(0);
-    matrixTest();
+    //InitMatrixDriver(0);
+    //matrixTest();
 }
