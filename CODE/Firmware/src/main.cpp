@@ -60,8 +60,8 @@ void setup()
 
   initSPIFFS();
   initIO();
-  //initI2C();
-  initWifi(ssid, password); 
+  initI2C();
+  //initWifi(ssid, password); 
   
   
   

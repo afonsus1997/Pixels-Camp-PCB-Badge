@@ -5,7 +5,10 @@
 #define G 0xFF
 #define B 0xFF
 #define byte uint8_t
-
+#define MAXPWM 40
+#define TIME 0
+#define KEEPTIME 100
+#define STEP 4
 uint8_t i,j;
 const PROGMEM byte PWM_Gama64[64]=
 {
@@ -78,51 +81,64 @@ void Init_3741(uint8_t Rdata, uint8_t Gdata, uint8_t Bdata)
 
 void IS31FL3741_Test_mode1(void)
 {
-    IS_IIC_WriteByte(Addr_GND,0xFD,0x00);//write frist frame
-    for (j=0;j<64;j++)//all LED ramping up
+    //IS_IIC_WriteByte(Addr_GND,0xFD,0x00);//write frist frame
+    while(1){
+    
+        
+        j=0;
+
+   
+    for (j=0;j<MAXPWM;j+=STEP)//all LED ramping up
     {
         IS_IIC_WriteByte(Addr_GND,0xfe,0xc5);//unlock
         IS_IIC_WriteByte(Addr_GND,0xfD,0x00);//write page 0
         for(i=0;i<0xB4;i++)
         {
-            IS_IIC_WriteByte(Addr_GND,i,pgm_read_byte_near(&PWM_Gama64[j]));//set all PWM
+            IS_IIC_WriteByte(Addr_GND,i,j);//set all PWM
+            //IS_IIC_WriteByte(Addr_GND,i,pgm_read_byte_near(&PWM_Gama64[j]));//set all PWM
         }
         IS_IIC_WriteByte(Addr_GND,0xfe,0xc5);//unlock
         IS_IIC_WriteByte(Addr_GND,0xfD,0x01);//write page 1
         for(i=0;i<0xAB;i++)
         {
-        IS_IIC_WriteByte(Addr_GND,i,pgm_read_byte_near(&PWM_Gama64[j]));//set all PWM
+        IS_IIC_WriteByte(Addr_GND,i,j);//set all PWM
         }
-        delay(10);//10ms
+        delay(TIME);//10ms
     }
-    delay(1000); //keep on 1s
+    delay(KEEPTIME); //keep on 1s
 
-    for (j=63;j>0;j--)//all LED ramping down
+    for (j=MAXPWM;j>0;j-=STEP)//all LED ramping down
     {
     IS_IIC_WriteByte(Addr_GND,0xfe,0xc5);//unlock
     IS_IIC_WriteByte(Addr_GND,0xfD,0x00);//write page 0
     for(i=0;i<0xB4;i++)
     {
-    IS_IIC_WriteByte(Addr_GND,i,pgm_read_byte_near(&PWM_Gama64[j-1]));//set all PWM
+    IS_IIC_WriteByte(Addr_GND,i,j);//set all PWM
+    //IS_IIC_WriteByte(Addr_GND,i,pgm_read_byte_near(&PWM_Gama64[j-1]));//set all PWM
+
     }
     IS_IIC_WriteByte(Addr_GND,0xfe,0xc5);//unlock
     IS_IIC_WriteByte(Addr_GND,0xfD,0x01);//write page 1
     for(i=0;i<0xAB;i++)
     {
-    IS_IIC_WriteByte(Addr_GND,i,pgm_read_byte_near(&PWM_Gama64[j-1]));//set all PWM
+    IS_IIC_WriteByte(Addr_GND,i,j);//set all PWM  pgm_read_byte_near(j)
     }
-    delay(10);//10ms
+    delay(TIME);//10ms
     }
-    delay(500); //keep off 0.5s
+    delay(KEEPTIME); //keep off 0.5s
+  
+
+    }
 } 
 
 void setup() {
  Wire.begin(23,22);
- Wire.setClock(400000);//I2C 1MHz
+ Wire.setClock(800000);//I2C 1MHz
  Init_3741(R, G, B);
+ IS31FL3741_Test_mode1();//breath mode
+ 
 }
 void loop() {
- IS31FL3741_Test_mode1();//breath mode
 }
 
 //SDA 23

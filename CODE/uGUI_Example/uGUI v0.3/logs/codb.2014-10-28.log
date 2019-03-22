@@ -1,0 +1,103 @@
+21:50:45.194 [ModalContext] INFO  org.coocox.codb.common.log.ErrorLog - [C:/CooCox/CoIDE/bin/fossil.exe,clone,-A,admin,http://admin:1d8de7@www.coocox.org:9090/cgi-bin/repo/89d778e3-9c91-4506-a70d-361424628e47,C:/CooCox/CoIDE/repo\.rn\fossils\89d778e3-9c91-4506-a70d-361424628e47.fossil] executed OK 
+Bytes      Cards  Artifacts     Deltas
+Sent:              53          1          0          0
+waiting for server...
+processed: 16%         
+processed: 60%         
+processed: 65%         
+processed: 90%         
+Received:         340          5          1          0
+Sent:              58          2          0          0
+waiting for server...
+processed: 3%         
+processed: 89%         
+Received:         694          3          0          0
+Total network traffic: 640 bytes sent, 1218 bytes received
+Rebuilding repository meta-data...
+  0.0% complete...
+  100.0% complete...
+project-id: f9460c3e2f5c39bb6f2a3e7b89b339fafe5db44b
+server-id:  8e290ec43038275c3aebe902f4f352371d472a1e
+admin-user: admin (password is "efd7a5")
+
+21:50:45.264 [ModalContext] INFO  org.coocox.codb.common.log.ErrorLog - [C:/CooCox/CoIDE/bin/fossil.exe,open,C:/CooCox/CoIDE/repo\.rn\fossils\89d778e3-9c91-4506-a70d-361424628e47.fossil,-latest] executed OK 
+
+
+21:50:45.304 [ModalContext] INFO  org.coocox.codb.common.log.ErrorLog - [C:/CooCox/CoIDE/bin/fossil.exe,settings,crnl-glob,"*,x"] executed OK 
+
+
+21:50:45.324 [ModalContext] INFO  org.coocox.codb.common.log.ErrorLog - [C:/CooCox/CoIDE/bin/fossil.exe,settings,autosync,off] executed OK 
+
+
+21:50:45.364 [ModalContext] INFO  org.coocox.codb.common.log.ErrorLog - [C:/CooCox/CoIDE/bin/fossil.exe,add,lib,doc] executed OK 
+ADDED  doc/7e77e743-f6b9-4781-857b-e860f26f9166.html
+ADDED  doc/Reference Guide.pdf
+ADDED  doc/docInfo.dat
+ADDED  lib/uGUI/Reference Guide ugui v0.2.pdf
+ADDED  lib/uGUI/license.txt
+ADDED  lib/uGUI/ugui.c
+ADDED  lib/uGUI/ugui.h
+
+21:51:07.234 [ModalContext] INFO  org.coocox.codb.common.log.ErrorLog - [C:/CooCox/CoIDE/bin/fossil.exe,commit,-comment,commit the driver sourceCode,-force] executed OK 
+Autosync:  http://admin@www.coocox.org:9090/cgi-bin/repo/89d778e3-9c91-4506-a70d-361424628e47
+                Bytes      Cards  Artifacts     Deltas
+Sent:             130          1          0          0
+waiting for server...
+processed: 58%         
+Received:          78          2          0          0
+Total network traffic: 397 bytes sent, 317 bytes received
+New_Version: 8b9f50a141220d12a2984c48b85b90be8e7bf014
+Autosync:  http://admin@www.coocox.org:9090/cgi-bin/repo/89d778e3-9c91-4506-a70d-361424628e47
+                Bytes      Cards  Artifacts     Deltas
+Sent:         4164819         15          2          0
+waiting for server...
+processed: 11%         
+processed: 23%         
+processed: 34%         
+processed: 46%         
+processed: 58%         
+processed: 69%         
+processed: 80%         
+processed: 92%         
+Received:         405          9          0          0
+Sent:          955880         12          3          0
+waiting for server...
+processed: 11%         
+processed: 23%         
+processed: 34%         
+processed: 46%         
+processed: 57%         
+processed: 69%         
+processed: 80%         
+processed: 92%         
+Received:         402          9          0          0
+Sent:            2231         10          2          0
+waiting for server...
+processed: 11%         
+processed: 23%         
+processed: 34%         
+processed: 46%         
+processed: 57%         
+processed: 69%         
+processed: 80%         
+processed: 92%         
+Received:         400          9          0          0
+Total network traffic: 356796 bytes sent, 1470 bytes received
+
+21:51:08.104 [ModalContext] INFO  org.coocox.codb.common.log.ErrorLog - [C:/CooCox/CoIDE/bin/fossil.exe,push,http://admin:1d8de7@www.coocox.org:9090/cgi-bin/repo/89d778e3-9c91-4506-a70d-361424628e47,-R,C:/CooCox/CoIDE/repo\.rn\fossils\89d778e3-9c91-4506-a70d-361424628e47.fossil] executed OK 
+Bytes      Cards  Artifacts     Deltas
+Sent:             498          9          0          0
+waiting for server...
+Received:          32          1          0          0
+Total network traffic: 593 bytes sent, 274 bytes received
+
+21:51:08.144 [ModalContext] INFO  org.coocox.codb.common.log.ErrorLog - [C:/CooCox/CoIDE/bin/fossil.exe,close,-force] executed OK 
+
+
+21:52:29.714 [ModalContext] INFO  org.coocox.codb.common.log.ErrorLog - [C:/CooCox/CoIDE/bin/fossil.exe,open,C:/CooCox/CoIDE/repo\.rn\fossils\89d778e3-9c91-4506-a70d-361424628e47.fossil,-latest] executed OK 
+
+
+21:52:29.744 [ModalContext] INFO  org.coocox.codb.common.log.ErrorLog - [C:/CooCox/CoIDE/bin/fossil.exe,close,-force] executed OK 
+
+
+21:52:32.354 [ModalContext] INFO  org.coocox.codb.common.log.ProcessTimeLog - 2`1`2094`uploadComponent`112210

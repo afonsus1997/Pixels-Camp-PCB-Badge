@@ -1,73 +1,21 @@
 #include "../include/matrixdriver.h"
+#include "../lib/ISSI/Adafruit_IS31FL3731.h"
 
 #include <Arduino.h>
 
 #define byte uint8_t
 
+#define XSIZE 9
+#define YSIZE 39
 
-void I2CWriteByte(int Dev_Add,int Reg_Add,int Reg_Dat)
-{
- Wire.beginTransmission(Dev_Add); // transmit to device IS31FL373x
- Wire.write((byte)Reg_Add); // sends regaddress
- Wire.write((byte)Reg_Dat); // sends regaddress
- Wire.endTransmission(); // stop transmitting
-}
+#define Addr_GND 0x30
+
+IS31FL3731 matrix = IS31FL3731();
 
 
 void InitMatrixDriver(int PWM)
 {
-    
-    int i;
-    int Rdata = 0xFF;
-    int Gdata = 0xFF;
-    int Bdata = 0xFF;
-    
-    I2CWriteByte(Addr_GND,0xfe,0xc5);//unlock
-    I2CWriteByte(Addr_GND,0xfD,0x02);//write page 2
-    for(i=2;i<0xB4;i+=3)
-        {
-            I2CWriteByte(Addr_GND,i,Rdata);//R LED Scaling
-        }
-    for(i=1;i<0xB4;i+=3)
-    {
-        I2CWriteByte(Addr_GND,i,Gdata);//G LED Scaling
-    }
-    for(i=0;i<0xB4;i+=3)
-    {
-        I2CWriteByte(Addr_GND,i,Bdata);//B LED Scaling
-    }
-    I2CWriteByte(Addr_GND,0xfe,0xc5);//unlock
-    I2CWriteByte(Addr_GND,0xfD,0x03);//write page 3
-    for(i=2;i<0xAB;i+=3)
-    {
-        I2CWriteByte(Addr_GND,i,Rdata);//R LED Scaling
-    }
-    for(i=1;i<0xAB;i+=3)
-    {
-        I2CWriteByte(Addr_GND,i,Gdata);//G LED Scaling
-    }
-    for(i=0;i<0xAB;i+=3)
-    {
-        I2CWriteByte(Addr_GND,i,Bdata);//B LED Scaling
-    }
-    I2CWriteByte(Addr_GND,0xfe,0xc5);//unlock
-    I2CWriteByte(Addr_GND,0xfD,0x00);//write page 0
-    for(i=0;i<0xB4;i++)
-    {
-        I2CWriteByte(Addr_GND,i,0x00);//write all PWM set 0x00
-    }
-    I2CWriteByte(Addr_GND,0xfe,0xc5);//unlock
-    I2CWriteByte(Addr_GND,0xfD,0x01);//write page 1
-    for(i=0;i<0xAB;i++)
-    {
-        I2CWriteByte(Addr_GND,i,0x00);//write all PWM set 0x00
-    } //init all the PWM data to 0
-
-    I2CWriteByte(Addr_GND,0xfe,0xc5);//unlock
-    I2CWriteByte(Addr_GND,0xfD,0x04);//write page 4
-    I2CWriteByte(Addr_GND,0x01,0x7F);//global current
-    //I2CWriteByte(Addr_GND,0x01,0xFF);//global current
-    I2CWriteByte(Addr_GND,0x00,0x01);//normal operation
+    int x;
     /*
     int x;
 
@@ -122,29 +70,29 @@ void InitMatrixDriver(int PWM)
 
     
 }
-
+/*
 void matrixTest(){
-    /*int i;
+    int i;
 
     I2CWriteByte(Addr_GND,0xfe,0xc5);//unlock
     I2CWriteByte(Addr_GND,0xfD,0x00);//write page 0
     for(i=0;i<0xB4;i++)
     {
-        I2CWriteByte(Addr_GND,i,0xFF);//write all PWM set 0x00
-        delay(50);
+        I2CWriteByte(Addr_GND,i,0x00);//write all PWM set 0x00
+        //delay(50);
     }
     I2CWriteByte(Addr_GND,0xfe,0xc5);//unlock
     I2CWriteByte(Addr_GND,0xfD,0x01);//write page 1
     for(i=0;i<0xAB;i++)
     {
-        I2CWriteByte(Addr_GND,i,0xFF);//write all PWM set 0x00
-        delay(50);
+        I2CWriteByte(Addr_GND,i,0x00);//write all PWM set 0x00
+        //delay(50);
 
     } //init all the PWM data to 0
-    */
+    
 
    //IS31FL3741_PWM_Write(0, 1, 1, 0xFF);
-
+    /*
     int i, j, k;
     for(j=1; j<27; j++){
         for(k=1; k<13; k++){
@@ -152,15 +100,54 @@ void matrixTest(){
             delay(100);
         }
     }
+    ///////
 
+   //I2CWriteByte(Addr_GND,0xFE,0xC5); UNLOCK
+   //I2CWriteByte(Addr_GND,0xFD,0x00); //SELECT PAGE 
+                                     //PAGE0 0x00
+                                     //PAGE1 0x01
+   //I2CWriteByte(Addr_GND,0xFE,0xC5);I2CWriteByte(Addr_GND,0xFD,0x00);I2CWriteByte(Addr_GND,0x02,idata);
+    writePixel(0, 0, 0x60);
+    writePixel(1, 1, 0x60);
+    writePixel(3, 3, 0x60);
+    
+
+    delay(500);
+    //I2CWriteByte(Addr_GND,0xFE,0xC5);I2CWriteByte(Addr_GND,0xFD,0x01);I2CWriteByte(Addr_GND,0x00,0xFF);
 
     
-}
+}*/
+
+
 
 void initI2C(){
-    Wire.begin(23,22);
-    Wire.setClock(400000);//I2C 1MHz
-    delay(500);
+    //Wire.begin(23,22);
+    //Wire.setClock(400000);//I2C 1MHz
+    //delay(500);
     //InitMatrixDriver(0);
-    //matrixTest();
+    matrix.begin();
+    matrix.drawPixel(0, 0, 0xFF);
+    matrix.print("AltLab");
+    matrix.drawPixel(0, 0, 0x00);
+    //matrix.drawRect(0, 0, 39, 9, 0x60);
+    /*
+    String text = "Pixels Camp"; // sample text
+    const int width = 30; // width of the marquee display (in characters)
+
+    for (int offset = 0; offset < text.length(); offset++)
+    {
+    // Construct the string to display for this iteration
+    String t = "";
+    for (int i = 0; i < width; i++){
+        t += text.charAt((offset + i) % text.length());
+         // Print the string for this iteration
+        matrix.setCursor(0, matrix.height()/2-10); // display will be halfway down screen
+        matrix.print(t);
+    // Short delay so the text doesn't move too fast
+        delay(200);
+        }
+    }
+    */
+
 }
+
