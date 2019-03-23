@@ -118,7 +118,38 @@ void matrixTest(){
     
 }*/
 
+void textScroll(){
+    while(1){
+        String text = "Next Pixels When, Celso?   "; // sample text
+        const int width = 6; // width of the marquee display (in characters)
 
+        for (int offset = 0; offset < text.length(); offset++)
+        {
+        // Construct the string to display for this iteration
+            //matrix.fillRect(0, 1, 35, 9, 0x00);            
+        
+        String t = "";
+        for (int i = 0; i < width; i++){
+            t += text.charAt((offset + i) % text.length());
+            // Print the string for this iteration
+            matrix.setCursor(0, 1); // display will be halfway down screen
+            matrix.print(t);
+            //Serial.print("Current String: "); Serial.println(t);
+            // Short delay so the text doesn't move too fast
+            //delay(10);
+            
+
+            }
+            delay(150);
+            matrix.setCursor(0, 1);
+            matrix.setTextColor(0x00);
+            matrix.print(t);
+            matrix.setTextColor(0x60);
+            
+
+        }
+    }
+}
 
 void initI2C(){
     //Wire.begin(23,22);
@@ -126,28 +157,15 @@ void initI2C(){
     //delay(500);
     //InitMatrixDriver(0);
     matrix.begin();
-    matrix.drawPixel(0, 0, 0xFF);
-    matrix.print("AltLab");
-    matrix.drawPixel(0, 0, 0x00);
-    //matrix.drawRect(0, 0, 39, 9, 0x60);
-    /*
-    String text = "Pixels Camp"; // sample text
-    const int width = 30; // width of the marquee display (in characters)
+    //matrix.drawPixel(0, 0, 0xFF);
+    //matrix.setTextColor(0x60, 0x00);
 
-    for (int offset = 0; offset < text.length(); offset++)
-    {
-    // Construct the string to display for this iteration
-    String t = "";
-    for (int i = 0; i < width; i++){
-        t += text.charAt((offset + i) % text.length());
-         // Print the string for this iteration
-        matrix.setCursor(0, matrix.height()/2-10); // display will be halfway down screen
-        matrix.print(t);
-    // Short delay so the text doesn't move too fast
-        delay(200);
-        }
-    }
-    */
+    //matrix.print("Pixels");
+    //matrix.setTextWrap(false);
+    textScroll();
+
+    //matrix.drawRect(0, 0, 39, 9, 0x60);
+    
 
 }
 
