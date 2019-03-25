@@ -120,7 +120,9 @@ void matrixTest(){
 
 void textScroll(){
     while(1){
-        String text = "Next Pixels When, Celso?   "; // sample text
+        //String text = "    //HABIT #IoTWizard    "; // sample text
+        String text = "    Next Pixels When, Celso?    "; // sample text
+        
         const int width = 6; // width of the marquee display (in characters)
 
         for (int offset = 0; offset < text.length(); offset++)
@@ -140,11 +142,11 @@ void textScroll(){
             
 
             }
-            delay(150);
+            delay(125);
             matrix.setCursor(0, 1);
             matrix.setTextColor(0x00);
             matrix.print(t);
-            matrix.setTextColor(0x60);
+            matrix.setTextColor(0xC0);
             
 
         }
@@ -162,6 +164,7 @@ void initI2C(){
 
     //matrix.print("Pixels");
     //matrix.setTextWrap(false);
+    matrix.setTextColor(0xC0);
     textScroll();
 
     //matrix.drawRect(0, 0, 39, 9, 0x60);

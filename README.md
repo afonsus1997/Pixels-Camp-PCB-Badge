@@ -1,5 +1,7 @@
 # Pixels Camp PCB Badge
 
+![Working!](https://i.imgur.com/fAwjtKI.jpg)
+
 ## Info
 This is a PCB badge for the 2019 edition of pixels camp. The project consists on a 39x9 (351) LED matrix display driven by the IS31FL3741 IC and controlled by an ESP32, making it wifi-connected. The board can be powered by usb and/or a 1s lipo battery (charges with usb).
 
@@ -30,6 +32,12 @@ The main goal is to make a web connected scrolling text display, although anyone
 ## Circuit and PCB
 
 ### Circuit
+
+#### Schematics
+All Schematics can be found in the PDF folder of the PCB Project
+*   [PDFs Folder](https://github.com/afonsus1997/Pixels-Camp-PCB-Badge/tree/master/PCB%20ESP32/PDF)
+	* [Control Board Schematic](https://github.com/afonsus1997/Pixels-Camp-PCB-Badge/blob/master/PCB%20ESP32/PDF/CONTROL/Schematic.PDF)   
+	* [Matrix Schematic](https://github.com/afonsus1997/Pixels-Camp-PCB-Badge/blob/master/PCB%20ESP32/PDF/MATRIX/Schematic.PDF) 	
 
 #### Power
 Power is supplied by usb and/or 1s lipo, with usb charging capabilities.
