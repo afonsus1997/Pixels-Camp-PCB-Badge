@@ -118,12 +118,12 @@ void matrixTest(){
     
 }*/
 
-void textScroll(){
+/*void textScroll(){
     while(1){
         //String text = "    //HABIT #IoTWizard    "; // sample text
         String text = "    Next Pixels When, Celso?    "; // sample text
         
-        const int width = 6; // width of the marquee display (in characters)
+        //const int width = 6; // width of the marquee display (in characters)
 
         for (int offset = 0; offset < text.length(); offset++)
         {
@@ -151,7 +151,7 @@ void textScroll(){
 
         }
     }
-}
+}*/
 
 void initI2C(){
     //Wire.begin(23,22);
@@ -161,11 +161,11 @@ void initI2C(){
     matrix.begin();
     //matrix.drawPixel(0, 0, 0xFF);
     //matrix.setTextColor(0x60, 0x00);
-
-    //matrix.print("Pixels");
+    matrix.setCursor(2, 1);
+    matrix.print("*DEEC*");
     //matrix.setTextWrap(false);
     matrix.setTextColor(0xC0);
-    textScroll();
+    //textScroll();
 
     //matrix.drawRect(0, 0, 39, 9, 0x60);
     
