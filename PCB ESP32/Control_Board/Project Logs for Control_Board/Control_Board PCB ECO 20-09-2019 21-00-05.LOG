@@ -1,0 +1,305 @@
+Removed Pin From Net: NetName=GND Pin=U1-1
+Removed Pin From Net: NetName=CS34 Pin=U5-1
+Removed Pin From Net: NetName=CS35 Pin=U5-2
+Removed Pin From Net: NetName=CS36 Pin=U5-3
+Removed Pin From Net: NetName=CS37 Pin=U5-4
+Removed Pin From Net: NetName=CS38 Pin=U5-5
+Removed Pin From Net: NetName=CS39 Pin=U5-6
+Removed Pin From Net: NetName=CS1 Pin=U5-26
+Removed Pin From Net: NetName=CS2 Pin=U5-27
+Removed Pin From Net: NetName=CS3 Pin=U5-28
+Removed Pin From Net: NetName=CS4 Pin=U5-29
+Removed Pin From Net: NetName=CS5 Pin=U5-30
+Removed Pin From Net: NetName=CS6 Pin=U5-31
+Removed Pin From Net: NetName=CS7 Pin=U5-32
+Removed Pin From Net: NetName=CS8 Pin=U5-33
+Removed Pin From Net: NetName=CS9 Pin=U5-34
+Removed Pin From Net: NetName=CS10 Pin=U5-35
+Removed Pin From Net: NetName=CS11 Pin=U5-37
+Removed Pin From Net: NetName=CS12 Pin=U5-38
+Removed Pin From Net: NetName=CS13 Pin=U5-39
+Removed Pin From Net: NetName=CS14 Pin=U5-40
+Removed Pin From Net: NetName=CS15 Pin=U5-41
+Removed Pin From Net: NetName=CS16 Pin=U5-42
+Removed Pin From Net: NetName=CS17 Pin=U5-43
+Removed Pin From Net: NetName=CS18 Pin=U5-44
+Removed Pin From Net: NetName=CS19 Pin=U5-45
+Removed Pin From Net: NetName=CS20 Pin=U5-46
+Removed Pin From Net: NetName=CS21 Pin=U5-47
+Removed Pin From Net: NetName=CS22 Pin=U5-48
+Removed Pin From Net: NetName=CS23 Pin=U5-49
+Removed Pin From Net: NetName=CS24 Pin=U5-50
+Removed Pin From Net: NetName=CS25 Pin=U5-51
+Removed Pin From Net: NetName=CS26 Pin=U5-52
+Removed Pin From Net: NetName=CS27 Pin=U5-53
+Removed Pin From Net: NetName=CS28 Pin=U5-54
+Removed Pin From Net: NetName=CS29 Pin=U5-56
+Removed Pin From Net: NetName=CS30 Pin=U5-57
+Removed Pin From Net: NetName=CS31 Pin=U5-58
+Removed Pin From Net: NetName=CS32 Pin=U5-59
+Removed Pin From Net: NetName=CS33 Pin=U5-60
+Added Component: Designator=RN1(RESARRAY(4x0603))
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "CTS Resistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "742C083121JP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "1206 CTS Components"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/742C083121JP/CTS%20Resistor%20Products/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=RN2(RESARRAY(4x0603))
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "CTS Resistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "742C083121JP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "1206 CTS Components"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/742C083121JP/CTS%20Resistor%20Products/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=RN3(RESARRAY(4x0603))
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "CTS Resistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "742C083121JP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "1206 CTS Components"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/742C083121JP/CTS%20Resistor%20Products/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=RN4(RESARRAY(4x0603))
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "CTS Resistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "742C083121JP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "1206 CTS Components"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/742C083121JP/CTS%20Resistor%20Products/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=RN5(RESARRAY(4x0603))
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "CTS Resistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "742C083121JP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "1206 CTS Components"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/742C083121JP/CTS%20Resistor%20Products/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=RN6(RESARRAY(4x0603))
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "CTS Resistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "742C083121JP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "1206 CTS Components"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/742C083121JP/CTS%20Resistor%20Products/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=RN7(RESARRAY(4x0603))
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "CTS Resistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "742C083121JP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "1206 CTS Components"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/742C083121JP/CTS%20Resistor%20Products/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=RN8(RESARRAY(4x0603))
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "CTS Resistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "742C083121JP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "1206 CTS Components"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/742C083121JP/CTS%20Resistor%20Products/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=RN9(RESARRAY(4x0603))
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "CTS Resistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "742C083121JP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "1206 CTS Components"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/742C083121JP/CTS%20Resistor%20Products/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=RN10(RESARRAY(4x0603))
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "CTS Resistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "742C083121JP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "1206 CTS Components"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/742C083121JP/CTS%20Resistor%20Products/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=U2(UDFN6 CASE 517DD)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=CS4 Pin=RN1-5
+Added Pin To Net: NetName=CS3 Pin=RN1-6
+Added Pin To Net: NetName=CS2 Pin=RN1-7
+Added Pin To Net: NetName=CS1 Pin=RN1-8
+Added Pin To Net: NetName=CS8 Pin=RN2-5
+Added Pin To Net: NetName=CS7 Pin=RN2-6
+Added Pin To Net: NetName=CS6 Pin=RN2-7
+Added Pin To Net: NetName=CS5 Pin=RN2-8
+Added Pin To Net: NetName=CS12 Pin=RN3-5
+Added Pin To Net: NetName=CS11 Pin=RN3-6
+Added Pin To Net: NetName=CS10 Pin=RN3-7
+Added Pin To Net: NetName=CS9 Pin=RN3-8
+Added Pin To Net: NetName=CS16 Pin=RN4-5
+Added Pin To Net: NetName=CS15 Pin=RN4-6
+Added Pin To Net: NetName=CS14 Pin=RN4-7
+Added Pin To Net: NetName=CS13 Pin=RN4-8
+Added Pin To Net: NetName=CS20 Pin=RN5-5
+Added Pin To Net: NetName=CS19 Pin=RN5-6
+Added Pin To Net: NetName=CS18 Pin=RN5-7
+Added Pin To Net: NetName=CS17 Pin=RN5-8
+Added Pin To Net: NetName=CS24 Pin=RN6-5
+Added Pin To Net: NetName=CS23 Pin=RN6-6
+Added Pin To Net: NetName=CS22 Pin=RN6-7
+Added Pin To Net: NetName=CS21 Pin=RN6-8
+Added Pin To Net: NetName=CS28 Pin=RN7-5
+Added Pin To Net: NetName=CS27 Pin=RN7-6
+Added Pin To Net: NetName=CS26 Pin=RN7-7
+Added Pin To Net: NetName=CS25 Pin=RN7-8
+Added Pin To Net: NetName=CS32 Pin=RN8-5
+Added Pin To Net: NetName=CS31 Pin=RN8-6
+Added Pin To Net: NetName=CS30 Pin=RN8-7
+Added Pin To Net: NetName=CS29 Pin=RN8-8
+Added Pin To Net: NetName=CS36 Pin=RN9-5
+Added Pin To Net: NetName=CS35 Pin=RN9-6
+Added Pin To Net: NetName=CS34 Pin=RN9-7
+Added Pin To Net: NetName=CS33 Pin=RN9-8
+Added Pin To Net: NetName=CS39 Pin=RN10-6
+Added Pin To Net: NetName=CS38 Pin=RN10-7
+Added Pin To Net: NetName=CS37 Pin=RN10-8
+Added Pin To Net: NetName=NetR22_1 Pin=U2-1
+Added Pin To Net: NetName=GND Pin=U2-2
+Added Pin To Net: NetName=GND Pin=U2-2
+Added Pin To Net: NetName=VCC3V3 Pin=U2-4
+Added Pin To Net: NetName=VCC3V3 Pin=U2-5
+Added Pin To Net: NetName=NetR22_1 Pin=U2-6
+Added Pin To Net: NetName=NetRN1_1 Pin=RN1-1
+Added Pin To Net: NetName=NetRN1_1 Pin=U5-26
+Added Net: Name=NetRN1_1
+Added Pin To Net: NetName=NetRN1_2 Pin=RN1-2
+Added Pin To Net: NetName=NetRN1_2 Pin=U5-27
+Added Net: Name=NetRN1_2
+Added Pin To Net: NetName=NetRN1_3 Pin=RN1-3
+Added Pin To Net: NetName=NetRN1_3 Pin=U5-28
+Added Net: Name=NetRN1_3
+Added Pin To Net: NetName=NetRN1_4 Pin=RN1-4
+Added Pin To Net: NetName=NetRN1_4 Pin=U5-29
+Added Net: Name=NetRN1_4
+Added Pin To Net: NetName=NetRN2_1 Pin=RN2-1
+Added Pin To Net: NetName=NetRN2_1 Pin=U5-30
+Added Net: Name=NetRN2_1
+Added Pin To Net: NetName=NetRN2_2 Pin=RN2-2
+Added Pin To Net: NetName=NetRN2_2 Pin=U5-31
+Added Net: Name=NetRN2_2
+Added Pin To Net: NetName=NetRN2_3 Pin=RN2-3
+Added Pin To Net: NetName=NetRN2_3 Pin=U5-32
+Added Net: Name=NetRN2_3
+Added Pin To Net: NetName=NetRN2_4 Pin=RN2-4
+Added Pin To Net: NetName=NetRN2_4 Pin=U5-33
+Added Net: Name=NetRN2_4
+Added Pin To Net: NetName=NetRN3_1 Pin=RN3-1
+Added Pin To Net: NetName=NetRN3_1 Pin=U5-34
+Added Net: Name=NetRN3_1
+Added Pin To Net: NetName=NetRN3_2 Pin=RN3-2
+Added Pin To Net: NetName=NetRN3_2 Pin=U5-35
+Added Net: Name=NetRN3_2
+Added Pin To Net: NetName=NetRN3_3 Pin=RN3-3
+Added Pin To Net: NetName=NetRN3_3 Pin=U5-37
+Added Net: Name=NetRN3_3
+Added Pin To Net: NetName=NetRN3_4 Pin=RN3-4
+Added Pin To Net: NetName=NetRN3_4 Pin=U5-38
+Added Net: Name=NetRN3_4
+Added Pin To Net: NetName=NetRN4_1 Pin=RN4-1
+Added Pin To Net: NetName=NetRN4_1 Pin=U5-39
+Added Net: Name=NetRN4_1
+Added Pin To Net: NetName=NetRN4_2 Pin=RN4-2
+Added Pin To Net: NetName=NetRN4_2 Pin=U5-40
+Added Net: Name=NetRN4_2
+Added Pin To Net: NetName=NetRN4_3 Pin=RN4-3
+Added Pin To Net: NetName=NetRN4_3 Pin=U5-41
+Added Net: Name=NetRN4_3
+Added Pin To Net: NetName=NetRN4_4 Pin=RN4-4
+Added Pin To Net: NetName=NetRN4_4 Pin=U5-42
+Added Net: Name=NetRN4_4
+Added Pin To Net: NetName=NetRN5_1 Pin=RN5-1
+Added Pin To Net: NetName=NetRN5_1 Pin=U5-43
+Added Net: Name=NetRN5_1
+Added Pin To Net: NetName=NetRN5_2 Pin=RN5-2
+Added Pin To Net: NetName=NetRN5_2 Pin=U5-44
+Added Net: Name=NetRN5_2
+Added Pin To Net: NetName=NetRN5_3 Pin=RN5-3
+Added Pin To Net: NetName=NetRN5_3 Pin=U5-45
+Added Net: Name=NetRN5_3
+Added Pin To Net: NetName=NetRN5_4 Pin=RN5-4
+Added Pin To Net: NetName=NetRN5_4 Pin=U5-46
+Added Net: Name=NetRN5_4
+Added Pin To Net: NetName=NetRN6_1 Pin=RN6-1
+Added Pin To Net: NetName=NetRN6_1 Pin=U5-47
+Added Net: Name=NetRN6_1
+Added Pin To Net: NetName=NetRN6_2 Pin=RN6-2
+Added Pin To Net: NetName=NetRN6_2 Pin=U5-48
+Added Net: Name=NetRN6_2
+Added Pin To Net: NetName=NetRN6_3 Pin=RN6-3
+Added Pin To Net: NetName=NetRN6_3 Pin=U5-49
+Added Net: Name=NetRN6_3
+Added Pin To Net: NetName=NetRN6_4 Pin=RN6-4
+Added Pin To Net: NetName=NetRN6_4 Pin=U5-50
+Added Net: Name=NetRN6_4
+Added Pin To Net: NetName=NetRN7_1 Pin=RN7-1
+Added Pin To Net: NetName=NetRN7_1 Pin=U5-51
+Added Net: Name=NetRN7_1
+Added Pin To Net: NetName=NetRN7_2 Pin=RN7-2
+Added Pin To Net: NetName=NetRN7_2 Pin=U5-52
+Added Net: Name=NetRN7_2
+Added Pin To Net: NetName=NetRN7_3 Pin=RN7-3
+Added Pin To Net: NetName=NetRN7_3 Pin=U5-53
+Added Net: Name=NetRN7_3
+Added Pin To Net: NetName=NetRN7_4 Pin=RN7-4
+Added Pin To Net: NetName=NetRN7_4 Pin=U5-54
+Added Net: Name=NetRN7_4
+Added Pin To Net: NetName=NetRN8_1 Pin=RN8-1
+Added Pin To Net: NetName=NetRN8_1 Pin=U5-56
+Added Net: Name=NetRN8_1
+Added Pin To Net: NetName=NetRN8_2 Pin=RN8-2
+Added Pin To Net: NetName=NetRN8_2 Pin=U5-57
+Added Net: Name=NetRN8_2
+Added Pin To Net: NetName=NetRN8_3 Pin=RN8-3
+Added Pin To Net: NetName=NetRN8_3 Pin=U5-58
+Added Net: Name=NetRN8_3
+Added Pin To Net: NetName=NetRN8_4 Pin=RN8-4
+Added Pin To Net: NetName=NetRN8_4 Pin=U5-59
+Added Net: Name=NetRN8_4
+Added Pin To Net: NetName=NetRN9_1 Pin=RN9-1
+Added Pin To Net: NetName=NetRN9_1 Pin=U5-60
+Added Net: Name=NetRN9_1
+Added Pin To Net: NetName=NetRN9_2 Pin=RN9-2
+Added Pin To Net: NetName=NetRN9_2 Pin=U5-1
+Added Net: Name=NetRN9_2
+Added Pin To Net: NetName=NetRN9_3 Pin=RN9-3
+Added Pin To Net: NetName=NetRN9_3 Pin=U5-2
+Added Net: Name=NetRN9_3
+Added Pin To Net: NetName=NetRN9_4 Pin=RN9-4
+Added Pin To Net: NetName=NetRN9_4 Pin=U5-3
+Added Net: Name=NetRN9_4
+Added Pin To Net: NetName=NetRN10_1 Pin=RN10-1
+Added Pin To Net: NetName=NetRN10_1 Pin=U5-4
+Added Net: Name=NetRN10_1
+Added Pin To Net: NetName=NetRN10_2 Pin=RN10-2
+Added Pin To Net: NetName=NetRN10_2 Pin=U5-5
+Added Net: Name=NetRN10_2
+Added Pin To Net: NetName=NetRN10_3 Pin=RN10-3
+Added Pin To Net: NetName=NetRN10_3 Pin=U5-6
+Added Net: Name=NetRN10_3
+Added Member To Class: ClassName=Sheet2 Member=Component RN1 742C083121JP
+Added Member To Class: ClassName=Sheet2 Member=Component RN2 742C083121JP
+Added Member To Class: ClassName=Sheet2 Member=Component RN3 742C083121JP
+Added Member To Class: ClassName=Sheet2 Member=Component RN4 742C083121JP
+Added Member To Class: ClassName=Sheet2 Member=Component RN5 742C083121JP
+Added Member To Class: ClassName=Sheet2 Member=Component RN6 742C083121JP
+Added Member To Class: ClassName=Sheet2 Member=Component RN7 742C083121JP
+Added Member To Class: ClassName=Sheet2 Member=Component RN8 742C083121JP
+Added Member To Class: ClassName=Sheet2 Member=Component RN9 742C083121JP
+Added Member To Class: ClassName=Sheet2 Member=Component RN10 742C083121JP
+Added Member To Class: ClassName=Sheet2 Member=Component U2 NCP708

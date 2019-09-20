@@ -1,0 +1,40 @@
+Removed Pin From Net: NetName=GND Pin=U4-1
+Removed Pin From Net: NetName=VCC3V3 Pin=U4-4
+Removed Pin From Net: NetName=D+ Pin=U4-5
+Removed Pin From Net: NetName=D- Pin=U4-6
+Removed Pin From Net: NetName=DTR Pin=U4-13
+Removed Pin From Net: NetName=RTS Pin=U4-14
+Removed Pin From Net: NetName=VCC3V3 Pin=U4-16
+Removed Member From Class: ClassName=Sheet2 Member=TP1
+Removed Member From Class: ClassName=Sheet2 Member=TP3
+Removed Member From Class: ClassName=Sheet2 Member=TP7
+Removed Member From Class: ClassName=Sheet2 Member=TP8
+Change Component Comment : Designator=C10 Old Comment=Capacitor New Comment=100nF
+Change Component Comment : Designator=U4 Old Comment=CH340G New Comment=CP2102-GM
+Change component parameters: Designator = "U4"; Footprint = "QFN28_5X5"; UniqueID = "\DOTXHDRC"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Built_By"; Value = "EMA_UL_Team"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Copyright"; Value = "Copyright (C) 2018 Accelerated Designs. All rights reserved"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "CP2102-GM"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "DEV"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "Value"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Vendor"; Value = "Silicon Labs"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=U4-3
+Added Pin To Net: NetName=D+ Pin=U4-4
+Added Pin To Net: NetName=D- Pin=U4-5
+Added Pin To Net: NetName=VCC3V3 Pin=U4-6
+Added Pin To Net: NetName=VCC3V3 Pin=U4-7
+Added Pin To Net: NetName=VBus Pin=U4-8
+Added Net: Name=CTS
+Added Pin To Net: NetName=DCD Pin=U4-1
+Added Net: Name=DCD
+Added Net: Name=DSR
+Added Pin To Net: NetName=NetR25_2 Pin=U1-35
+Added Net: Name=NetR25_2
+Added Pin To Net: NetName=NetR26_2 Pin=U1-34
+Added Net: Name=NetR26_2
+Added Pin To Net: NetName=RI Pin=U4-2
+Added Net: Name=RI
+Added Net: Name=RX_CP
+Added Net: Name=TX_CP
