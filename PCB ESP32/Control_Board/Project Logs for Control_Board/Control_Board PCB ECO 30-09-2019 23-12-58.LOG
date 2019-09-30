@@ -1,0 +1,36 @@
+Removed Pin From Net: NetName=NetR22_1 Pin=R22-1
+Removed Pin From Net: NetName=GND Pin=U5-61
+Removed Member From Class: ClassName=Sheet2 Member=R22
+Change Component Description : Designator=RN1 Old Description=Res Thick Film Array 120 Ohm 5% 1/4W ±200ppm/°C ISOL Molded 8-Pin 1206_4 X 0603_ Concave SMD Paper T/R New Description=
+Res Thick Film Array 120 Ohm 5% 1/4W ±200ppm/°C ISOL Molded 8-Pin 1206_4 X 0603_ Concave SMD Paper T/R
+
+Change Component Description : Designator=RN2 Old Description=Res Thick Film Array 120 Ohm 5% 1/4W ±200ppm/°C ISOL Molded 8-Pin 1206_4 X 0603_ Concave SMD Paper T/R New Description=
+Res Thick Film Array 120 Ohm 5% 1/4W ±200ppm/°C ISOL Molded 8-Pin 1206_4 X 0603_ Concave SMD Paper T/R
+
+Change Component Description : Designator=RN3 Old Description=Res Thick Film Array 120 Ohm 5% 1/4W ±200ppm/°C ISOL Molded 8-Pin 1206_4 X 0603_ Concave SMD Paper T/R New Description=
+Res Thick Film Array 120 Ohm 5% 1/4W ±200ppm/°C ISOL Molded 8-Pin 1206_4 X 0603_ Concave SMD Paper T/R
+
+Change Component Description : Designator=RN4 Old Description=Res Thick Film Array 120 Ohm 5% 1/4W ±200ppm/°C ISOL Molded 8-Pin 1206_4 X 0603_ Concave SMD Paper T/R New Description=
+Res Thick Film Array 120 Ohm 5% 1/4W ±200ppm/°C ISOL Molded 8-Pin 1206_4 X 0603_ Concave SMD Paper T/R
+
+Change Component Description : Designator=RN5 Old Description=Res Thick Film Array 120 Ohm 5% 1/4W ±200ppm/°C ISOL Molded 8-Pin 1206_4 X 0603_ Concave SMD Paper T/R New Description=
+Res Thick Film Array 120 Ohm 5% 1/4W ±200ppm/°C ISOL Molded 8-Pin 1206_4 X 0603_ Concave SMD Paper T/R
+
+Change Component Description : Designator=RN6 Old Description=Res Thick Film Array 120 Ohm 5% 1/4W ±200ppm/°C ISOL Molded 8-Pin 1206_4 X 0603_ Concave SMD Paper T/R New Description=
+Res Thick Film Array 120 Ohm 5% 1/4W ±200ppm/°C ISOL Molded 8-Pin 1206_4 X 0603_ Concave SMD Paper T/R
+
+Change Component Description : Designator=RN7 Old Description=Res Thick Film Array 120 Ohm 5% 1/4W ±200ppm/°C ISOL Molded 8-Pin 1206_4 X 0603_ Concave SMD Paper T/R New Description=
+Res Thick Film Array 120 Ohm 5% 1/4W ±200ppm/°C ISOL Molded 8-Pin 1206_4 X 0603_ Concave SMD Paper T/R
+
+Change Component Description : Designator=RN8 Old Description=Res Thick Film Array 120 Ohm 5% 1/4W ±200ppm/°C ISOL Molded 8-Pin 1206_4 X 0603_ Concave SMD Paper T/R New Description=
+Res Thick Film Array 120 Ohm 5% 1/4W ±200ppm/°C ISOL Molded 8-Pin 1206_4 X 0603_ Concave SMD Paper T/R
+
+Change Component Description : Designator=RN9 Old Description=Res Thick Film Array 120 Ohm 5% 1/4W ±200ppm/°C ISOL Molded 8-Pin 1206_4 X 0603_ Concave SMD Paper T/R New Description=
+Res Thick Film Array 120 Ohm 5% 1/4W ±200ppm/°C ISOL Molded 8-Pin 1206_4 X 0603_ Concave SMD Paper T/R
+
+Change Component Description : Designator=RN10 Old Description=Res Thick Film Array 120 Ohm 5% 1/4W ±200ppm/°C ISOL Molded 8-Pin 1206_4 X 0603_ Concave SMD Paper T/R New Description=
+Res Thick Film Array 120 Ohm 5% 1/4W ±200ppm/°C ISOL Molded 8-Pin 1206_4 X 0603_ Concave SMD Paper T/R
+
+Added Pin To Net: NetName=NetR22_1 Pin=AMS1117-3
+Added Pin To Net: NetName=SDB Pin=U1-30
+Change Net Name : Old Net Name=NetR22_1 New Net Name=NetAMS1117_3
