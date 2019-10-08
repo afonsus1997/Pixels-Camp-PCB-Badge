@@ -28,7 +28,7 @@ DItemRevisionGUID=
 ReportSuppressedErrorsInMessages=0
 FSMCodingStyle=eFMSDropDownList_OneProcess
 FSMEncodingStyle=eFMSDropDownList_OneHot
-OutputPath=
+OutputPath=Project Outputs for Panel
 LogFolderPath=
 ManagedProjectGUID=
 IncludeDesignInRelease=0
@@ -72,91 +72,91 @@ GenerateClassCluster=0
 DocumentUniqueId=
 
 [GeneratedDocument1]
-DocumentPath=GERBER\panel-RoundHoles.TXT
+DocumentPath=..\GERBERS\Panel\panel-RoundHoles.TXT
 DItemRevisionGUID=
 
 [GeneratedDocument2]
-DocumentPath=GERBER\panel-SlotHoles.TXT
+DocumentPath=..\GERBERS\Panel\panel-SlotHoles.TXT
 DItemRevisionGUID=
 
 [GeneratedDocument3]
-DocumentPath=GERBER\panel.DRR
+DocumentPath=..\GERBERS\Panel\panel.DRR
 DItemRevisionGUID=
 
 [GeneratedDocument4]
-DocumentPath=GERBER\panel.EXTREP
+DocumentPath=..\GERBERS\Panel\panel.EXTREP
 DItemRevisionGUID=
 
 [GeneratedDocument5]
-DocumentPath=GERBER\panel.GBL
+DocumentPath=..\GERBERS\Panel\panel.GBL
 DItemRevisionGUID=
 
 [GeneratedDocument6]
-DocumentPath=GERBER\panel.GBO
+DocumentPath=..\GERBERS\Panel\panel.GBO
 DItemRevisionGUID=
 
 [GeneratedDocument7]
-DocumentPath=GERBER\panel.GBP
+DocumentPath=..\GERBERS\Panel\panel.GBP
 DItemRevisionGUID=
 
 [GeneratedDocument8]
-DocumentPath=GERBER\panel.GBS
+DocumentPath=..\GERBERS\Panel\panel.GBS
 DItemRevisionGUID=
 
 [GeneratedDocument9]
-DocumentPath=GERBER\panel.GKO
+DocumentPath=..\GERBERS\Panel\panel.GKO
 DItemRevisionGUID=
 
 [GeneratedDocument10]
-DocumentPath=GERBER\panel.GM1
+DocumentPath=..\GERBERS\Panel\panel.GM1
 DItemRevisionGUID=
 
 [GeneratedDocument11]
-DocumentPath=GERBER\panel.GM4
+DocumentPath=..\GERBERS\Panel\panel.GM4
 DItemRevisionGUID=
 
 [GeneratedDocument12]
-DocumentPath=GERBER\panel.GM13
+DocumentPath=..\GERBERS\Panel\panel.GM13
 DItemRevisionGUID=
 
 [GeneratedDocument13]
-DocumentPath=GERBER\panel.GM14
+DocumentPath=..\GERBERS\Panel\panel.GM14
 DItemRevisionGUID=
 
 [GeneratedDocument14]
-DocumentPath=GERBER\panel.GM15
+DocumentPath=..\GERBERS\Panel\panel.GM15
 DItemRevisionGUID=
 
 [GeneratedDocument15]
-DocumentPath=GERBER\panel.GM16
+DocumentPath=..\GERBERS\Panel\panel.GM16
 DItemRevisionGUID=
 
 [GeneratedDocument16]
-DocumentPath=GERBER\panel.GTL
+DocumentPath=..\GERBERS\Panel\panel.GTL
 DItemRevisionGUID=
 
 [GeneratedDocument17]
-DocumentPath=GERBER\panel.GTO
+DocumentPath=..\GERBERS\Panel\panel.GTO
 DItemRevisionGUID=
 
 [GeneratedDocument18]
-DocumentPath=GERBER\panel.GTP
+DocumentPath=..\GERBERS\Panel\panel.GTP
 DItemRevisionGUID=
 
 [GeneratedDocument19]
-DocumentPath=GERBER\panel.GTS
+DocumentPath=..\GERBERS\Panel\panel.GTS
 DItemRevisionGUID=
 
 [GeneratedDocument20]
-DocumentPath=GERBER\panel.LDP
+DocumentPath=..\GERBERS\Panel\panel.LDP
 DItemRevisionGUID=
 
 [GeneratedDocument21]
-DocumentPath=GERBER\panel.REP
+DocumentPath=..\GERBERS\Panel\panel.REP
 DItemRevisionGUID=
 
 [GeneratedDocument22]
-DocumentPath=GERBER\panel.RUL
+DocumentPath=..\GERBERS\Panel\panel.RUL
 DItemRevisionGUID=
 
 [Configuration1]
@@ -168,6 +168,9 @@ Variant=[No Variations]
 OutputJobsCount=0
 ContentTypeGUID=CB6F2064-E317-11DF-B822-12313F0024A2
 ConfigurationType=Source
+
+[Generic_EDE]
+OutputDir=Project Outputs for Panel
 
 [OutputGroup1]
 Name=Netlist Outputs
@@ -274,27 +277,17 @@ OutputName20=WireList Netlist
 OutputDocumentPath20=
 OutputVariantName20=
 OutputDefault20=0
-OutputType21=XSpiceNetlist
-OutputName21=XSpice Netlist
-OutputDocumentPath21=
-OutputVariantName21=
-OutputDefault21=0
 
 [OutputGroup2]
 Name=Simulator Outputs
 Description=
-TargetPrinter=Microsoft Print to PDF
+TargetPrinter=Canon MX490 series Printer WS
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
-OutputType1=AdvSimNetlist
-OutputName1=Mixed Sim
-OutputDocumentPath1=
-OutputVariantName1=
-OutputDefault1=0
 
 [OutputGroup3]
 Name=Documentation Outputs
 Description=
-TargetPrinter=Microsoft Print to PDF
+TargetPrinter=Virtual Printer
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=Composite
 OutputName1=Composite Drawing
@@ -706,87 +699,62 @@ OutputName6=Footprint Comparison Report
 OutputDocumentPath6=
 OutputVariantName6=
 OutputDefault6=0
+OutputType7=BOM_Violations
+OutputName7=BOM Checks Report
+OutputDocumentPath7=
+OutputVariantName7=
+OutputDefault7=0
 
 [OutputGroup9]
 Name=Export Outputs
 Description=
 TargetPrinter=Microsoft Print to PDF
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
-OutputType1=Ansoft Neutral
-OutputName1=Ansoft Neutral (AutoPCB)
+OutputType1=AutoCAD dwg/dxf PCB
+OutputName1=AutoCAD dwg/dxf File PCB
 OutputDocumentPath1=
 OutputVariantName1=
 OutputDefault1=0
-OutputType2=AutoCAD dwg/dxf PCB
-OutputName2=AutoCAD dwg/dxf File PCB
+OutputType2=AutoCAD dwg/dxf Schematic
+OutputName2=AutoCAD dwg/dxf File Schematic
 OutputDocumentPath2=
 OutputVariantName2=
 OutputDefault2=0
-OutputType3=AutoCAD dwg/dxf Schematic
-OutputName3=AutoCAD dwg/dxf File Schematic
+OutputType3=ExportIDF
+OutputName3=Export IDF
 OutputDocumentPath3=
 OutputVariantName3=
 OutputDefault3=0
-OutputType4=ExportIDF
-OutputName4=Export IDF
+OutputType4=ExportPARASOLID
+OutputName4=Export PARASOLID
 OutputDocumentPath4=
-OutputVariantName4=
+OutputVariantName4=[No Variations]
 OutputDefault4=0
-OutputType5=ExportPARASOLID
-OutputName5=Export PARASOLID
+OutputType5=ExportSTEP
+OutputName5=Export STEP
 OutputDocumentPath5=
 OutputVariantName5=[No Variations]
 OutputDefault5=0
-OutputType6=ExportSTEP
-OutputName6=Export STEP
+OutputType6=ExportVRML
+OutputName6=Export VRML
 OutputDocumentPath6=
 OutputVariantName6=[No Variations]
 OutputDefault6=0
-OutputType7=ExportVRML
-OutputName7=Export VRML
+OutputType7=Save As/Export PCB
+OutputName7=Save As/Export PCB
 OutputDocumentPath7=
-OutputVariantName7=[No Variations]
+OutputVariantName7=
 OutputDefault7=0
-OutputType8=HyperLynx
-OutputName8=HyperLynx (AutoPCB)
+OutputType8=Save As/Export Schematic
+OutputName8=Save As/Export Schematic
 OutputDocumentPath8=
 OutputVariantName8=
 OutputDefault8=0
-OutputType9=Orcad v7 Capture Design
-OutputName9=Orcad v7 Capture Design (AutoSCH)
+OutputType9=Specctra Design PCB
+OutputName9=Specctra Design PCB
 OutputDocumentPath9=
 OutputVariantName9=
 OutputDefault9=0
-OutputType10=P-CAD ASCII
-OutputName10=P-CAD ASCII (AutoPCB)
-OutputDocumentPath10=
-OutputVariantName10=
-OutputDefault10=0
-OutputType11=P-CAD V16 Schematic Design
-OutputName11=P-CAD V16 Schematic Design (AutoSCH)
-OutputDocumentPath11=
-OutputVariantName11=
-OutputDefault11=0
-OutputType12=Save As/Export PCB
-OutputName12=Save As/Export PCB
-OutputDocumentPath12=
-OutputVariantName12=
-OutputDefault12=0
-OutputType13=Save As/Export Schematic
-OutputName13=Save As/Export Schematic
-OutputDocumentPath13=
-OutputVariantName13=
-OutputDefault13=0
-OutputType14=SiSoft
-OutputName14=SiSoft (AutoPCB)
-OutputDocumentPath14=
-OutputVariantName14=
-OutputDefault14=0
-OutputType15=Specctra Design PCB
-OutputName15=Specctra Design PCB
-OutputDocumentPath15=
-OutputVariantName15=
-OutputDefault15=0
 
 [OutputGroup10]
 Name=PostProcess Outputs
@@ -916,6 +884,7 @@ Type113=1
 Type114=1
 Type115=1
 Type116=1
+Type117=1
 
 [Difference Levels]
 Type1=1
@@ -983,6 +952,7 @@ Type62=1
 Type63=1
 Type64=1
 Type65=1
+Type66=1
 
 [Electrical Rules Check]
 Type1=1
@@ -1177,4 +1147,7 @@ ComparisonOptions2=Kind=Component Class|MinPercent=75|MinMatch=3|ShowMatch=-1|Co
 ComparisonOptions3=Kind=Rule|MinPercent=75|MinMatch=3|ShowMatch=-1|Confirm=-1|UseName=-1|InclAllRules=0
 ComparisonOptions4=Kind=Differential Pair|MinPercent=50|MinMatch=1|ShowMatch=0|Confirm=0|UseName=0|InclAllRules=0
 ComparisonOptions5=Kind=Structure Class|MinPercent=75|MinMatch=3|ShowMatch=-1|Confirm=-1|UseName=-1|InclAllRules=0
+
+[SmartPDF]
+PageOptions=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
 
