@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------------------------------------------------------------------
-NCDrill File Report For: panel.PcbDoc   08/10/2019  10:12:34
+NCDrill File Report For: panel.PcbDoc   08/10/2019  23:21:08
 ----------------------------------------------------------------------------------------------------------------------------------
 
 Layer Pair : Top Layer to Bottom Layer
@@ -9,8 +9,8 @@ ASCII SlotHoles File : panel-SlotHoles.TXT
 Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
 ----------------------------------------------------------------------------------------------------------------------------------
 T1      0.3mm (12mil)                                             Round             417       PTH        0.00mm (0.00inch)
-T2      0.45mm (18mil)                                            Slot              2         PTH        0.00mm (0.00inch)
-T3      0.5mm (20mil)                                             Round             146       PTH        0.00mm (0.00inch)
+T2      0.5mm (20mil)                                             Round             146       PTH        0.00mm (0.00inch)
+T3      0.55mm (22mil)                                            Slot              2         PTH        0.00mm (0.00inch)
 T4      0.6mm (24mil)                                             Round             2         PTH        0.00mm (0.00inch)
 T5      0.8mm (32mil)                                             Round             2         PTH        0.00mm (0.00inch)
 T6      0.9mm (35mil)                                             Round             100       PTH        0.00mm (0.00inch)

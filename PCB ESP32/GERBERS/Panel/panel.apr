@@ -34,8 +34,8 @@ D43   ROUNDED           118.110     118.110       0.000 FLASH       0.000
 D45   ROUNDED            39.370      39.370       0.000 FLASH       0.000
 D46   RECTANGULAR        59.055      59.055       0.000 FLASH     270.000
 D47   ROUNDED            31.500      31.500       0.000 FLASH       0.000
-D48   RECTANGULAR        39.370      39.370       0.000 FLASH     180.000
-D49   RECTANGULAR        98.425      15.748       0.000 FLASH     180.000
+D48   RECTANGULAR        98.425      15.748       0.000 FLASH     180.000
+D49   RECTANGULAR        39.370      39.370       0.000 FLASH     180.000
 D50   RECTANGULAR        38.189      20.866       0.000 FLASH      90.000
 D51   RECTANGULAR       194.882     194.882       0.000 FLASH     180.000
 D52   RECTANGULAR        33.071       8.661       0.000 FLASH     180.000
@@ -70,12 +70,12 @@ D81   ROUNDED            27.685      27.685       0.000 FLASH       0.000
 D82   RECTANGULAR        67.055      67.055       0.000 FLASH       0.000
 D83   ROUNDED            67.055      67.055       0.000 FLASH       0.000
 D84   ROUNDED           126.110     126.110       0.000 FLASH       0.000
-D86   ROUNDED             8.000       8.000       0.000 FLASH       0.000
+D85   ROUNDED             8.000       8.000       0.000 FLASH       0.000
 D87   ROUNDED            47.370      47.370       0.000 FLASH       0.000
 D88   RECTANGULAR        67.055      67.055       0.000 FLASH     270.000
 D89   ROUNDED            39.500      39.500       0.000 FLASH       0.000
-D90   RECTANGULAR        47.370      47.370       0.000 FLASH     180.000
-D91   RECTANGULAR       106.425      23.748       0.000 FLASH     180.000
+D90   RECTANGULAR       106.425      23.748       0.000 FLASH     180.000
+D91   RECTANGULAR        47.370      47.370       0.000 FLASH     180.000
 D92   RECTANGULAR        46.189      28.866       0.000 FLASH      90.000
 D93   RECTANGULAR       202.882     202.882       0.000 FLASH     180.000
 D94   RECTANGULAR        41.071      16.661       0.000 FLASH     180.000
