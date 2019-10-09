@@ -21,7 +21,7 @@ TargetOutputMedium=GERBER_CONTROL
 VariantName=[No Variations]
 VariantScope=1
 CurrentConfigurationName=
-TargetPrinter=Microsoft Print to PDF
+TargetPrinter=Canon MX490 series Printer WS
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputMedium1=Print Job
 OutputMedium1_Type=Printer
@@ -176,7 +176,7 @@ ShowComponentParameters2=1
 GlobalBookmarks2=0
 PDFACompliance2=Disabled
 PDFVersion2=Default
-OutputFilePath3=C:\Users\Afonso Muralha\Documents\GitHub\0603-Led-Matrix\PCB ESP32\GERBERS\Control\
+OutputFilePath3=F:\Documents\GitHub\0603-Led-Matrix\PCB ESP32\GERBERS\Control\
 ReleaseManaged3=0
 OutputBasePath3=..\GERBERS\Control\
 OutputPathMedia3=
@@ -193,7 +193,7 @@ OpenOutput3=1
 [GeneratedFilesSettings]
 RelativeOutputPath2=C:\Users\Afonso Muralha\Documents\GitHub\0603-Led-Matrix\PCB ESP32\PDF\CONTROL\Job1.PDF
 OpenOutputs2=1
-RelativeOutputPath3=C:\Users\Afonso Muralha\Documents\GitHub\0603-Led-Matrix\PCB ESP32\GERBERS\Control\
+RelativeOutputPath3=F:\Documents\GitHub\0603-Led-Matrix\PCB ESP32\GERBERS\Control\
 OpenOutputs3=1
 AddToProject3=1
 TimestampFolder3=0

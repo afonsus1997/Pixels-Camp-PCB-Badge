@@ -2,69 +2,13 @@
 FileName = Control_Board.GBR
 AutoAperture = True
 *************************************************************
-Generating : Mechanical 18
-      File : Control_Board.GM18
+Generating : Keep-Out Layer
+      File : Control_Board.GKO
 
-    Adding Layer      : Mechanical 18
-
-
-Used DCodes :
-    D102
-*************************************************************
-
-*************************************************************
-Generating : Mechanical 15
-      File : Control_Board.GM15
-
-    Adding Layer      : Mechanical 15
+    Adding Layer      : Keep-Out Layer
 
 
 Used DCodes :
-    D13
-    D65
-    D104
-*************************************************************
-
-*************************************************************
-Generating : Mechanical 13
-      File : Control_Board.GM13
-
-    Adding Layer      : Mechanical 13
-
-
-Used DCodes :
-    D65
-    D100
-    D106
-*************************************************************
-
-*************************************************************
-Generating : Mechanical 4
-      File : Control_Board.GM4
-
-    Adding Layer      : Mechanical 4
-
-
-Used DCodes :
-    D14
-    D15
-    D103
-    D104
-*************************************************************
-
-*************************************************************
-Generating : Mechanical 1
-      File : Control_Board.GM1
-
-    Adding Layer      : Mechanical 1
-
-
-Used DCodes :
-    D10
-    D12
-    D15
-    D63
-    D101
 *************************************************************
 
 *************************************************************
@@ -105,13 +49,49 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
-Generating : Keep-Out Layer
-      File : Control_Board.GKO
+Generating : Mechanical 2
+      File : Control_Board.GM2
 
-    Adding Layer      : Keep-Out Layer
+    Adding Layer      : Mechanical 2
 
 
 Used DCodes :
+    D102
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 8
+      File : Control_Board.GM8
+
+    Adding Layer      : Mechanical 8
+
+
+Used DCodes :
+    D15
+    D105
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 14
+      File : Control_Board.GM14
+
+    Adding Layer      : Mechanical 14
+
+
+Used DCodes :
+    D10
+    D65
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 16
+      File : Control_Board.GM16
+
+    Adding Layer      : Mechanical 16
+
+
+Used DCodes :
+    D104
 *************************************************************
 
 *************************************************************
@@ -163,119 +143,20 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
-Generating : Mechanical 16
-      File : Control_Board.GM16
+Generating : Top Overlay
+      File : Control_Board.GTO
 
-    Adding Layer      : Mechanical 16
-
-
-Used DCodes :
-    D104
-*************************************************************
-
-*************************************************************
-Generating : Mechanical 14
-      File : Control_Board.GM14
-
-    Adding Layer      : Mechanical 14
+    Adding Layer      : Top Overlay
 
 
 Used DCodes :
     D10
-    D65
-*************************************************************
-
-*************************************************************
-Generating : Mechanical 8
-      File : Control_Board.GM8
-
-    Adding Layer      : Mechanical 8
-
-
-Used DCodes :
-    D15
-    D105
-*************************************************************
-
-*************************************************************
-Generating : Mechanical 2
-      File : Control_Board.GM2
-
-    Adding Layer      : Mechanical 2
-
-
-Used DCodes :
-    D102
-*************************************************************
-
-*************************************************************
-Generating : Bottom Paste
-      File : Control_Board.GBP
-
-    Adding Layer      : Bottom Paste
-
-    Adding Layer      : Bottom Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D17
-    D18
-    D75
-    D76
-    D77
-    D78
-    D79
-    D80
-    D81
-    D82
-    D83
-    D84
-    D85
-*************************************************************
-
-*************************************************************
-Generating : Bottom Layer
-      File : Control_Board.GBL
-
-    Adding Layer      : Bottom Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
     D11
     D12
+    D13
     D14
     D15
-    D17
-    D18
-    D62
-    D63
-    D64
-    D65
-    D67
-    D68
-    D69
-    D70
-    D71
-    D72
-    D73
-    D74
-    D75
-    D76
-    D77
-    D78
-    D79
-    D80
-    D81
-    D82
-    D83
-    D84
-    D85
-    D86
-    D87
+    D16
 *************************************************************
 
 *************************************************************
@@ -370,19 +251,138 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
-Generating : Top Overlay
-      File : Control_Board.GTO
+Generating : Mechanical 18
+      File : Control_Board.GM18
 
-    Adding Layer      : Top Overlay
+    Adding Layer      : Mechanical 18
+
+
+Used DCodes :
+    D102
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 15
+      File : Control_Board.GM15
+
+    Adding Layer      : Mechanical 15
+
+
+Used DCodes :
+    D13
+    D65
+    D104
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 13
+      File : Control_Board.GM13
+
+    Adding Layer      : Mechanical 13
+
+
+Used DCodes :
+    D65
+    D100
+    D106
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 4
+      File : Control_Board.GM4
+
+    Adding Layer      : Mechanical 4
+
+
+Used DCodes :
+    D14
+    D15
+    D103
+    D104
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 1
+      File : Control_Board.GM1
+
+    Adding Layer      : Mechanical 1
 
 
 Used DCodes :
     D10
+    D12
+    D15
+    D62
+    D101
+*************************************************************
+
+*************************************************************
+Generating : Bottom Paste
+      File : Control_Board.GBP
+
+    Adding Layer      : Bottom Paste
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D17
+    D18
+    D75
+    D76
+    D77
+    D78
+    D79
+    D80
+    D81
+    D82
+    D83
+    D84
+    D85
+*************************************************************
+
+*************************************************************
+Generating : Bottom Layer
+      File : Control_Board.GBL
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
     D11
     D12
-    D13
     D14
     D15
-    D16
+    D17
+    D18
+    D62
+    D63
+    D64
+    D65
+    D67
+    D68
+    D69
+    D70
+    D71
+    D72
+    D73
+    D74
+    D75
+    D76
+    D77
+    D78
+    D79
+    D80
+    D81
+    D82
+    D83
+    D84
+    D85
+    D86
+    D87
 *************************************************************
 
