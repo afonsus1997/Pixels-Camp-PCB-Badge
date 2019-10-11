@@ -7,7 +7,17 @@ This is a PCB badge for the 2019 edition of pixels camp. The project consists on
 
 The main goal is to make a web connected scrolling text display, although anyone can develop a custom version of the firmware.
 
-**Special thanks to ISSI for supporting the project by supplying a devboard for the IS31FL3741 IC, much apreciated!**
+## Sponsors
+![ISSI](https://i.imgur.com/fAwjtKI.jpg)
+![PCBway](https://i.imgur.com/uSTSpIF.png)
+
+#### PCBWay
+PCBWay was kind enough to supply the V2.1 Pcbs and stencils.
+
+#### ISSI
+IssI has been a great supporter due to it's technical support and the supplied some samples of the driver IC and the corresponding devboard.
+
+**I thank both of the sponsors for making the new version possible!**
 
 ## Updates
 
