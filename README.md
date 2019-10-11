@@ -8,7 +8,7 @@ This is a PCB badge for the 2019 edition of pixels camp. The project consists on
 The main goal is to make a web connected scrolling text display, although anyone can develop a custom version of the firmware.
 
 ## Sponsors
-![ISSI](https://i.imgur.com/fAwjtKI.jpg)
+![ISSI](https://i.imgur.com/3MfmEuN.jpg)
 ![PCBway](https://i.imgur.com/uSTSpIF.png)
 
 #### PCBWay
