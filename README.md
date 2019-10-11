@@ -23,20 +23,14 @@ IssI has been a great supporter due to it's technical support and the supplied s
 
 
 ### Latest Updates
-* LED Matrix works!
-* Working on the firmware (freeRTOS?)
-* Working on new control board design
-
+* New version in development
+	* Waiting for the new PCBs and components to arrive 
 
 ### Known Bugs
-* Swapped pins on the regulator footprint
-    * Fixed in new version (added an aditional regulator)
-* LED driver enable pin allways down!
-* USB-to-Serial (CH340G) needs external oscillator
-	* Maybe change to a CPxxxx
+* Waiting for the new version
 
 ### TODO
-* Fix bugs
+* Assemble new board
 
 
 ## Circuit and PCB
