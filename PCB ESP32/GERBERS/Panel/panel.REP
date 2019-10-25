@@ -2,6 +2,50 @@
 FileName = panel.GBR
 AutoAperture = True
 *************************************************************
+Generating : Bottom Layer
+      File : panel.GBL
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D11
+    D13
+    D14
+    D31
+    D32
+    D33
+    D34
+    D35
+    D36
+    D37
+    D38
+    D40
+    D41
+    D42
+    D43
+    D44
+    D45
+    D46
+    D47
+    D48
+    D49
+    D50
+    D51
+    D52
+    D53
+    D54
+    D55
+    D56
+    D57
+    D58
+    D59
+    D60
+*************************************************************
+
+*************************************************************
 Generating : Top Overlay
       File : panel.GTO
 
@@ -10,8 +54,8 @@ Generating : Top Overlay
 
 Used DCodes :
     D11
-    D31
-    D33
+    D32
+    D34
     D35
     D37
     D61
@@ -167,8 +211,8 @@ Generating : Bottom Overlay
 
 Used DCodes :
     D11
-    D31
-    D33
+    D32
+    D34
     D35
     D59
     D101
@@ -184,7 +228,7 @@ Generating : Mechanical 1
 
 Used DCodes :
     D11
-    D34
+    D31
     D35
     D37
     D103
@@ -199,7 +243,7 @@ Generating : Route Tool Path
 
 Used DCodes :
     D11
-    D31
+    D32
     D38
 *************************************************************
 
@@ -211,7 +255,7 @@ Generating : Mechanical 4
 
 
 Used DCodes :
-    D33
+    D34
     D35
     D104
     D105
@@ -312,49 +356,5 @@ Used DCodes :
     D45
     D46
     D47
-*************************************************************
-
-*************************************************************
-Generating : Bottom Layer
-      File : panel.GBL
-
-    Adding Layer      : Bottom Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D11
-    D13
-    D14
-    D31
-    D32
-    D33
-    D34
-    D35
-    D36
-    D37
-    D38
-    D40
-    D41
-    D42
-    D43
-    D44
-    D45
-    D46
-    D47
-    D48
-    D49
-    D50
-    D51
-    D52
-    D53
-    D54
-    D55
-    D56
-    D57
-    D58
-    D59
-    D60
 *************************************************************
 
