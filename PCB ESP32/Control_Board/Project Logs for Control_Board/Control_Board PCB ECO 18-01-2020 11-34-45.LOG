@@ -1,0 +1,31 @@
+Added Pin To Net: NetName=D_N Pin=D1-4
+Added Member To Class: ClassName=Sheet2 Member=Component C1 10uF
+Added Member To Class: ClassName=Sheet2 Member=Component C6 1uF
+Added Member To Class: ClassName=Sheet2 Member=Component C7 0.1uF
+Added Member To Class: ClassName=Sheet2 Member=Component C8 1uF
+Added Member To Class: ClassName=Sheet2 Member=Component C10 LED
+Added Member To Class: ClassName=Sheet2 Member=Component C13 10uF
+Added Member To Class: ClassName=Sheet2 Member=Component C18 LED
+Added Member To Class: ClassName=Sheet2 Member=Component D1 Diode_Littelfuse_SP0503BAHTG_eec
+Added Member To Class: ClassName=Sheet2 Member=Component P2 Header 5X2
+Added Member To Class: ClassName=Sheet2 Member=Component P3 Header 3X2
+Added Member To Class: ClassName=Sheet2 Member=Component P5 Header 4
+Added Member To Class: ClassName=Sheet2 Member=Component R1 Res1
+Added Member To Class: ClassName=Sheet2 Member=Component R2 Res1
+Added Member To Class: ClassName=Sheet2 Member=Component R4 Res1
+Added Member To Class: ClassName=Sheet2 Member=Component R5 Res1
+Added Member To Class: ClassName=Sheet2 Member=Component R6 Res1
+Added Member To Class: ClassName=Sheet2 Member=Component R7 Res1
+Added Member To Class: ClassName=Sheet2 Member=Component R8 Res1
+Added Member To Class: ClassName=Sheet2 Member=Component R9 Res1
+Added Member To Class: ClassName=Sheet2 Member=Component R10 Res1
+Added Member To Class: ClassName=Sheet2 Member=Component R13 Res1
+Added Member To Class: ClassName=Sheet2 Member=Component R14 Res1
+Added Member To Class: ClassName=Sheet2 Member=Component R15 Res1
+Added Member To Class: ClassName=Sheet2 Member=Component R16 Res1
+Added Member To Class: ClassName=Sheet2 Member=Component R17 Res1
+Added Member To Class: ClassName=Sheet2 Member=Component R19 Res1
+Added Member To Class: ClassName=Sheet2 Member=Component R23 Res1
+Added Member To Class: ClassName=Sheet2 Member=Component R25 Res1
+Added Member To Class: ClassName=Sheet2 Member=Component U3 IS31FL3741
+Added Member To Class: ClassName=Sheet2 Member=Component U4 MCP73831T-2ADI/OT

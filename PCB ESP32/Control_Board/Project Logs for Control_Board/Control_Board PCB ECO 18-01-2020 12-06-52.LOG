@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=ESP_SW1 Pin=P2-6
+Removed Pin From Net: NetName=ESP_SW1 Pin=U1-23
+Added Pin To Net: NetName=ESP_SW1 Pin=U1-9
+Added Pin To Net: NetName=JTAG_TDO Pin=P2-6
+Added Pin To Net: NetName=JTAG_TDO Pin=U1-23
+Added Net: Name=JTAG_TDO
