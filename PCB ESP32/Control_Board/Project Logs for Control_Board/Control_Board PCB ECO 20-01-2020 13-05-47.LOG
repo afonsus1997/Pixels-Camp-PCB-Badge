@@ -1,0 +1,17 @@
+Removed Pin From Net: NetName=VCC3V3 Pin=R30-1
+Removed Pin From Net: NetName=VCC3V3 Pin=R31-1
+Added Component: Designator=R32(C 0603 / 1608)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "Axial Device, Thru-Hole; 2 Leads; 0.3 in Pin Spacing"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "AXIAL-0.3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "OPEN"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VCC3V3 Pin=R32-1
+Added Pin To Net: NetName=NetR30_1 Pin=R30-1
+Added Pin To Net: NetName=NetR30_1 Pin=R31-1
+Added Pin To Net: NetName=NetR30_1 Pin=R32-2
+Added Net: Name=NetR30_1
+Added Member To Class: ClassName=Sheet2 Member=Component R32 Res1
