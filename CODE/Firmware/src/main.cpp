@@ -22,18 +22,22 @@ void idleLedTask2( void * parameter )
   for(;;){
   digitalWrite(LED1, HIGH);
   digitalWrite(LED2, HIGH);
+  digitalWrite(LED3, HIGH);
+  digitalWrite(LED4, HIGH);
   delay(250);
   digitalWrite(LED1, LOW);
   digitalWrite(LED2, LOW);
+  digitalWrite(LED3, LOW);
+  digitalWrite(LED4, LOW);
   delay(250);
   }
 }
 
 void createTasks(){
   xTaskCreate(
-                    idleLedTask,          /* Task function. */
-                    "idleLedTask",        /* String with name of task. */
-                    10000,            /* Stack size in bytes. */
+                    idleLedTask2,          /* Task function. */
+                    "idleLedTask2",        /* String with name of task. */
+                    1000,            /* Stack size in bytes. */
                     NULL,             /* Parameter passed as input of the task */
                     2,                /* Priority of the task. */
                     NULL);  
@@ -55,9 +59,9 @@ void setup()
   initSPIFFS();
   initIO();
   initI2C();
-  //textScroll();
-  //createTasks();
-  //initWifi(ssid, password); 
+  textScroll();
+  createTasks();
+  initWifi(ssid, password); 
   
   
   
