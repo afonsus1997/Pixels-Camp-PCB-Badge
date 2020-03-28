@@ -13,110 +13,55 @@
 IS31FL3731 matrix = IS31FL3731();
 
 
-void InitMatrixDriver(int PWM)
-{
-    int x;
-    /*
-    int x;
 
-    Serial.println("Start i2c-test");
 
-    I2CWriteByte(Addr_GND, 0x01, 0xFF); //gcc
-    delay(10);
 
-    I2CWriteByte(Addr_GND, 0x00, 0x8D); //config register
-    delay(10);
+// void matrixTest(){
+//     int i;
 
-    Wire.beginTransmission(Addr_GND);
-    Wire.write((byte)0xFC);
-    Wire.endTransmission();
-    Wire.beginTransmission(Addr_GND);
-    Wire.requestFrom(Addr_GND, 1);
-    x = Wire.read();
-    Wire.endTransmission();
-    Serial.print("Check: ");Serial.println(x, HEX);
-    delay(10);
+//     I2CWriteByte(Addr_GND,0xfe,0xc5);//unlock
+//     I2CWriteByte(Addr_GND,0xfD,0x00);//write page 0
+//     for(i=0;i<0xB4;i++)
+//     {
+//         I2CWriteByte(Addr_GND,i,0x00);//write all PWM set 0x00
+//         //delay(50);
+//     }
+//     I2CWriteByte(Addr_GND,0xfe,0xc5);//unlock
+//     I2CWriteByte(Addr_GND,0xfD,0x01);//write page 1
+//     for(i=0;i<0xAB;i++)
+//     {
+//         I2CWriteByte(Addr_GND,i,0x00);//write all PWM set 0x00
+//         //delay(50);
 
-    Wire.beginTransmission(Addr_GND);
-    Wire.write((byte)0x00);
-    Wire.endTransmission();
-    Wire.beginTransmission(Addr_GND);
-    Wire.requestFrom(Addr_GND, 1);
-    x = Wire.read();
-    Wire.endTransmission();
-    Serial.print("Register: ");Serial.println(x, HEX);
-    delay(10);
-
-    Wire.beginTransmission(Addr_GND);
-    Wire.write((byte)0xF1);
-    Wire.endTransmission();
-    Wire.beginTransmission(Addr_GND);
-    Wire.requestFrom(Addr_GND, 1);
-    x = Wire.read();
-    Wire.endTransmission();
-    Serial.print("OPEN/SHORT: ");Serial.println(x, HEX);
-    delay(10);
-
-    Wire.beginTransmission(Addr_GND);
-    Wire.write((byte)0x01);
-    Wire.endTransmission();
-    Wire.beginTransmission(Addr_GND);
-    Wire.requestFrom(Addr_GND, 1);
-    x = Wire.read();
-    Wire.endTransmission();
-    Serial.print("Current: ");Serial.println(x, HEX);
-    delay(10);*/
+//     } //init all the PWM data to 0
     
 
+//    //IS31FL3741_PWM_Write(0, 1, 1, 0xFF);
     
-}
-/*
-void matrixTest(){
-    int i;
+//     int i, j, k;
+//     for(j=1; j<27; j++){
+//         for(k=1; k<13; k++){
+//             IS31FL3741_PWM_Write(i, j, k, 0x55);
+//             delay(100);
+//         }
+//     }
+//     ///////
 
-    I2CWriteByte(Addr_GND,0xfe,0xc5);//unlock
-    I2CWriteByte(Addr_GND,0xfD,0x00);//write page 0
-    for(i=0;i<0xB4;i++)
-    {
-        I2CWriteByte(Addr_GND,i,0x00);//write all PWM set 0x00
-        //delay(50);
-    }
-    I2CWriteByte(Addr_GND,0xfe,0xc5);//unlock
-    I2CWriteByte(Addr_GND,0xfD,0x01);//write page 1
-    for(i=0;i<0xAB;i++)
-    {
-        I2CWriteByte(Addr_GND,i,0x00);//write all PWM set 0x00
-        //delay(50);
-
-    } //init all the PWM data to 0
+//    I2CWriteByte(Addr_GND,0xFE,0xC5); UNLOCK
+//    I2CWriteByte(Addr_GND,0xFD,0x00); //SELECT PAGE 
+//                                      PAGE0 0x00
+//                                      PAGE1 0x01
+//    I2CWriteByte(Addr_GND,0xFE,0xC5);I2CWriteByte(Addr_GND,0xFD,0x00);I2CWriteByte(Addr_GND,0x02,idata);
+//     writePixel(0, 0, 0x60);
+//     writePixel(1, 1, 0x60);
+//     writePixel(3, 3, 0x60);
     
 
-   //IS31FL3741_PWM_Write(0, 1, 1, 0xFF);
-    /*
-    int i, j, k;
-    for(j=1; j<27; j++){
-        for(k=1; k<13; k++){
-            IS31FL3741_PWM_Write(i, j, k, 0x55);
-            delay(100);
-        }
-    }
-    ///////
-
-   //I2CWriteByte(Addr_GND,0xFE,0xC5); UNLOCK
-   //I2CWriteByte(Addr_GND,0xFD,0x00); //SELECT PAGE 
-                                     //PAGE0 0x00
-                                     //PAGE1 0x01
-   //I2CWriteByte(Addr_GND,0xFE,0xC5);I2CWriteByte(Addr_GND,0xFD,0x00);I2CWriteByte(Addr_GND,0x02,idata);
-    writePixel(0, 0, 0x60);
-    writePixel(1, 1, 0x60);
-    writePixel(3, 3, 0x60);
-    
-
-    delay(500);
-    //I2CWriteByte(Addr_GND,0xFE,0xC5);I2CWriteByte(Addr_GND,0xFD,0x01);I2CWriteByte(Addr_GND,0x00,0xFF);
+//     delay(500);
+//     I2CWriteByte(Addr_GND,0xFE,0xC5);I2CWriteByte(Addr_GND,0xFD,0x01);I2CWriteByte(Addr_GND,0x00,0xFF);
 
     
-}*/
+// }
 
 /*void textScroll(){
     while(1){
@@ -153,21 +98,24 @@ void matrixTest(){
     }
 }*/
 
+extern void InitMatrixDriver(int PWM);
+
 void initI2C(){
-    //Wire.begin(23,22);
+    Wire.begin(23,22);
     //Wire.setClock(400000);//I2C 1MHz
     //delay(500);
-    //InitMatrixDriver(0);
+    
+    InitMatrixDriver(0xFF);
     matrix.begin();
-    //matrix.drawPixel(0, 0, 0xFF);
-    //matrix.setTextColor(0x60, 0x00);
-    matrix.setCursor(2, 1);
-    matrix.print("*DEEC*");
-    //matrix.setTextWrap(false);
-    matrix.setTextColor(0xC0);
+    matrix.drawPixel(1, 1, 0xFF);
+    // matrix.setTextColor(0x60, 0x00);
+    // matrix.setCursor(1, 1);
+    // matrix.print("PIXELS");
+    // matrix.setTextWrap(false);
+    // matrix.setTextColor(0xC0);
     //textScroll();
 
-    //matrix.drawRect(0, 0, 39, 9, 0x60);
+    // matrix.drawRect(0, 0, 39, 9, 0x60);
     
 
 }

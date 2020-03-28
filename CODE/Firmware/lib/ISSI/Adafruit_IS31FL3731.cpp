@@ -23,7 +23,62 @@ void I2CWriteByte(int Dev_Add,int Reg_Add,int Reg_Dat)
  Wire.endTransmission(); // stop transmitting
 }
 
+void InitMatrixDriver(int PWM)
+{
+    int x;
+    
 
+    Serial.println("Start i2c-test");
+
+    I2CWriteByte(Addr_GND, 0x01, 0xFF); //gcc
+    delay(10);
+
+    I2CWriteByte(Addr_GND, 0x00, 0x8D); //config register
+    delay(10);
+
+    Wire.beginTransmission(Addr_GND);
+    Wire.write((byte)0xFC);
+    Wire.endTransmission();
+    Wire.beginTransmission(Addr_GND);
+    Wire.requestFrom(Addr_GND, 1);
+    x = Wire.read();
+    Wire.endTransmission();
+    Serial.print("Check: ");Serial.println(x, HEX);
+    delay(10);
+
+    Wire.beginTransmission(Addr_GND);
+    Wire.write((byte)0x00);
+    Wire.endTransmission();
+    Wire.beginTransmission(Addr_GND);
+    Wire.requestFrom(Addr_GND, 1);
+    x = Wire.read();
+    Wire.endTransmission();
+    Serial.print("Register: ");Serial.println(x, HEX);
+    delay(10);
+
+    Wire.beginTransmission(Addr_GND);
+    Wire.write((byte)0xF1);
+    Wire.endTransmission();
+    Wire.beginTransmission(Addr_GND);
+    Wire.requestFrom(Addr_GND, 1);
+    x = Wire.read();
+    Wire.endTransmission();
+    Serial.print("OPEN/SHORT: ");Serial.println(x, HEX);
+    delay(10);
+
+    Wire.beginTransmission(Addr_GND);
+    Wire.write((byte)0x01);
+    Wire.endTransmission();
+    Wire.beginTransmission(Addr_GND);
+    Wire.requestFrom(Addr_GND, 1);
+    x = Wire.read();
+    Wire.endTransmission();
+    Serial.print("Current: ");Serial.println(x, HEX);
+    delay(10);
+    
+
+    
+}
 
 
 /* Constructor */
@@ -38,7 +93,7 @@ boolean IS31FL3731::begin() {
     int Bdata = 0xFF;
 
     Wire.begin(23,22);
-    Wire.setClock(900000);//I2C 1MHz
+    Wire.setClock(500000);//I2C 1MHz
 
     I2CWriteByte(Addr_GND,0xfe,0xc5);//unlock
     I2CWriteByte(Addr_GND,0xfD,0x02);//write page 2
@@ -84,7 +139,7 @@ boolean IS31FL3731::begin() {
     I2CWriteByte(Addr_GND,0xfe,0xc5);//unlock
     I2CWriteByte(Addr_GND,0xfD,0x04);//write page 4
     I2CWriteByte(Addr_GND,0x01,0x7F);//global current
-    //I2CWriteByte(Addr_GND,0x01,0xFF);//global current
+    I2CWriteByte(Addr_GND,0x01,0xFF);//global current
     I2CWriteByte(Addr_GND,0x00,0x01);//normal operation
     return 1;
 }

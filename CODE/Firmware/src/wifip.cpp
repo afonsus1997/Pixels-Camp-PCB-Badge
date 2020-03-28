@@ -67,7 +67,7 @@ int initWifi(char *ssid, char *password){
     Serial.print("Password: "); Serial.println(password);
     Serial.print("AP IP address: ");
     Serial.println(myIP);
-    Serial.println("==============");
+    Serial.println("==============\n");
 
 }
 

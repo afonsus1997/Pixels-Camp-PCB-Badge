@@ -17,6 +17,17 @@ void idleLedTask( void * parameter )
   textScroll();
 }
 
+void BtnReadTask( void * parameter )
+{
+  for(;;){
+    uint8_t state = 000;
+    state = (digitalRead(SWLEFT) << 2) | (digitalRead(SWCENTER) << 1 ) | (digitalRead(SWRIGHT));
+    Serial.print("Button state: "); Serial.println(state);
+    delay(100);
+  }
+
+}
+
 void idleLedTask2( void * parameter )
 {
   for(;;){
@@ -24,32 +35,32 @@ void idleLedTask2( void * parameter )
   digitalWrite(LED2, HIGH);
   digitalWrite(LED3, HIGH);
   digitalWrite(LED4, HIGH);
-  delay(250);
+  delay(500);
   digitalWrite(LED1, LOW);
   digitalWrite(LED2, LOW);
   digitalWrite(LED3, LOW);
   digitalWrite(LED4, LOW);
-  delay(250);
+  delay(500);
   }
 }
 
 void createTasks(){
-  xTaskCreate(
-                    idleLedTask2,          /* Task function. */
-                    "idleLedTask2",        /* String with name of task. */
-                    1000,            /* Stack size in bytes. */
-                    NULL,             /* Parameter passed as input of the task */
-                    2,                /* Priority of the task. */
-                    NULL);  
+//   xTaskCreate(
+//                     idleLedTask2,          /* Task function. */
+//                     "idleLedTask2",        /* String with name of task. */
+//                     1000,            /* Stack size in bytes. */
+//                     NULL,             /* Parameter passed as input of the task */
+//                     2,                /* Priority of the task. */
+//                     NULL);  
   
 
-  //xTaskCreate(
-  //                  idleLedTask2,          /* Task function. */
-  //                  "idleLedTask2",        /* String with name of task. */
-  //                  10000,            /* Stack size in bytes. */
-  //                  NULL,             /* Parameter passed as input of the task */
-  //                  2,                /* Priority of the task. */
-  //                  NULL);
+  xTaskCreate(
+                   BtnReadTask,          /* Task function. */
+                   "BtnReadTask",        /* String with name of task. */
+                   1000,            /* Stack size in bytes. */
+                   NULL,             /* Parameter passed as input of the task */
+                   2,                /* Priority of the task. */
+                   NULL);
 }
 
 void setup()
@@ -59,9 +70,9 @@ void setup()
   initSPIFFS();
   initIO();
   initI2C();
-  textScroll();
-  createTasks();
-  initWifi(ssid, password); 
+  // textScroll();
+  // initWifi(ssid, password); 
+  // createTasks();
   
   
   
@@ -70,6 +81,6 @@ void setup()
 
 void loop()
 {
-  //Serial.print("Battery Voltage: "); Serial.println(batVoltage());
-  //delay(500);
+  Serial.print("Battery Voltage: "); Serial.println(batVoltage());
+  delay(500);
 }

@@ -8,9 +8,11 @@
 #define LED3 27
 #define LED4 32
 
-#define SWLEFT 0
-#define SWCENTER 0
-#define SWRIGHT 0
+#define MATRIX_EN 30
+
+#define SWLEFT 28
+#define SWCENTER 27
+#define SWRIGHT 9
 
 #define BATPIN 35
 
