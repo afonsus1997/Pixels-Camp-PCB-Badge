@@ -4,9 +4,12 @@
         "PLATFORMIO_CALLER": "vscode"
     },
     "files.associations": {
+        "*.v": "systemverilog",
         "initializer_list": "cpp",
         "vector": "cpp",
         "xstring": "cpp",
-        "xutility": "cpp"
+        "xutility": "cpp",
+        "functional": "cpp",
+        "xmemory0": "cpp"
     }
 }
