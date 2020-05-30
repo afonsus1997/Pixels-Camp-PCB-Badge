@@ -104,13 +104,19 @@ void initI2C(){
     Wire.begin(23,22);
     //Wire.setClock(400000);//I2C 1MHz
     //delay(500);
-    
     InitMatrixDriver(0xFF);
     matrix.begin();
-    matrix.drawPixel(1, 1, 0xFF);
-    // matrix.setTextColor(0x60, 0x00);
-    // matrix.setCursor(1, 1);
-    // matrix.print("PIXELS");
+    // while(1){
+    //     matrix.fillScreen(0xFF);
+    //     delay(500);
+    //     matrix.fillScreen(0x00);
+    //     delay(500);
+    // }
+    
+    // matrix.drawPixel(1, 1, 0xFF);
+    matrix.setTextColor(0x60, 0x00);
+    matrix.setCursor(1, 1);
+    matrix.print("WOLOLO");
     // matrix.setTextWrap(false);
     // matrix.setTextColor(0xC0);
     //textScroll();

@@ -14,7 +14,7 @@ extern void textScroll();
 
 void idleLedTask( void * parameter )
 {
-  textScroll();
+  // textScroll();
 }
 
 void BtnReadTask( void * parameter )
@@ -45,13 +45,13 @@ void idleLedTask2( void * parameter )
 }
 
 void createTasks(){
-//   xTaskCreate(
-//                     idleLedTask2,          /* Task function. */
-//                     "idleLedTask2",        /* String with name of task. */
-//                     1000,            /* Stack size in bytes. */
-//                     NULL,             /* Parameter passed as input of the task */
-//                     2,                /* Priority of the task. */
-//                     NULL);  
+  xTaskCreate(
+                    idleLedTask2,          /* Task function. */
+                    "idleLedTask2",        /* String with name of task. */
+                    1000,            /* Stack size in bytes. */
+                    NULL,             /* Parameter passed as input of the task */
+                    2,                /* Priority of the task. */
+                    NULL);  
   
 
   xTaskCreate(
@@ -66,21 +66,18 @@ void createTasks(){
 void setup()
 {
   Serial.begin(115200);
-
+  // vTaskSuspendAll();
   initSPIFFS();
   initIO();
   initI2C();
+  vTaskDelay(1000);
   // textScroll();
-  // initWifi(ssid, password); 
+  initWifi(ssid, password); 
   // createTasks();
-  
-  
-  
-  
 }
 
 void loop()
 {
-  Serial.print("Battery Voltage: "); Serial.println(batVoltage());
-  delay(500);
+  // Serial.print("Battery Voltage: "); Serial.println(batVoltage());
+  // delay(500);
 }

@@ -93,7 +93,7 @@ boolean IS31FL3731::begin() {
     int Bdata = 0xFF;
 
     Wire.begin(23,22);
-    Wire.setClock(500000);//I2C 1MHz
+    Wire.setClock(1000000);//I2C 1MHz
 
     I2CWriteByte(Addr_GND,0xfe,0xc5);//unlock
     I2CWriteByte(Addr_GND,0xfD,0x02);//write page 2

@@ -8,7 +8,7 @@
 #define LED3 27
 #define LED4 32
 
-#define MATRIX_EN 30
+#define MATRIX_EN 18
 
 #define SWLEFT 28
 #define SWCENTER 27

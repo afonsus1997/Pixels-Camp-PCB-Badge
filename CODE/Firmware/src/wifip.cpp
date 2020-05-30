@@ -11,7 +11,10 @@ int initWebHandles(){
     request->send(200, "text/plain", String(ESP.getFreeHeap()));
     });
 
-    //server.on("/Score", handleSendScore);
+    server.on("/helloworld", HTTP_GET, [](AsyncWebServerRequest *request){
+    //request->send(SPIFFS, "/index.html", "text/html");
+    Serial.println("Hello World!\n");
+    });
 
     //server.on("/StringState", handleString);
 
