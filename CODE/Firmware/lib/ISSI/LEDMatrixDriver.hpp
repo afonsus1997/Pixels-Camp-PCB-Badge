@@ -18,7 +18,7 @@
 
 #ifndef LEDMATRIXDRIVER_H_
 #define LEDMATRIXDRIVER_H_
-
+#include <Arduino.h>
 #ifdef ESP32
 #include <cstring>
 #endif
@@ -46,7 +46,7 @@ class LEDMatrixDriver
 		//with N segments and ssPin as SS,
 		//flags describe segment orientation (optional)
 		//an already allocated buffer can be provided as well (optional)
-		LEDMatrixDriver(uint8_t N, uint8_t ssPin, uint8_t flags = 0, uint8_t* frameBuffer = nullptr);
+		LEDMatrixDriver(uint8_t sdaPin, uint8_t sclPin, uint8_t addr, uint8_t enablePin, uint8_t** fb);
 		#ifdef USE_ADAFRUIT_GFX
 		virtual
 		#endif
@@ -58,8 +58,8 @@ class LEDMatrixDriver
 		LEDMatrixDriver& operator=(const LEDMatrixDriver& other) = delete;
 
 		#ifdef USE_ADAFRUIT_GFX
-		virtual void writePixel(int16_t x, int16_t y, uint16_t color) {setPixel(x,y,color);}
-		virtual void drawPixel(int16_t x, int16_t y, uint16_t color) {setPixel(x,y,color);}
+		virtual void writePixel(uint8_t x, uint8_t y, uint8_t color) {setPixel(x,y,color);}
+		virtual void drawPixel(uint8_t x, uint8_t y, uint8_t pwm) {setPixel(x,y,color);}
 		virtual void endWrite(void) {if (not manualDisplayRefresh) display();}
 		void setManualDisplayRefresh(bool enabled) {manualDisplayRefresh = enabled;}
 		#endif
@@ -68,13 +68,13 @@ class LEDMatrixDriver
 		void setEnabled(bool enabled);
 		//display brightness: 0 - 15
 		void setIntensity(uint8_t level);
-		void setPixel(int16_t x, int16_t y, bool enabled);
-		bool getPixel(int16_t x, int16_t y) const;
+		void setPixel(int8_t x, int8_t y, uint8_t pwm);
+		uint8_t getPixel(int8_t x, int8_t y) const;
 		//sets pixels in the column acording to value (LSB => y=0)
-		void setColumn(int16_t x, uint8_t value);
-		uint8_t getSegments() const {return N;}
+		void setColumn(int8_t x, uint8_t value);
+		// uint8_t getSegments() const {return N;}
 		
-		uint8_t* getFrameBuffer() const {return frameBuffer;}
+		uint8_t** getFrameBuffer() const {return frameBuffer;}
 
 		//functions for 7-segment displays
 		//number of digits displayed (0 -> 1 digit, 7 -> 8 digits)
@@ -116,10 +116,10 @@ class LEDMatrixDriver
 
 	private:
 		uint8_t* _getBufferPtr(int16_t x, int16_t y) const;
-		void _sendCommand(uint16_t command);
+		void _sendCommand(uint8_t Reg_Add, uint8_t Reg_Dat);
 		void _displayRow(uint8_t row);
 
-		uint8_t* frameBuffer;
+		uint8_t** frameBuffer;
 		bool selfAllocated;
 		uint8_t sdaPin;
 		uint8_t sclPin;

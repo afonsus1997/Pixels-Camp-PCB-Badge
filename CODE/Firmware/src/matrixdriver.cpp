@@ -1,7 +1,7 @@
-#include "../include/matrixdriver.h"
-#include "../lib/ISSI/Adafruit_IS31FL3731.h"
+#include "../lib/ISSI/LEDMatrixDriver.hpp"
 
 #include <Arduino.h>
+#include "../include/boardpins.h"
 
 #define byte uint8_t
 
@@ -10,10 +10,8 @@
 
 #define Addr_GND 0x30
 
-IS31FL3731 matrix = IS31FL3731();
 
-
-
+LEDMatrixDriver lmd(22, 23, Addr_GND, (uint8_t)MATRIX_EN, NULL);
 
 
 // void matrixTest(){
@@ -101,22 +99,9 @@ IS31FL3731 matrix = IS31FL3731();
 extern void InitMatrixDriver(int PWM);
 
 void initI2C(){
-    Wire.begin(23,22);
-    //Wire.setClock(400000);//I2C 1MHz
-    //delay(500);
-    InitMatrixDriver(0xFF);
-    matrix.begin();
-    // while(1){
-    //     matrix.fillScreen(0xFF);
-    //     delay(500);
-    //     matrix.fillScreen(0x00);
-    //     delay(500);
-    // }
-    
-    // matrix.drawPixel(1, 1, 0xFF);
-    matrix.setTextColor(0x60, 0x00);
-    matrix.setCursor(1, 1);
-    matrix.print("WOLOLO");
+    // matrix.setTextColor(0x60, 0x00);
+    // matrix.setCursor(1, 1);
+    // matrix.print("WOLOLO");
     // matrix.setTextWrap(false);
     // matrix.setTextColor(0xC0);
     //textScroll();
