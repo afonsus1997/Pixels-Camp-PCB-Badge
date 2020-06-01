@@ -8,10 +8,6 @@
 #define XSIZE 9
 #define YSIZE 39
 
-#define Addr_GND 0x30
-
-
-LEDMatrixDriver lmd(22, 23, Addr_GND, (uint8_t)MATRIX_EN, NULL);
 
 
 // void matrixTest(){
@@ -96,9 +92,9 @@ LEDMatrixDriver lmd(22, 23, Addr_GND, (uint8_t)MATRIX_EN, NULL);
     }
 }*/
 
-extern void InitMatrixDriver(int PWM);
+// extern void InitMatrixDriver(int PWM);
 
-void initI2C(){
+
     // matrix.setTextColor(0x60, 0x00);
     // matrix.setCursor(1, 1);
     // matrix.print("WOLOLO");
@@ -107,7 +103,19 @@ void initI2C(){
     //textScroll();
 
     // matrix.drawRect(0, 0, 39, 9, 0x60);
-    
+void initMatrix(){
+    Serial.print("Initializing Matrix...");
+
+    LEDMatrixDriver matrix(MATRIX_SDA, MATRIX_SCL, MATRIX_ADDR_GND, MATRIX_EN);
+    matrix.setEnabled(1);
+    Serial.print("Done!\n");
+
+    matrix.writePixelLow(1, 1, 0xFF);
+    matrix.writePixelLow(2, 2, 0xAA);
+    matrix.writePixelLow(3, 3, 0x55);
+
+
+
 
 }
 

@@ -6,8 +6,10 @@
  */
 
 #include "LEDMatrixDriver.hpp"
+#include "addrmap.h"
 #include <Arduino.h>
 #include <Wire.h>
+
 
 void I2CWriteByte(int Dev_Add,int Reg_Add,int Reg_Dat)
 {
@@ -17,12 +19,10 @@ void I2CWriteByte(int Dev_Add,int Reg_Add,int Reg_Dat)
  Wire.endTransmission(); // stop transmitting
 }
 
-LEDMatrixDriver::LEDMatrixDriver(uint8_t sdaPin, uint8_t sclPin, uint8_t addr, uint8_t enablePin, uint8_t** fb):
-#ifdef USE_ADAFRUIT_GFX
-	Adafruit_GFX(N*8, N), //needchange
-#endif
-	frameBuffer(fb),
-	selfAllocated(fb == nullptr),
+LEDMatrixDriver::LEDMatrixDriver(uint8_t sdaPin, uint8_t sclPin, uint8_t addr, uint8_t enablePin):
+	Adafruit_GFX(39, 9), //needchange
+	// frameBuffer(fb),
+	selfAllocated(1),
 	sdaPin(sdaPin),
 	sclPin(sclPin),
 	addr(addr),
@@ -30,17 +30,74 @@ LEDMatrixDriver::LEDMatrixDriver(uint8_t sdaPin, uint8_t sclPin, uint8_t addr, u
 
 
 {
+		// uint8_t *frameBuffer = (uint8_t *) ps_malloc(9 * 39 * sizeof(uint8_t));
+
 	if (selfAllocated){
-		// frameBuffer = new uint8_t[9][39];
-		int** frameBuffer = new int*[9];
+		// uint8_t *frameBuffer = (uint8_t *) ps_malloc(1 * 1 * sizeof(uint8_t));
+		// uint8_t frameBuffer[2][2] = {(1, 2), (1, 2)};
+
+		
+		frameBuffer = new uint8_t*[9];
 		for(int i = 0; i < 9; ++i)
-    		frameBuffer[i] = new int[39];
+    		frameBuffer[i] = new uint8_t[39];
 	}
 
 	clear();	// initally clear the buffer as the memory will not be initialized on reset (old content will be in memory yet)
 
 	Wire.begin(sdaPin, sclPin);
 	Wire.setClock(1000000);//I2C 1MHz
+
+	int i;
+	int Rdata = 0xFF;
+    int Gdata = 0xFF;
+    int Bdata = 0xFF;
+
+	I2CWriteByte(addr,0xfe,0xc5);//unlock
+    I2CWriteByte(addr,0xfD,0x02);//write page 2
+    for(i=2;i<0xB4;i+=3)
+        {
+            I2CWriteByte(addr,i,Rdata);//R LED Scaling
+        }
+    for(i=1;i<0xB4;i+=3)
+    {
+        I2CWriteByte(addr,i,Gdata);//G LED Scaling
+    }
+    for(i=0;i<0xB4;i+=3)
+    {
+        I2CWriteByte(addr,i,Bdata);//B LED Scaling
+    }
+    I2CWriteByte(addr,0xfe,0xc5);//unlock
+    I2CWriteByte(addr,0xfD,0x03);//write page 3
+    for(i=2;i<0xAB;i+=3)
+    {
+        I2CWriteByte(addr,i,Rdata);//R LED Scaling
+    }
+    for(i=1;i<0xAB;i+=3)
+    {
+        I2CWriteByte(addr,i,Gdata);//G LED Scaling
+    }
+    for(i=0;i<0xAB;i+=3)
+    {
+        I2CWriteByte(addr,i,Bdata);//B LED Scaling
+    }
+    I2CWriteByte(addr,0xfe,0xc5);//unlock
+    I2CWriteByte(addr,0xfD,0x00);//write page 0
+    for(i=0;i<0xB4;i++)
+    {
+        I2CWriteByte(addr,i,0x00);//write all PWM set 0x00
+    }
+    I2CWriteByte(addr,0xfe,0xc5);//unlock
+    I2CWriteByte(addr,0xfD,0x01);//write page 1
+    for(i=0;i<0xAB;i++)
+    {
+        I2CWriteByte(addr,i,0x00);//write all PWM set 0x00
+    } //init all the PWM data to 0
+
+    I2CWriteByte(addr,0xfe,0xc5);//unlock
+    I2CWriteByte(addr,0xfD,0x04);//write page 4
+    I2CWriteByte(addr,0x01,0x7F);//global current
+    I2CWriteByte(addr,0x01,0xFF);//global current
+    I2CWriteByte(addr,0x00,0x01);//normal operation
 
 
 	
@@ -55,11 +112,11 @@ LEDMatrixDriver::LEDMatrixDriver(uint8_t sdaPin, uint8_t sclPin, uint8_t addr, u
 	// _sendCommand(LEDMatrixDriver::SCAN_LIMIT | 7);	//all lines
 }
 
-LEDMatrixDriver::~LEDMatrixDriver()
-{
-	if (selfAllocated)
-		delete[] frameBuffer;
-}
+// LEDMatrixDriver::~LEDMatrixDriver()
+// {
+// 	if (selfAllocated)
+// 		delete[] frameBuffer;
+// }
 
 void LEDMatrixDriver::setPixel(int8_t x, int8_t y, uint8_t pwm)
 {
@@ -86,6 +143,7 @@ void LEDMatrixDriver::setColumn(int8_t x, uint8_t value) //not needed?
 void LEDMatrixDriver::setEnabled(bool enabled)
 {
 		digitalWrite(enablePin, enabled);
+		return;
 }
 
 
@@ -259,4 +317,10 @@ void LEDMatrixDriver::scroll(scrollDirection direction, bool wrap)
 			break;
 		}
 	}
+}
+
+void LEDMatrixDriver::writePixelLow(uint8_t x, uint8_t y, uint8_t pwm){
+	I2CWriteByte(addr,0xFE,0xC5); //UNLOCK
+	I2CWriteByte(addr,0xFD,IS31FL3741addrmap[x][y][1]); //SELECT PAGE
+	I2CWriteByte(addr,IS31FL3741addrmap[x][y][0],pwm); //WRITE PIXEL
 }

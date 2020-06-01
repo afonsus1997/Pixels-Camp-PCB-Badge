@@ -9,6 +9,11 @@
 #define LED4 32
 
 #define MATRIX_EN 18
+#define MATRIX_SDA 23
+#define MATRIX_SCL 22
+#define MATRIX_ADDR_GND 0x30
+
+
 
 #define SWLEFT 28
 #define SWCENTER 27

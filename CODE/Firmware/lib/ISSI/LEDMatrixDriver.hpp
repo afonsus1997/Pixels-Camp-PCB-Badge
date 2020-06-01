@@ -19,23 +19,21 @@
 #ifndef LEDMATRIXDRIVER_H_
 #define LEDMATRIXDRIVER_H_
 #include <Arduino.h>
+
 #ifdef ESP32
 #include <cstring>
 #endif
 
-#ifdef USE_ADAFRUIT_GFX
-#include <Adafruit_GFX.h>
+
+
+
+#include "../AdafruitGFX/Adafruit_GFX.h"
+
 class LEDMatrixDriver: public Adafruit_GFX
-#else
-class LEDMatrixDriver
-#endif
+
 {
 	//commands as defined in the datasheet
-	const static uint16_t ENABLE =		0x0C00;
-	const static uint16_t TEST =	 	0x0F00;
-	const static uint16_t INTENSITY =	0x0A00;
-	const static uint16_t SCAN_LIMIT =	0x0B00;
-	const static uint16_t DECODE =		0x0900;
+
 	
 	
 	public:
@@ -46,23 +44,23 @@ class LEDMatrixDriver
 		//with N segments and ssPin as SS,
 		//flags describe segment orientation (optional)
 		//an already allocated buffer can be provided as well (optional)
-		LEDMatrixDriver(uint8_t sdaPin, uint8_t sclPin, uint8_t addr, uint8_t enablePin, uint8_t** fb);
-		#ifdef USE_ADAFRUIT_GFX
-		virtual
-		#endif
-		~LEDMatrixDriver();
+		LEDMatrixDriver(uint8_t sdaPin, uint8_t sclPin, uint8_t addr, uint8_t enablePin);
+		// virtual
+		// ~LEDMatrixDriver();
 
 		//we don't want to copy the object
-		LEDMatrixDriver(const LEDMatrixDriver& other) = delete;
-		LEDMatrixDriver(LEDMatrixDriver&& other) = delete;
-		LEDMatrixDriver& operator=(const LEDMatrixDriver& other) = delete;
+		// LEDMatrixDriver(const LEDMatrixDriver& other) = delete;
+		// LEDMatrixDriver(LEDMatrixDriver& other) = delete;
+		// LEDMatrixDriver& operator=(const LEDMatrixDriver& other) = delete;
 
-		#ifdef USE_ADAFRUIT_GFX
-		virtual void writePixel(uint8_t x, uint8_t y, uint8_t color) {setPixel(x,y,color);}
-		virtual void drawPixel(uint8_t x, uint8_t y, uint8_t pwm) {setPixel(x,y,color);}
-		virtual void endWrite(void) {if (not manualDisplayRefresh) display();}
-		void setManualDisplayRefresh(bool enabled) {manualDisplayRefresh = enabled;}
-		#endif
+		// #ifdef USE_ADAFRUIT_GFX
+		// void writePixel(uint8_t x, uint8_t y, uint8_t color) {setPixel(x,y,color);}
+		virtual void drawPixel(int16_t x, int16_t y, uint16_t color) {setPixel(x,y,color);}
+		// virtual void endWrite(void) {return;}//{if (not manualDisplayRefresh) display();}
+		virtual void setManualDisplayRefresh(bool enabled) {return;}//{manualDisplayRefresh = enabled;}
+		// #endif
+
+		void writePixelLow(uint8_t x, uint8_t y, uint8_t pwm);
 
 		//all these commands work on ALL segments
 		void setEnabled(bool enabled);
@@ -87,7 +85,8 @@ class LEDMatrixDriver
 		//flush a single row to the display
 		void displayRow(uint8_t row) {_displayRow(row);}
 		//clear the framebuffer
-		void clear() {memset(frameBuffer, 0, 39*9);}
+		// void clear() {memset(frameBuffer, 0, 39*9);}
+		void clear() {return;}
 		/*void clea() {
 			int*** array2d = new (int**)[rows];
 			for (int i = 0; i < rows; ++i) {

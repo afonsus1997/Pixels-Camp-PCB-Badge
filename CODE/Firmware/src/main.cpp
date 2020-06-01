@@ -9,7 +9,7 @@
 char *ssid = "Pixels Camp Badger";
 char *password = "1234567890";
 
-extern void initI2C();
+extern void initMatrix();
 extern void textScroll();
 
 void idleLedTask( void * parameter )
@@ -69,7 +69,7 @@ void setup()
   // vTaskSuspendAll();
   initSPIFFS();
   initIO();
-  initI2C();
+  initMatrix();
   vTaskDelay(1000);
   // textScroll();
   initWifi(ssid, password); 
