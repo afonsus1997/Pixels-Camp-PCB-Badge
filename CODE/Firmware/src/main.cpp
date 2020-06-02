@@ -11,6 +11,8 @@ char *password = "1234567890";
 
 extern void initMatrix();
 extern void textScroll();
+// extern void I2CUnloadTask ( void * parameter );
+
 
 void idleLedTask( void * parameter )
 {
@@ -45,23 +47,24 @@ void idleLedTask2( void * parameter )
 }
 
 void createTasks(){
-  xTaskCreate(
-                    idleLedTask2,          /* Task function. */
-                    "idleLedTask2",        /* String with name of task. */
-                    1000,            /* Stack size in bytes. */
-                    NULL,             /* Parameter passed as input of the task */
-                    2,                /* Priority of the task. */
-                    NULL);  
+  // xTaskCreate(
+  //                   I2CUnloadTask,          /* Task function. */
+  //                   "I2CUnloadTask",        /* String with name of task. */
+  //                   1000,            /* Stack size in bytes. */
+  //                   NULL,             /* Parameter passed as input of the task */
+  //                   6,                /* Priority of the task. */
+  //                   NULL);  
   
 
-  xTaskCreate(
-                   BtnReadTask,          /* Task function. */
-                   "BtnReadTask",        /* String with name of task. */
-                   1000,            /* Stack size in bytes. */
-                   NULL,             /* Parameter passed as input of the task */
-                   2,                /* Priority of the task. */
-                   NULL);
+  // xTaskCreate(
+  //                  BtnReadTask,          /* Task function. */
+  //                  "BtnReadTask",        /* String with name of task. */
+  //                  1000,            /* Stack size in bytes. */
+  //                  NULL,             /* Parameter passed as input of the task */
+  //                  2,                /* Priority of the task. */
+  //                  NULL);
 }
+
 
 void setup()
 {

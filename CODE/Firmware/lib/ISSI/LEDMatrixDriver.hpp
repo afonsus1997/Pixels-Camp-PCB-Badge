@@ -61,6 +61,7 @@ class LEDMatrixDriver: public Adafruit_GFX
 		// #endif
 
 		void writePixelLow(uint8_t x, uint8_t y, uint8_t pwm);
+		void unloadI2CBuffer();
 
 		//all these commands work on ALL segments
 		void setEnabled(bool enabled);

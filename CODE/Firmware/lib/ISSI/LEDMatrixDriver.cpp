@@ -45,7 +45,7 @@ LEDMatrixDriver::LEDMatrixDriver(uint8_t sdaPin, uint8_t sclPin, uint8_t addr, u
 	clear();	// initally clear the buffer as the memory will not be initialized on reset (old content will be in memory yet)
 
 	Wire.begin(sdaPin, sclPin);
-	Wire.setClock(1000000);//I2C 1MHz
+	Wire.setClock(800000L);//I2C 1MHz
 
 	int i;
 	int Rdata = 0xFF;
@@ -319,8 +319,50 @@ void LEDMatrixDriver::scroll(scrollDirection direction, bool wrap)
 	}
 }
 
+
+
 void LEDMatrixDriver::writePixelLow(uint8_t x, uint8_t y, uint8_t pwm){
 	I2CWriteByte(addr,0xFE,0xC5); //UNLOCK
 	I2CWriteByte(addr,0xFD,IS31FL3741addrmap[x][y][1]); //SELECT PAGE
 	I2CWriteByte(addr,IS31FL3741addrmap[x][y][0],pwm); //WRITE PIXEL
+
+
+	// i2cAddrbuffer[tail] = 0xFE;
+	// i2cCMDbuffer[tail++] = 0xC5;
+
+	// i2cAddrbuffer[tail] = 0xFD;
+	// i2cCMDbuffer[tail++] = IS31FL3741addrmap[x][y][1];
+
+	// i2cAddrbuffer[tail] = IS31FL3741addrmap[x][y][0];
+	// i2cCMDbuffer[tail++] = pwm;
+
 }
+
+void LEDMatrixDriver::unloadI2CBuffer(){
+	uint8_t i2cAddrbuffer[1054];
+    uint8_t i2cCMDbuffer[1054];
+    int tail = 0;   
+    for(int y = 0; y<9; y++){
+    
+		for(int x = 0; x<39; x++){
+			i2cAddrbuffer[tail] = 0xFE;
+			i2cCMDbuffer[tail++] = 0xC5;
+
+			i2cAddrbuffer[tail] = 0xFD;
+			i2cCMDbuffer[tail++] = IS31FL3741addrmap[y][x][1];
+
+			i2cAddrbuffer[tail] = IS31FL3741addrmap[y][x][0];
+			i2cCMDbuffer[tail++] = 0x3;
+		}
+		
+	}
+		Serial.print("tail: "); Serial.print(tail);
+
+	for(int i = 0; i<tail; i++)
+		I2CWriteByte(addr, i2cAddrbuffer[i], i2cCMDbuffer[i]);
+	tail=0;
+
+    
+}
+
+
