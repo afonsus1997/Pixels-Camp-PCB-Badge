@@ -30,7 +30,8 @@ void initMatrix(){
     //              portMAX_DELAY);
 
 
-     
+    // vTaskSuspendAll();
+ 
     LEDMatrixDriver matrix(MATRIX_SDA, MATRIX_SCL, MATRIX_ADDR_GND, MATRIX_EN);
 
     matrix.setEnabled(1);
