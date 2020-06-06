@@ -42,7 +42,9 @@ void initMatrix(){
     //         matrix.writePixelLow(j, i, 0x3);
     // matrix.writePixelLow(2, 2, 0x3);
 
-    matrix.unloadI2CBuffer();
+    matrix.setPixel(3, 3, 0x3);
+
+    matrix.updateFrameBuffer();
     
 
 

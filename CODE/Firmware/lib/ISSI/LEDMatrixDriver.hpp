@@ -61,7 +61,8 @@ class LEDMatrixDriver: public Adafruit_GFX
 		// #endif
 
 		void writePixelLow(uint8_t x, uint8_t y, uint8_t pwm);
-		void unloadI2CBuffer();
+		void ClearFrameBuffer();
+		void updateFrameBuffer();
 
 		//all these commands work on ALL segments
 		void setEnabled(bool enabled);
@@ -127,6 +128,7 @@ class LEDMatrixDriver: public Adafruit_GFX
 		uint8_t enablePin;
 		byte page0buffer[180];
     	byte page1buffer[171];
+		// uint8_t frameBuffer[9][39];
 
 		#ifdef USE_ADAFRUIT_GFX
 		bool manualDisplayRefresh = true;

@@ -109,17 +109,16 @@ LEDMatrixDriver::LEDMatrixDriver(uint8_t sdaPin, uint8_t sclPin, uint8_t addr, u
     I2CWriteByte(addr,0x01,0xFF);//global current
     I2CWriteByte(addr,0x00,0x01);//normal operation
 
+	ClearFrameBuffer();
+	updateFrameBuffer();
+
 
 	
 #ifdef ESP8266
 	SPI.setHwCs(false);
 #endif
 
-	// setEnabled(false);
-	// setIntensity(0);
-	// _sendCommand(LEDMatrixDriver::TEST);			//no test
-	// _sendCommand(LEDMatrixDriver::DECODE);			//no decode
-	// _sendCommand(LEDMatrixDriver::SCAN_LIMIT | 7);	//all lines
+
 }
 
 // LEDMatrixDriver::~LEDMatrixDriver()
@@ -128,16 +127,22 @@ LEDMatrixDriver::LEDMatrixDriver(uint8_t sdaPin, uint8_t sclPin, uint8_t addr, u
 // 		delete[] frameBuffer;
 // }
 
+void LEDMatrixDriver::ClearFrameBuffer(){
+	for(int x = 0; x<39; x++)
+		for(int y = 0; y<9; y++)
+			frameBuffer[y][x] = 0x0;	
+}
+
 void LEDMatrixDriver::setPixel(int8_t x, int8_t y, uint8_t pwm)
 {
 	
-	frameBuffer[x][y] = pwm;
+	frameBuffer[y][x] = pwm;
 	
 }
 
 uint8_t LEDMatrixDriver::getPixel(int8_t x, int8_t y) const
 {
-	return frameBuffer[x][y];
+	return frameBuffer[y][x];
 }
 
 void LEDMatrixDriver::setColumn(int8_t x, uint8_t value) //not needed?
@@ -195,58 +200,6 @@ void LEDMatrixDriver::_displayRow(uint8_t row)
 	return;
 
 }
-
-// void LEDMatrixDriver::_drawPixel(uint8_t row, uint8_t collumn, uint8_t pwm){
-	
-// 	byte page;
-// 	byte address;
-  
-//   if(collumn > 38 || row > 8) return;
-
-// 	if(collumn <= 29 && row <= 5){ //page0
-		
-// 		page = 0x00;
-// 		address = row*0x1E; //base address of Y
-// 		address += collumn;
-//    		I2CWriteByte(Addr_GND,0xFE,0xC5); //UNLOCK
-// 		I2CWriteByte(Addr_GND,0xFD,page); //SELECT PAGE
-// 		I2CWriteByte(Addr_GND,address,pwm); //WRITE PIXEL
-
-// 	}
-// 	else{
-// 		page = 0x01;
-//     if(collumn<=29 && row>=6){
-//       	address = (row-6)*0x1E;
-//       	address += collumn;
-//       	I2CWriteByte(Addr_GND,0xFE,0xC5); //UNLOCK
-// 		I2CWriteByte(Addr_GND,0xFD,page); //SELECT PAGE
-//   		I2CWriteByte(Addr_GND,address,pwm); //WRITE PIXEL
-//     }
-//     else{
-//       address = row*9;
-//       address += 0x5A;
-//       address += (collumn-30);
-//       I2CWriteByte(Addr_GND,0xFE,0xC5); //UNLOCK
-// 	  	I2CWriteByte(Addr_GND,0xFD,page); //SELECT PAGE
-//   		I2CWriteByte(Addr_GND,address,pwm); //WRITE PIXEL
-//     	}
-// 	}
-//   return;
-	
-// 	return;
-// }
-
-// uint8_t* LEDMatrixDriver::_getBufferPtr(int16_t x, int16_t y) const
-// {
-// 	if ((y < 0) or (y >= 8))
-// 		return nullptr;
-// 	if ((x < 0) or (x >= (8*N)))
-// 		return nullptr;
-
-// 	uint16_t B = x >> 3;		//byte
-
-// 	return frameBuffer + y*N + B;
-// }
 
 void LEDMatrixDriver::display()
 {
@@ -333,28 +286,19 @@ void LEDMatrixDriver::scroll(scrollDirection direction, bool wrap)
 
 void LEDMatrixDriver::writePixelLow(uint8_t x, uint8_t y, uint8_t pwm){
 	if(IS31FL3741addrmap[y][x][1]) //page 1
-		page1buffer[IS31FL3741addrmap[y][x][0]] = 0x3;
+		page1buffer[IS31FL3741addrmap[y][x][0]] = pwm;
 	else
-		page0buffer[IS31FL3741addrmap[y][x][0]] = 0x3;
+		page0buffer[IS31FL3741addrmap[y][x][0]] = pwm;
 
 }
 
-void LEDMatrixDriver::unloadI2CBuffer(){
+void LEDMatrixDriver::updateFrameBuffer(){
 	
-    
-
-	// for(int x = 0; x<39; x++){
-	//     for(int y = 0; y<9; y++){
-	// 		writePixelLow(x, y, 0);	
-	// 	}
-	// }
-
-	for(int i = 0; i<180; i++) //B3
-		page0buffer[i] = 0x3;
-
-	for(int i = 0; i<171; i++) // AA
-		page1buffer[i] = 0x3;
-
+	for(int x = 0; x<39; x++){
+		for(int y = 0; y<9; y++){
+			writePixelLow(x, y, frameBuffer[y][x]);	
+		}
+	}
 
 	//write all of page0 contents
 	I2CWriteByte(addr,0xFE,0xC5); //UNLOCK
@@ -364,7 +308,7 @@ void LEDMatrixDriver::unloadI2CBuffer(){
 	//write all of page0 contents
 	I2CWriteByte(addr,0xFE,0xC5); //UNLOCK
 	I2CWriteByte(addr,0xFD,0x01); //SELECT PAGE
-	I2CWriteMultipleBytes(addr, 0x00, page0buffer, 171); //171
+	I2CWriteMultipleBytes(addr, 0x00, page1buffer, 171); //171
 
 
 
