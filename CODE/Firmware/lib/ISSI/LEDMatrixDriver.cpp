@@ -11,12 +11,22 @@
 #include <Wire.h>
 
 
-void I2CWriteByte(int Dev_Add,int Reg_Add,int Reg_Dat)
+void I2CWriteByte(int Dev_Add, byte Reg_Add, byte Reg_Dat)
 {
- Wire.beginTransmission(Dev_Add); // transmit to device IS31FL373x
- Wire.write((byte)Reg_Add); // sends regaddress
- Wire.write((byte)Reg_Dat); // sends regaddress
- Wire.endTransmission(); // stop transmitting
+	Wire.beginTransmission(Dev_Add); // transmit to device IS31FL373x
+	Wire.write(Reg_Add); // sends regaddress
+	Wire.write(Reg_Dat); // sends regaddress
+	Wire.endTransmission(); // stop transmitting
+}
+
+void I2CWriteMultipleBytes(int Dev_Add, byte Reg_Add, byte* Reg_Dat, int nBytes)
+{
+	Wire.beginTransmission(Dev_Add); // transmit to device IS31FL373x
+	Wire.write(Reg_Add); // sends regaddress
+	for (int i = 0; i < nBytes; i++){
+		Wire.write(Reg_Dat[i]);
+	}
+	Wire.endTransmission(); // stop transmitting
 }
 
 LEDMatrixDriver::LEDMatrixDriver(uint8_t sdaPin, uint8_t sclPin, uint8_t addr, uint8_t enablePin):
@@ -322,52 +332,42 @@ void LEDMatrixDriver::scroll(scrollDirection direction, bool wrap)
 
 
 void LEDMatrixDriver::writePixelLow(uint8_t x, uint8_t y, uint8_t pwm){
-	I2CWriteByte(addr,0xFE,0xC5); //UNLOCK
-	I2CWriteByte(addr,0xFD,IS31FL3741addrmap[x][y][1]); //SELECT PAGE
-	I2CWriteByte(addr,IS31FL3741addrmap[x][y][0],pwm); //WRITE PIXEL
-
-
-	// i2cAddrbuffer[tail] = 0xFE;
-	// i2cCMDbuffer[tail++] = 0xC5;
-
-	// i2cAddrbuffer[tail] = 0xFD;
-	// i2cCMDbuffer[tail++] = IS31FL3741addrmap[x][y][1];
-
-	// i2cAddrbuffer[tail] = IS31FL3741addrmap[x][y][0];
-	// i2cCMDbuffer[tail++] = pwm;
+	if(IS31FL3741addrmap[y][x][1]) //page 1
+		page1buffer[IS31FL3741addrmap[y][x][0]] = 0x3;
+	else
+		page0buffer[IS31FL3741addrmap[y][x][0]] = 0x3;
 
 }
 
 void LEDMatrixDriver::unloadI2CBuffer(){
-	uint8_t i2cAddrbuffer[1054];
-    uint8_t i2cCMDbuffer[1054];
-    int tail = 0;   
-
-	for(int x = 0; x<39; x++){
-
-	i2cAddrbuffer[tail] = 0xFE;
-	i2cCMDbuffer[tail++] = 0xC5;
-
-	    for(int y = 0; y<9; y++){
-    
-			
-
-			i2cAddrbuffer[tail] = 0xFD;
-			i2cCMDbuffer[tail++] = IS31FL3741addrmap[y][x][1];
-
-			i2cAddrbuffer[tail] = IS31FL3741addrmap[y][x][0];
-			i2cCMDbuffer[tail++] = 0x3;
-		}
-		
-	}
-		Serial.print("tail: "); Serial.print(tail);
-		delay(10);
-	int i;
-	for(i = 0; i<tail; i++)
-		I2CWriteByte(addr, i2cAddrbuffer[i], i2cCMDbuffer[i]);
 	
+    
 
-	tail=0;
+	// for(int x = 0; x<39; x++){
+	//     for(int y = 0; y<9; y++){
+	// 		writePixelLow(x, y, 0);	
+	// 	}
+	// }
+
+	for(int i = 0; i<=0xB3; i++) //B3
+		page0buffer[i] = 0x3;
+
+	for(int i = 0; i<=0xAA; i++) // AA
+		page1buffer[i] = 0x3;
+
+
+	//write all of page0 contents
+	I2CWriteByte(addr,0xFE,0xC5); //UNLOCK
+	I2CWriteByte(addr,0xFD,0x00); //SELECT PAGE
+	I2CWriteMultipleBytes(addr, 0x00, page0buffer, 180); //180 i think 127 is the biggest wire buffer size
+
+	//write all of page0 contents
+	I2CWriteByte(addr,0xFE,0xC5); //UNLOCK
+	I2CWriteByte(addr,0xFD,0x01); //SELECT PAGE
+	I2CWriteMultipleBytes(addr, 0x00, page0buffer, 171); //171
+
+
+
 
     
 }

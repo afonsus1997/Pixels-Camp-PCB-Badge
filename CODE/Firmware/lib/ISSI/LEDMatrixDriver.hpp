@@ -125,6 +125,8 @@ class LEDMatrixDriver: public Adafruit_GFX
 		uint8_t sclPin;
 		uint8_t addr;
 		uint8_t enablePin;
+		byte page0buffer[1054];
+    	byte page1buffer[1054];
 
 		#ifdef USE_ADAFRUIT_GFX
 		bool manualDisplayRefresh = true;
