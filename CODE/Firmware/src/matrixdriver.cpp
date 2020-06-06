@@ -2,6 +2,7 @@
 
 #include <Arduino.h>
 #include "../include/boardpins.h"
+#include "bitmaps.h"
 
 #define byte uint8_t
 
@@ -42,7 +43,19 @@ void initMatrix(){
     //         matrix.writePixelLow(j, i, 0x3);
     // matrix.writePixelLow(2, 2, 0x3);
 
-    matrix.setPixel(3, 3, 0x3);
+    // matrix.setPixel(3, 3, 0x3);
+
+    // matrix.drawCircle(4, 4, 4, 0xA);
+    // matrix.drawCircle(14, 4, 4, 0xA);
+    // matrix.drawCircle(24, 4, 4, 0xA);
+    // matrix.drawCircle(34, 4, 4, 0xA);
+
+    matrix.drawBitmap(0, 0, glasses, 39, 9, 0xE);
+
+
+    // matrix.setTextColor(0xE, 0x00);
+    // matrix.setCursor(7, 1);
+    // matrix.print("BRUH");
 
     matrix.updateFrameBuffer();
     
