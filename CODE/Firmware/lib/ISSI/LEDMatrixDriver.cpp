@@ -349,10 +349,10 @@ void LEDMatrixDriver::unloadI2CBuffer(){
 	// 	}
 	// }
 
-	for(int i = 0; i<=0xB3; i++) //B3
+	for(int i = 0; i<180; i++) //B3
 		page0buffer[i] = 0x3;
 
-	for(int i = 0; i<=0xAA; i++) // AA
+	for(int i = 0; i<171; i++) // AA
 		page1buffer[i] = 0x3;
 
 
