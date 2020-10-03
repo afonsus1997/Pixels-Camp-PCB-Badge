@@ -49,7 +49,14 @@ LEDMatrixDriver::LEDMatrixDriver(uint8_t sdaPin, uint8_t sclPin, uint8_t addr, u
 		
 		frameBuffer = new uint8_t*[9];
 		for(int i = 0; i < 9; ++i)
-    		frameBuffer[i] = new uint8_t[39];
+			frameBuffer[i] = new uint8_t[39];
+
+		// uint8_t ** frameBuffer = (uint8_t**) ps_malloc(sizeof(int *) * 9 + sizeof(int) * 39*9);
+		// uint8_t * frameBuffer = (uint8_t*) ps_calloc(39*9, sizeof(uint8_t));
+
+		
+		// frameBuffer = (uint8_t**) ps_malloc(sizeof(int *) * 9 + sizeof(int) * 39*9);
+
 	}
 
 	clear();	// initally clear the buffer as the memory will not be initialized on reset (old content will be in memory yet)
@@ -222,7 +229,7 @@ void LEDMatrixDriver::scroll(scrollDirection direction, bool wrap)
 			else
 				memset(tmp, 0, 39);					//or zero the memory
 			
-			memmove(frameBuffer, frameBuffer + 39, 8*39);	//shift 7 rows
+			memmove(frameBuffer, frameBuffer+39, sizeof(uint8_t)*39);	//shift 7 rows
 			memcpy(frameBuffer + 8*39, tmp, 39);		//last row is zeros or copy of the first row
 			break;
 		}

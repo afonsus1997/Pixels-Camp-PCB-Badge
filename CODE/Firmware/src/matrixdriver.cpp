@@ -57,7 +57,11 @@ void initMatrix(){
     // matrix.setCursor(7, 1);
     // matrix.print("BRUH");
 
+    // matrix.updateFrameBuffer();
+    // matrix.scroll(LEDMatrixDriver::scrollDirection::scrollUp, 0);
     matrix.updateFrameBuffer();
+
+
     
 
 
