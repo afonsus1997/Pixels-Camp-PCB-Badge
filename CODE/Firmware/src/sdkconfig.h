@@ -4,6 +4,7 @@
  * Espressif IoT Development Framework Configuration
  *
  */
+#define CONFIG_TCPIP_LWIP 1
 #define CONFIG_GATTC_ENABLE 1
 #define CONFIG_ESP32_PHY_MAX_TX_POWER 20
 #define CONFIG_TRACEMEM_RESERVE_DRAM 0x0

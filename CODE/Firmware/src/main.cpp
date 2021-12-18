@@ -75,7 +75,7 @@ void setup()
   initMatrix();
   vTaskDelay(1000);
   // textScroll();
-  initWifi(ssid, password); 
+  // initWifi(ssid, password); 
   // createTasks();
 }
 

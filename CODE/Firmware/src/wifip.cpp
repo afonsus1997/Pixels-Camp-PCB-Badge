@@ -1,34 +1,34 @@
 
 #include "../include/wifip.h"
 
-AsyncWebServer server(80);
+AsyncServer server(80);
 
 
 
 
 int initWebHandles(){
-    server.on("/heap", HTTP_GET, [](AsyncWebServerRequest *request) {
-    request->send(200, "text/plain", String(ESP.getFreeHeap()));
-    });
+    // server.on("/heap", HTTP_GET, [](AsyncWebServerRequest *request) {
+    // request->send(200, "text/plain", String(ESP.getFreeHeap()));
+    // });
 
-    server.on("/helloworld", HTTP_GET, [](AsyncWebServerRequest *request){
-    //request->send(SPIFFS, "/index.html", "text/html");
-    Serial.println("Hello World!\n");
-    });
+    // server.on("/helloworld", HTTP_GET, [](AsyncWebServerRequest *request){
+    // //request->send(SPIFFS, "/index.html", "text/html");
+    // Serial.println("Hello World!\n");
+    // });
 
-    //server.on("/StringState", handleString);
+    // //server.on("/StringState", handleString);
 
     
 
-    server.serveStatic("/", SPIFFS, "/").setDefaultFile("index.html");
+    // server.serveStatic("/", SPIFFS, "/").setDefaultFile("index.html");
 
-    return 1;
+    // return 1;
 }
 
 
 int initWebServer(){
-    initWebHandles();
-    server.begin();
+    // initWebHandles();
+    // server.begin();
     return 1;    
 }
 /*
@@ -47,12 +47,13 @@ int initDNS(char *hostname){
     return 1;
 }*/
 
-void handleString(AsyncWebServerRequest *request)
-{
-  String t_state = String(request->arg("StringTxt")); //Refer  xhttp.open("GET", "StringState?StringTxt="+value, true);
-  Serial.println("Got Name " + t_state);
-  request->send(200);
-}
+
+// void handleString(AsyncWebServerRequest *request)
+// {
+//   String t_state = String(request->arg("StringTxt")); //Refer  xhttp.open("GET", "StringState?StringTxt="+value, true);
+//   Serial.println("Got Name " + t_state);
+//   request->send(200);
+// }
 
 
 
