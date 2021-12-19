@@ -3,14 +3,16 @@
 #include <Arduino.h>
 #include "../include/boardpins.h"
 #include "bitmaps.h"
-
 #define byte uint8_t
 
 #define XSIZE 9
 #define YSIZE 39
 
 SemaphoreHandle_t xI2CSemaphore;
+LEDMatrixDriver matrix(MATRIX_SDA, MATRIX_SCL, MATRIX_ADDR_GND, MATRIX_EN);
+SemaphoreHandle_t xStringSemaphore;
 
+String textRX;
 
 // void I2CUnloadTask( void * parameter ){
 //     // xSemaphoreTake( xI2CSemaphore,
@@ -21,9 +23,8 @@ SemaphoreHandle_t xI2CSemaphore;
 //             matrix.writePixelLow(j, i, 0x3);
 // }
 
-
-
 void initMatrix(){
+    xStringSemaphore = xSemaphoreCreateBinary();
     Serial.print("Initializing Matrix...");
     
     // xI2CSemaphore = xSemaphoreCreateBinary();
@@ -32,11 +33,11 @@ void initMatrix(){
 
 
     // vTaskSuspendAll();
- 
-    LEDMatrixDriver matrix(MATRIX_SDA, MATRIX_SCL, MATRIX_ADDR_GND, MATRIX_EN);
 
+    matrix.begin();
     matrix.setEnabled(1);
     Serial.print("Done!\n");
+    return;
 
     // for(int i = 0; i<39; i++)
     //     for(int j = 0; j<9; j++)
@@ -55,82 +56,122 @@ void initMatrix(){
 
     // matrix.setTextColor(0xE, 0x00);
     // matrix.setCursor(7, 1);
-    matrix.setTextColor(5);
-    // matrix.print("BRUH");
+   
 
-    // matrix.updateFrameBuffer();
-    // matrix.scroll(LEDMatrixDriver::scrollDirection::scrollUp, 0);
+
+}
+
+void matrixPrintString(int x){
+    matrix.fillScreen(0);
+    matrix.print("abcd");
     matrix.updateFrameBuffer();
 
-    String text = "Wololo  ";   // A message to scroll
-    int string_len = text.length();
+}
+
+void setupScroll(String in){
+
+}
+
+void vMatrixTask(){
+
+    int string_len;
     int text_x = 0; // Initial text position = off right edge
     int text_y = 1;
     int text_min;
-    matrix.setTextWrap(false);
-
-    // Get text dimensions to determine X coord where scrolling resets
     uint16_t w, h;
     int16_t ignore;
-    matrix.getTextBounds(text, 0, 0, &ignore, &ignore, &w, &h);
-    Serial.print("Text size: "); Serial.println(w);
-    int max_strings = (matrix.width() / w) + 2;
-    Serial.println(max_strings);
+    int max_strings;
     int matrix_width = matrix.width();
-
     int x_positions[10];
     int x_positions_init[10];
     int i;
+    int spawn_position;
+    portBASE_TYPE xStatusQ;
+    String text;
+
+    // String text = "The quick brown fox jumps over the lazy dog ";   // A message to scroll
+    
+    xSemaphoreTake( xStringSemaphore, portMAX_DELAY );
+    Serial.println(textRX);
+
+    text = "";
+    text = textRX;
+    Serial.println(text);
+    matrix.setTextColor(50);
+    matrix.fillScreen(0);
+    matrix.updateFrameBuffer();
+    // return;
+    string_len = text.length();
+    text_x = 0; // Initial text position = off right edge
+    text_y = 1;
+    matrix.setTextWrap(false);
+
+    // Get text dimensions to determine X coord where scrolling resets
+    
+    matrix.getTextBounds(text, 0, 0, &ignore, &ignore, &w, &h);
+    // Serial.print("Text size: "); Serial.println(w);
+    max_strings = (matrix.width() / w) + 2;
+    // Serial.println(max_strings);
+
     for(i = 0; i<max_strings; i++){
         x_positions[i] = (w*i);//+matrix_width;
         x_positions_init[i] = (w*i);//+matrix_width;
     }
-
-    Serial.println("Positions: ");
-    for(i = 0; i<max_strings; i++){
-        Serial.print(x_positions[i]);  Serial.print(",");
-    }
-    Serial.println();
-
-    
-
-    int current_string = 0;
-    int next_string;
-
-    //next_string = next_string + 1 % max_strings;
-
-
-  text_min = -w; // Off left edge this many pixels
-//   text_min = matrix_width - w;
+    spawn_position = (max_strings-1)*w;
 
     while(1){
-        matrix.fillScreen(0);
-        matrix.updateFrameBuffer();
-        
-        for(i = 0; i<max_strings; i++){
-            matrix.setCursor(x_positions[i], text_y);
-            matrix.print(text); // write the letter
-            --x_positions[i];
-        }
-        for(i = 0; i<max_strings; i++){
-            if(x_positions[i] == -w){
-                x_positions[i] = x_positions_init[max_strings-1];
+        xStatusQ = xSemaphoreTake( xStringSemaphore, 1 );
+        if(xStatusQ == pdTRUE){
+            text = "";
+            text = textRX;
+            Serial.println(text);
+            matrix.setTextColor(50);
+            matrix.fillScreen(0);
+            matrix.updateFrameBuffer();
+            // return;
+            string_len = text.length();
+            text_x = 0; // Initial text position = off right edge
+            text_y = 1;
+            matrix.setTextWrap(false);
+
+            // Get text dimensions to determine X coord where scrolling resets
+            
+            matrix.getTextBounds(text, 0, 0, &ignore, &ignore, &w, &h);
+            // Serial.print("Text size: "); Serial.println(w);
+            max_strings = (matrix.width() / w) + 2;
+            // Serial.println(max_strings);
+    
+            for(i = 0; i<max_strings; i++){
+                x_positions[i] = (w*i);//+matrix_width;
+                x_positions_init[i] = (w*i);//+matrix_width;
             }
+            spawn_position = (max_strings-1)*w;
         }
-        
-
-        
-        // if (--x_positions[0] < text_min) {
-        //     x_positions[0] = matrix.width();
-        // }
-        matrix.updateFrameBuffer();
-        delay(25);
+        else{
+            matrix.fillScreen(0);
+            matrix.updateFrameBuffer();
+            
+            for(i = 0; i<max_strings; i++){
+                matrix.setCursor(x_positions[i], text_y);
+                matrix.print(text); // write the letter
+                --x_positions[i];
+            }
+            for(i = 0; i<max_strings; i++){
+                if(x_positions[i] == -w){
+                    x_positions[i] = spawn_position;
+                }
+            }
+            matrix.updateFrameBuffer();
+            //delay(50);
+        }
+    
     }
-
-
-
+    
     
 
-
+    // while(1){
+        
+    //     // delay(70);
+    // }
 }
 

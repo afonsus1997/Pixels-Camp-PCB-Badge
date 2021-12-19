@@ -1,0 +1,128 @@
+/* CSS - Shea Parker */
+
+/********* BASE **********/
+*, *:before, *:after {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body,html {
+    min-height:100%;
+}
+
+body{
+    background:white;
+}
+
+.leaderboard {
+    position:relative;
+    width:70%;
+    height:70%;
+    max-width:960px;
+    min-width:400px;
+    min-height:600px;
+    margin: 30px auto 0 auto;
+    padding:3%;
+}
+
+.leaderboard h1{
+    text-transform: uppercase;
+    margin:3px;
+    padding:0;
+    color: orange;
+}
+
+.content {
+    position:relative;
+    width:70%;
+    margin:3px auto 0 auto;
+    min-width:300px;
+
+}
+
+.content ul{
+    margin:0;
+    padding:0;
+    list-style: none;
+    border:5px solid #CCC;
+    background: black;
+}
+.content ul li{
+    position: relative;
+    color:#FFF;
+    font-family: helvetica;
+    padding:2% 5%;
+    border-bottom: 1px solid #555;
+}
+
+.content ul li:last-child{
+    border-bottom:none;
+}
+
+.name{
+    font-weight:bold;
+}
+.count{
+    display:inline-block;
+    float:right;
+    color:orange;
+    font-weight:bold;
+}
+.count:after{
+    content:' Likes';
+    color:#CCC;
+    font-size:80%;
+    font-weight:normal;
+}
+
+
+/********* BLING **********/
+.content ul{
+    border-radius: 20px;
+}
+
+.animate {
+    -moz-animation: flashIt 0.2s ease 1;
+    -webkit-animation: flashIt 0.2s ease 1;
+    animation: flashIt 0.2s ease 1;
+}
+
+.animate .countold{
+    -moz-animation: spinIt 0.3s ease 1;
+    -webkit-animation: spinIt 0.3s ease 1;
+    animation: spinIt 0.3s ease 1;
+}
+
+
+@-moz-keyframes flashIt {
+    100% { opacity: 0; background-color: #FFF;}
+}
+@-webkit-keyframes flashIt {
+    100% { opacity: 0; background-color: #FFF;}
+}
+@keyframes flashIt {
+    100% { opacity: 0; }
+}
+
+@-moz-keyframes spinIt {
+    20% {-moz-transform: rotate(-10deg)}
+    40% {-moz-transform: rotate(10deg)}
+    60% {-moz-transform: rotate(-10deg)}
+    80% {-moz-transform: rotate(10deg)}
+    100% {-moz-transform: rotate(-10deg)}
+}
+@-webkit-keyframes spinIt {
+    20% {-webkit-transform: rotate(-10deg)}
+    40% {-webkit-transform: rotate(10deg)}
+    60% {-webkit-transform: rotate(-10deg)}
+    80% {-webkit-transform: rotate(10deg)}
+    100% {-webkit-transform: rotate(-10deg)}
+}
+@keyframes spinIt {
+     20% {transform: rotate(-10deg)}
+     40% {transform: rotate(10deg)}
+     60% {transform: rotate(-10deg)}
+     80% {transform: rotate(10deg)}
+     100% {transform: rotate(-10deg)}
+ }

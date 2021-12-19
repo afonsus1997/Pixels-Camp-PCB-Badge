@@ -30,17 +30,23 @@ void I2CWriteMultipleBytes(int Dev_Add, byte Reg_Add, byte* Reg_Dat, int nBytes)
 }
 
 LEDMatrixDriver::LEDMatrixDriver(uint8_t sdaPin, uint8_t sclPin, uint8_t addr, uint8_t enablePin):
-	Adafruit_GFX(39, 9), //needchange
+Adafruit_GFX(39, 9), //needchange
 	// frameBuffer(fb),
 	selfAllocated(1),
 	sdaPin(sdaPin),
 	sclPin(sclPin),
 	addr(addr),
-	enablePin(enablePin)
-
-
+	enablePin(enablePin)	
 {
-		// uint8_t *frameBuffer = (uint8_t *) ps_malloc(9 * 39 * sizeof(uint8_t));
+
+
+}
+
+
+void LEDMatrixDriver::begin()
+	{
+
+			// uint8_t *frameBuffer = (uint8_t *) ps_malloc(9 * 39 * sizeof(uint8_t));
 
 	if (selfAllocated){
 		// uint8_t *frameBuffer = (uint8_t *) ps_malloc(1 * 1 * sizeof(uint8_t));

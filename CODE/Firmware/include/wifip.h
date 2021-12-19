@@ -6,8 +6,10 @@
 #include <WiFiClient.h>
 #include <WiFiServer.h>
 #include <WiFiUdp.h>
-#include <AsyncTCP.h>
 #include <WiFiAP.h>
+#include <AsyncTCP.h>
+#include "ESPAsyncWebServer.h"
 
+#include "wifi_credentials.h"
 
 #endif

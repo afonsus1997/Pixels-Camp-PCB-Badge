@@ -10,9 +10,10 @@ char *ssid = "Pixels Camp Badger";
 char *password = "1234567890";
 
 extern void initMatrix();
-extern void textScroll();
+extern void vMatrixTask();
 // extern void I2CUnloadTask ( void * parameter );
 
+TaskHandle_t xHandleMatrixTask;
 
 void idleLedTask( void * parameter )
 {
@@ -63,6 +64,22 @@ void createTasks(){
   //                  NULL,             /* Parameter passed as input of the task */
   //                  2,                /* Priority of the task. */
   //                  NULL);
+  // xTaskCreate(
+  //                  idleLedTask2,          /* Task function. */
+  //                  "idleLedTask2",        /* String with name of task. */
+  //                  configMINIMAL_STACK_SIZE,            /* Stack size in bytes. */
+  //                  NULL,             /* Parameter passed as input of the task */
+  //                  5,                /* Priority of the task. */
+  //                  NULL);
+
+  // xTaskCreateUniversal (
+  //                  vMatrixTask,          /* Task function. */
+  //                  "MatrixTask",        /* String with name of task. */
+  //                  10000,            /* Stack size in bytes. */
+  //                  NULL,             /* Parameter passed as input of the task */
+  //                  0 | portPRIVILEGE_BIT ,                /* Priority of the task. */
+  //                  &xHandleMatrixTask,
+  //                  0);
 }
 
 
@@ -73,14 +90,20 @@ void setup()
   initSPIFFS();
   initIO();
   initMatrix();
-  vTaskDelay(1000);
+  // vTaskDelay(1000);
   // textScroll();
-  // initWifi(ssid, password); 
-  // createTasks();
+  initWifi(ssid, password, 0); 
+  createTasks();
+  // vTaskResume(xHandleMatrixTask);
 }
 
 void loop()
 {
   // Serial.print("Battery Voltage: "); Serial.println(batVoltage());
   // delay(500);
+  // String inString;
+  // xQueueReceive(xStringQueue, &inString, portMAX_DELAY);
+  // Serial.print(inString);
+  vMatrixTask();
+
 }

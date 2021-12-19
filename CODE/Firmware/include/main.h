@@ -6,7 +6,7 @@
 
 
 /*WIFI INCLUDES*/
-extern int initWifi(char *ssid, char *password);
+extern int initWifi(char *ssid, char *password, uint16_t mode);
 
 /*SPIFFS INCLUDES*/
 int initSPIFFS();

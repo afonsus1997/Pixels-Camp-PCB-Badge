@@ -55,6 +55,8 @@ class LEDMatrixDriver: public Adafruit_GFX
 
 		// #ifdef USE_ADAFRUIT_GFX
 		// void writePixel(uint8_t x, uint8_t y, uint8_t color) {setPixel(x,y,color);}
+		// virtual void begin();
+		void begin();
 		virtual void drawPixel(int16_t x, int16_t y, uint16_t color) {setPixel(x,y,color);}
 		// virtual void endWrite(void) {return;}//{if (not manualDisplayRefresh) display();}
 		virtual void setManualDisplayRefresh(bool enabled) {return;}//{manualDisplayRefresh = enabled;}
