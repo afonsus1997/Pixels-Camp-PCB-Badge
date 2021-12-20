@@ -12,7 +12,11 @@ SemaphoreHandle_t xI2CSemaphore;
 LEDMatrixDriver matrix(MATRIX_SDA, MATRIX_SCL, MATRIX_ADDR_GND, MATRIX_EN);
 SemaphoreHandle_t xStringSemaphore;
 
-String textRX;
+String textRX = "Pixels Camp Badger!";
+String text;
+int spacing = 3;
+int speed = 50;
+int brightness = 40;
 
 // void I2CUnloadTask( void * parameter ){
 //     // xSemaphoreTake( xI2CSemaphore,
@@ -68,8 +72,9 @@ void matrixPrintString(int x){
 
 }
 
-void setupScroll(String in){
-
+void setBrightness(int brightness){
+    matrix.setTextColor(map(brightness, 0, 100, 0, 255));
+    matrix.updateFrameBuffer();
 }
 
 void vMatrixTask(){
@@ -87,17 +92,17 @@ void vMatrixTask(){
     int i;
     int spawn_position;
     portBASE_TYPE xStatusQ;
-    String text;
 
     // String text = "The quick brown fox jumps over the lazy dog ";   // A message to scroll
     
-    xSemaphoreTake( xStringSemaphore, portMAX_DELAY );
+    // xSemaphoreTake( xStringSemaphore, portMAX_DELAY );
     Serial.println(textRX);
 
     text = "";
     text = textRX;
-    Serial.println(text);
-    matrix.setTextColor(50);
+    for(i=0;i<spacing;i++)
+        text += " ";
+    matrix.setTextColor(brightness);
     matrix.fillScreen(0);
     matrix.updateFrameBuffer();
     // return;
@@ -124,8 +129,10 @@ void vMatrixTask(){
         if(xStatusQ == pdTRUE){
             text = "";
             text = textRX;
+            for(i=0;i<spacing;i++)
+                text += " ";
             Serial.println(text);
-            matrix.setTextColor(50);
+            matrix.setTextColor(brightness);
             matrix.fillScreen(0);
             matrix.updateFrameBuffer();
             // return;
@@ -161,8 +168,9 @@ void vMatrixTask(){
                     x_positions[i] = spawn_position;
                 }
             }
+            matrix.setTextColor(brightness);
             matrix.updateFrameBuffer();
-            //delay(50);
+            delay(speed);
         }
     
     }
