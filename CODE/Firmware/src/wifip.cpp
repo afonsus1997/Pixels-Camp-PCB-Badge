@@ -12,6 +12,8 @@ extern int speed;
 extern void setBrightness(int brightness);
 extern int brightness;
 
+String ip_addr;
+
 void handleStringTxt(AsyncWebServerRequest *request)
 {
     //String t_state = String(request->arg("StringTxt")); //Refer  xhttp.open("GET", "StringState?StringTxt="+value, true);
@@ -121,7 +123,7 @@ int initWifi(char *ssid, char *password, uint16_t mode)
         Serial.println("Done!");
         //initDNS("pixelsbadger");
         Serial.print("Initializing Webserver...");
-        initWebServer();
+        // initWebServer();
         Serial.println("Done!");
         Serial.println("==============");
         Serial.print("SSID: ");
@@ -146,8 +148,8 @@ int initWifi(char *ssid, char *password, uint16_t mode)
 
         Serial.println("\nConnected to the WiFi network");
         Serial.print("Local ESP32 IP: ");
-        Serial.println(WiFi.localIP());
+        Serial.println(WiFi.localIP().toString());
     }
-    initWebServer();
-    String ip_addr = String(WiFi.localIP());
+    ip_addr = WiFi.localIP().toString();
+    
 }

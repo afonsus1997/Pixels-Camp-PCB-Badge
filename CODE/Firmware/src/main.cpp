@@ -11,7 +11,10 @@ char *password = "1234567890";
 
 extern void initMatrix();
 extern void vMatrixTask();
-// extern void I2CUnloadTask ( void * parameter );
+extern int initWebServer();
+extern String ip_addr;
+extern SemaphoreHandle_t xStringSemaphore;
+extern String textRX;
 
 TaskHandle_t xHandleMatrixTask;
 
@@ -25,8 +28,12 @@ void BtnReadTask( void * parameter )
   for(;;){
     uint8_t state = 000;
     state = (digitalRead(SWLEFT) << 2) | (digitalRead(SWCENTER) << 1 ) | (digitalRead(SWRIGHT));
-    Serial.print("Button state: "); Serial.println(state);
-    delay(100);
+    // Serial.print("Button state: "); Serial.println(digitalRead(SWLEFT));
+    if(!digitalRead(SWLEFT)){
+      textRX = ip_addr;
+      xSemaphoreGive(xStringSemaphore);
+    }
+    delay(500);
   }
 
 }
@@ -57,13 +64,13 @@ void createTasks(){
   //                   NULL);  
   
 
-  // xTaskCreate(
-  //                  BtnReadTask,          /* Task function. */
-  //                  "BtnReadTask",        /* String with name of task. */
-  //                  1000,            /* Stack size in bytes. */
-  //                  NULL,             /* Parameter passed as input of the task */
-  //                  2,                /* Priority of the task. */
-  //                  NULL);
+  xTaskCreate(
+                   BtnReadTask,          /* Task function. */
+                   "BtnReadTask",        /* String with name of task. */
+                   1000,            /* Stack size in bytes. */
+                   NULL,             /* Parameter passed as input of the task */
+                   4,                /* Priority of the task. */
+                   NULL);
   // xTaskCreate(
   //                  idleLedTask2,          /* Task function. */
   //                  "idleLedTask2",        /* String with name of task. */
@@ -92,7 +99,9 @@ void setup()
   initMatrix();
   // vTaskDelay(1000);
   // textScroll();
-  initWifi(ssid, password, 0); 
+  initWifi(ssid, password, !digitalRead(SWLEFT)); 
+  initWebServer();
+  
   createTasks();
   // vTaskResume(xHandleMatrixTask);
 }
@@ -105,5 +114,4 @@ void loop()
   // xQueueReceive(xStringQueue, &inString, portMAX_DELAY);
   // Serial.print(inString);
   vMatrixTask();
-
 }

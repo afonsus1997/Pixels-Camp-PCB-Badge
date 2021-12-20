@@ -15,9 +15,9 @@
 
 
 
-#define SWLEFT 28
-#define SWCENTER 27
-#define SWRIGHT 9
+#define SWLEFT 33
+#define SWCENTER 16
+#define SWRIGHT 17
 
 #define BATPIN 35
 
