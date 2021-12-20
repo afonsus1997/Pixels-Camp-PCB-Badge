@@ -1,68 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Led Matrix</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/main.css">
   <script src="js/jquery-1.12.4.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
 </head>
+
 <body>
 
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#">Menu</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="info.html">Info</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-open"></span> Firmware Update</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
-        <li><button class="btn btn-danger navbar-btn">Button</button></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-  
-<div class="container">
-    <div class="panel panel-default">
-        <div class="panel-body"><h3>Led Matrix</h3></div>
-        <div class="panel-footer">
-  
-          <form class="form-inline">
-            <div class="form-group mb-2">
-            <h4>Enter display text:</h4>              
+  <script src="js/sendData.js"></script>
+
+  <div class="modal modal-sheet position-static d-block bg-secondary py-5" tabindex="-1" role="dialog" id="modalSheet">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content rounded-6 shadow">
+        <div class="modal-header border-bottom-0">
+          <h5 class="modal-title">LED Matrix</h5>
+        </div>
+
+        <div class="container">
+
+          <div class="card">
+            <div class="card-header">
+              Text
             </div>
-            <div class="form-group mx-sm-3 mb-2">
-              <label for="displaytext" class="sr-only">Password</label>
-              <input type="text" class="form-control" id="displaytext" placeholder="Display Text"/>
+            <div class="card-body">
+              <p class="card-text">Write text to send to the matrix.</p>
+              <div class="input-group mb-3">
+                <textarea class="form-control" aria-label="With textarea" id="displaytext"></textarea>
+              </div>
+              <button type="button" class="btn btn-lg btn-primary w-100 mx-0 mb-2" onclick="button_handler()" id="sendbtn">Send</button>
+              <div class="panel panel-default">
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Accordion Item #1
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                      data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the
+                        collapse plugin adds the appropriate classes that we use to style each element. These classes
+                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                        modify any of this with custom CSS or overriding our default variables. It's also worth noting
+                        that just about any HTML can go within the <code>.accordion-body</code>, though the transition
+                        does limit overflow.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Accordion Item #2
+                      </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                      data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the
+                        collapse plugin adds the appropriate classes that we use to style each element. These classes
+                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                        modify any of this with custom CSS or overriding our default variables. It's also worth noting
+                        that just about any HTML can go within the <code>.accordion-body</code>, though the transition
+                        does limit overflow.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Accordion Item #3
+                      </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                      data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
+                        collapse plugin adds the appropriate classes that we use to style each element. These classes
+                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                        modify any of this with custom CSS or overriding our default variables. It's also worth noting
+                        that just about any HTML can go within the <code>.accordion-body</code>, though the transition
+                        does limit overflow.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <button type="button" class="btn btn-primary mb-2" onclick="sendString()"" id="sendbtn">Send</button>
-            
-          </form>
-                      
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              Settings
+            </div>
+            <div class="card-body">
+              <label for="customRange3" class="form-label">Example range</label>
+              <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
+            </div>
+          </div>
+
 
         </div>
-      </div>
-</div>
-
-
-
-
-
-
-<script src="js/sendData.js"></script>
 
 </body>
+
 </html>

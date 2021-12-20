@@ -1,17 +1,7 @@
-var stringFrom = document.getElementById("displaytext");
 var sendButton = document.getElementById("sendbtn");
 
-sendButton.addEventListener(onclick, button_handler);
-
 function button_handler(){
-  stringFrom.value = "";
-  sendString();
-  
-}
-
-
-
-  function sendString(value) {
+  var formString  = document.getElementById('displaytext').value;
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
@@ -19,8 +9,9 @@ function button_handler(){
         //this.responseText;
       }
     };
-    xhttp.open("GET", "StringState?StringTxt="+stringFrom.value , true);
+    xhttp.open("GET", "StringState?StringTxt="+formString, true);
     xhttp.send();
-  }
+}
+
    
   
