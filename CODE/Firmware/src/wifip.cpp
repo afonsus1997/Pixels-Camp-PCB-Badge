@@ -120,6 +120,7 @@ int initWifi(char *ssid, char *password, uint16_t mode)
     {
         WiFi.softAP("Pixels Camp Badger", "1234567890");
         IPAddress myIP = WiFi.softAPIP();
+        ip_addr = myIP.toString();
         Serial.println("Done!");
         //initDNS("pixelsbadger");
         Serial.print("Initializing Webserver...");
@@ -149,7 +150,8 @@ int initWifi(char *ssid, char *password, uint16_t mode)
         Serial.println("\nConnected to the WiFi network");
         Serial.print("Local ESP32 IP: ");
         Serial.println(WiFi.localIP().toString());
+        ip_addr = WiFi.localIP().toString();
+
     }
-    ip_addr = WiFi.localIP().toString();
     
 }
