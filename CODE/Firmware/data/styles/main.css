@@ -16,3 +16,13 @@ body{
 .card{
     margin-bottom: 20px;
 }
+
+.btn{
+    margin-bottom: 20px;
+}
+
+.accordion-body{
+    height: 200px; 
+    overflow-x: scroll;
+    margin-bottom: 20px;
+}
