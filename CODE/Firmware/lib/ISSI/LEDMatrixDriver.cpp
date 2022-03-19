@@ -53,9 +53,9 @@ void LEDMatrixDriver::begin()
 		// uint8_t frameBuffer[2][2] = {(1, 2), (1, 2)};
 
 		
-		frameBuffer = new uint8_t*[9];
+		frameBuffer = new uint8_t*[9];//9
 		for(int i = 0; i < 9; ++i)
-			frameBuffer[i] = new uint8_t[39];
+			frameBuffer[i] = new uint8_t[39];//39
 
 		// uint8_t ** frameBuffer = (uint8_t**) ps_malloc(sizeof(int *) * 9 + sizeof(int) * 39*9);
 		// uint8_t * frameBuffer = (uint8_t*) ps_calloc(39*9, sizeof(uint8_t));

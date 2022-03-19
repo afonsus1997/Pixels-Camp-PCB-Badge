@@ -117,6 +117,7 @@ class LEDMatrixDriver: public Adafruit_GFX
 		const static uint8_t BCD_P =        0x0E;
 		const static uint8_t BCD_BLANK =    0x0F;
 
+
 	private:
 		uint8_t* _getBufferPtr(int16_t x, int16_t y) const;
 		void _sendCommand(uint8_t Reg_Add, uint8_t Reg_Dat);

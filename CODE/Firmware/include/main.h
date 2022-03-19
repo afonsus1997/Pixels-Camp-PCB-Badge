@@ -9,7 +9,7 @@
 extern int initWifi(char *ssid, char *password, uint16_t mode);
 
 /*SPIFFS INCLUDES*/
-int initSPIFFS();
+extern int initSPIFFS();
 
 /*BOARD AND IO INCLUDES*/
 #include "boardpins.h"

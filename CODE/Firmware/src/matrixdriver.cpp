@@ -5,6 +5,8 @@
 #include "bitmaps.h"
 #define byte uint8_t
 
+#include "../lib/AdafruitGFX/Fonts/Tiny3x3a2pt7b.h"
+
 #define XSIZE 9
 #define YSIZE 39
 
@@ -40,6 +42,9 @@ void initMatrix(){
 
     matrix.begin();
     matrix.setEnabled(1);
+    // matrix.setTextSize(2);
+    
+    // matrix.setFont(&Tiny3x3a2pt7b);
     Serial.print("Done!\n");
     return;
 
@@ -78,7 +83,7 @@ void setBrightness(int brightness){
 }
 
 void vMatrixTask(){
-
+    
     int string_len;
     int text_x = 0; // Initial text position = off right edge
     int text_y = 1;
@@ -97,6 +102,7 @@ void vMatrixTask(){
     
     // xSemaphoreTake( xStringSemaphore, portMAX_DELAY );
     Serial.println(textRX);
+
 
     text = "";
     text = textRX;
