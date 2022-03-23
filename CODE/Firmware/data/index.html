@@ -1,156 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title>Led Matrix</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixels Camp Badge!</title>
 
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="styles/main.css">
-  <script src="js/jquery-1.12.4.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/sendData.js"></script>
 </head>
-
 <body>
-
-  <script src="js/sendData.js"></script>
-
-  <div class="modal modal-sheet position-static d-block bg-secondary py-5" tabindex="-1" role="dialog" id="modalSheet">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content rounded-6 shadow">
-        <div class="modal-header border-bottom-0">
-          <h5 class="modal-title">LED Matrix</h5>
+    <div class="container">
+        <h1 class="title">The Amazing Pixels Camp Badge!</h1>
+        <div class="text-box">
+            <textarea name="Insert memes here pls" id="displaytext" cols="80" rows="10"></textarea>
+            <button type="button" class="the-big-button" onclick="text_button_handler()">Set</button>
         </div>
-
-        <div class="container">
-
-          <div class="card">
-            <div class="card-header">
-              Text
-            </div>
-            <div class="card-body">
-              <p class="card-text">Write text to send to the matrix.</p>
-              <div class="input-group mb-3">
-                <textarea class="form-control" aria-label="With textarea" id="displaytext"></textarea>
-              </div>
-              <button type="button" class="btn btn-lg btn-primary w-100 mx-0 mb-2" onclick="text_button_handler()" id="sendbtn">Send</button>
-              <div class="panel panel-default">
-              </div>
-            </div>
-          </div>
-
-
-          <div class="card">
-            <div class="card-header">
-              Text Templates aka "Copypastas"
-            </div>
-            <div class="card-body">
-
-              <div class="accordion" id="accordionExample">
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                      Rick Roll
-                    </button>
-                  </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                      <!-- The classic from Rick Astley, perfect for any occasion. -->
-                      <div class="text-center">
-                        <p></p>
-                          <em>
-                            <p>We're no strangers to love<p>
-                            <p>You know the rules and so do I<p>
-                            A full commitment's what I'm thinking of<p>
-                            You wouldn't get this from any other guy<p>
-
-                            I just wanna tell you how I'm feeling<p>
-                            Gotta make you understand<p>
-
-                            Never gonna give you up<p>
-                            Never gonna let you down<p>
-                            Never gonna run around and desert you<p>
-                            Never gonna make you cry<p>
-                            Never gonna say goodbye<p>
-                            Never gonna tell a lie and hurt you<p>
-                          </em>
-                      </div>
-                      
-                    </div>
-                    <div class="d-grid gap-3 col-5 mx-auto">
-                      <button type="button" class="btn btn-primary " onclick="set_Rick()" id="sendbtn">Set</button>
-                    </div>
+        <div class="text-template">
+            <div class="tabs">
+                <div class="tab">
+                  <input type="radio" id="rd1" name="rd">
+                  <label class="tab-label" for="rd1">Rickroll</label>
+                  <div class="tab-content">
+                    Yeah, you know what this is.
+                  <button class="button" onclick="set_Rick()">Set</button>
                   </div>
                 </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      GNU+Linux
-                    </button>
-                  </h2>
-                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                      I'd just like to interject for a moment. What you're refering to as Linux, is in fact, GNU/Linux, or as I've recently taken to calling it, GNU plus Linux. Linux is not an operating system unto itself, but rather another free component of a fully functioning GNU system made useful by the GNU corelibs, shell utilities and vital system components comprising a full OS as defined by POSIX.
-                      Many computer users run a modified version of the GNU system every day, without realizing it. Through a peculiar turn of events, the version of GNU which is widely used today is often called Linux, and many of its users are not aware that it is basically the GNU system, developed by the GNU Project.
-                      There really is a Linux, and these people are using it, but it is just a part of the system they use. Linux is the kernel: the program in the system that allocates the machine's resources to the other programs that you run. The kernel is an essential part of an operating system, but useless by itself; it can only function in the context of a complete operating system. Linux is normally used in combination with the GNU operating system: the whole system is basically GNU with Linux added, or GNU/Linux. All the so-called Linux distributions are really distributions of GNU/Linux!
-                    </div>
-                    <div class="d-grid gap-3 col-5 mx-auto">
-                      <button type="button" class="btn btn-primary " onclick="set_GNU()" id="sendbtn">Set</button>
-                    </div>
+                <div class="tab">
+                  <input type="radio" id="rd2" name="rd">
+                  <label class="tab-label" for="rd2">GNU/Linux manifesto</label>
+                  <div class="tab-content">
+                    I'd just like to interject for a moment. What you're refering to as Linux, is in fact, GNU/Linux, or as I've recently taken to calling it, GNU plus Linux. Linux is not an operating system unto itself, but rather another free component of a fully functioning GNU system made useful by the GNU corelibs, shell utilities and vital system components comprising a full OS as defined by POSIX.
+                    Many computer users run a modified version of the GNU system every day, without realizing it. Through a peculiar turn of events, the version of GNU which is widely used today is often called Linux, and many of its users are not aware that it is basically the GNU system, developed by the GNU Project.
+                    There really is a Linux, and these people are using it, but it is just a part of the system they use. Linux is the kernel: the program in the system that allocates the machine's resources to the other programs that you run. The kernel is an essential part of an operating system, but useless by itself; it can only function in the context of a complete operating system. Linux is normally used in combination with the GNU operating system: the whole system is basically GNU with Linux added, or GNU/Linux. All the so-called Linux distributions are really distributions of GNU/Linux!
+                  <button class="button" onclick="set_GNU()">Set</button>
                   </div>
                 </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      Accordion Item #3
-                    </button>
-                  </h2>
-                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                      <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                      collapse plugin adds the appropriate classes that we use to style each element. These classes
-                      control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                      modify any of this with custom CSS or overriding our default variables. It's also worth noting
-                      that just about any HTML can go within the <code>.accordion-body</code>, though the transition
-                      does limit overflow.
-                    </div>
-                  </div>
+                <div class="tab">
+                  <input type="radio" id="rd3" name="rd">
+                  <label for="rd3" class="tab-close">Close others &times;</label>
                 </div>
-              </div>
             </div>
-          </div>
-
-          <div class="card">
-            <div class="card-header">
-              Settings
-            </div>
-            <div class="card-body">
+        </div>
+        <div class="sliders">
+            <div class="slider">
               <label for="customRange3" class="form-label">Text Speed</label>
               <input type="range" class="form-range" min="0" max="100" step="5" id="TextSpeed">
-              <button type="button" class="btn btn-lg btn-primary w-100 mx-0 mb-2" onclick="speed_button_handler()" id="TextSpeedBtn">Update</button>
+              <button type="button" class="" onclick="speed_button_handler()" id="TextSpeedBtn">Update</button>
             </div>
-            <div class="card-body">
+            <div class="slider">
               <label for="customRange3" class="form-label">Text Spacing</label>
               <input type="range" class="form-range" min="0" max="5" step="1" id="TextSpacing">
-              <button type="button" class="btn btn-lg btn-primary w-100 mx-0 mb-2" onclick="spacing_button_handler()" id="TextSpacingBtn">Update</button>
+              <button type="button" class="" onclick="spacing_button_handler()" id="TextSpacingBtn">Update</button>
             </div>
-            <div class="card-body">
+            <div class="slider">
               <label for="customRange3" class="form-label">Brightness</label>
               <input type="range" class="form-range" min="1" max="100" step="1" id="Brightness">
-              <button type="button" class="btn btn-lg btn-primary w-100 mx-0 mb-2" onclick="brightness_button_handler()" id="BrightnessBtn">Update</button>
+              <button type="button" class="" onclick="brightness_button_handler()" id="BrightnessBtn">Update</button>
             </div>
-          </div>
-
-
         </div>
+    </div>
 
 </body>
-
 </html>

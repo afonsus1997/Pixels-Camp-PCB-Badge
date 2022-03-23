@@ -16,7 +16,7 @@ String textRX = "Pixels Camp Badger!";
 String text;
 int spacing = 3;
 int speed = 50;
-int brightness = 40;
+int brightness = 5;
 
 // void I2CUnloadTask( void * parameter ){
 //     // xSemaphoreTake( xI2CSemaphore,
