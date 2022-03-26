@@ -15,6 +15,8 @@ extern int initWebServer();
 extern String ip_addr;
 extern SemaphoreHandle_t xStringSemaphore;
 extern String textRX;
+extern bool scroll;
+extern bool annoyingDog;
 
 TaskHandle_t xHandleMatrixTask;
 
@@ -25,15 +27,22 @@ void idleLedTask( void * parameter )
 
 void BtnReadTask( void * parameter )
 {
+  uint8_t state = 000;
   for(;;){
-    uint8_t state = 000;
-    state = (digitalRead(SWLEFT) << 2) | (digitalRead(SWCENTER) << 1 ) | (digitalRead(SWRIGHT));
+    state = (!digitalRead(SWLEFT) << 2) | (!digitalRead(SWCENTER) << 1 ) | (!digitalRead(SWRIGHT));
     // Serial.print("Button state: "); Serial.println(digitalRead(SWLEFT));
     if(!digitalRead(SWLEFT)){
       textRX = ip_addr;
       xSemaphoreGive(xStringSemaphore);
     }
-    delay(500);
+    if(!digitalRead(SWCENTER)){
+      scroll = !scroll;
+    }
+    if(!digitalRead(SWRIGHT)){
+      annoyingDog = !annoyingDog;
+      Serial.println(annoyingDog);
+    }
+    delay(150);
   }
 
 }

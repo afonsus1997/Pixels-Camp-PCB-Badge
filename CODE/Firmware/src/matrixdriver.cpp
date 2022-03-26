@@ -17,6 +17,25 @@ String text;
 int spacing = 3;
 int speed = 50;
 int brightness = 5;
+volatile bool scroll = true;
+volatile bool annoyingDog = false;
+
+/***
+ * VERY TEMPORARY
+ */
+const unsigned char annoyingDogFrame1 [] = {
+	// 'frame_3_delay-0, 39x9px
+	0xff, 0xfe, 0xff, 0xff, 0xfe, 0xff, 0xfd, 0xef, 0xff, 0xfe, 0xff, 0xff, 0xf7, 0xff, 0xfe, 0xff, 
+	0xff, 0xbf, 0xff, 0xfe, 0xff, 0xff, 0xff, 0xff, 0xfe, 0xff, 0xff, 0xff, 0xff, 0xfe, 0xff, 0xff, 
+	0xff, 0xff, 0xfe, 0xff, 0xfd, 0x4b, 0xff, 0xfe, 0xff, 0xfe, 0xfb, 0xff, 0xfe
+};
+
+const unsigned char annoyingDogFrame2 [] PROGMEM = {
+	// 'frame_2_delay-0, 39x9px
+	0xff, 0xfe, 0xff, 0xff, 0xfe, 0xff, 0xfd, 0xef, 0xff, 0xfe, 0xff, 0xff, 0xf5, 0xff, 0xfe, 0xff, 
+	0xff, 0xbf, 0xff, 0xfe, 0xff, 0xff, 0xff, 0xff, 0xfe, 0xff, 0xff, 0xff, 0xff, 0xfe, 0xff, 0xff, 
+	0xff, 0xff, 0xfe, 0xff, 0xfd, 0x4b, 0xff, 0xfe, 0xff, 0xff, 0x27, 0xff, 0xfe
+};
 
 // void I2CUnloadTask( void * parameter ){
 //     // xSemaphoreTake( xI2CSemaphore,
@@ -122,60 +141,79 @@ void vMatrixTask(){
         x_positions[i] = (w*i);//+matrix_width;
         x_positions_init[i] = (w*i);//+matrix_width;
     }
-    spawn_position = (max_strings-1)*w;
+    spawn_position = (max_strings - 1) * w;
 
-    while(1){
-        xStatusQ = xSemaphoreTake( xStringSemaphore, 1 );
-        if(xStatusQ == pdTRUE){
-            text = "";
-            text = textRX;
-            for(i=0;i<spacing;i++)
-                text += " ";
-            Serial.println(text);
-            matrix.setTextColor(brightness);
-            matrix.fillScreen(0);
-            matrix.updateFrameBuffer();
-            // return;
-            string_len = text.length();
-            text_x = 0; // Initial text position = off right edge
-            text_y = 1;
-            matrix.setTextWrap(false);
+    while (1)
+    {
+        if (scroll)
+        {
+            if (annoyingDog)
+            {
+                matrix.drawBitmap(0, 39, annoyingDogFrame1, 39, 9, brightness);
+                matrix.updateFrameBuffer();
+                // delay(speed);
+                // matrix.drawBitmap(0, 39, annoyingDogFrame2, w, h, brightness);
+                // matrix.updateFrameBuffer();
+                // delay(speed);
+            }
+            else
+            {
+                xStatusQ = xSemaphoreTake(xStringSemaphore, 1);
+                if (xStatusQ == pdTRUE)
+                {
+                    text = "";
+                    text = textRX;
+                    for (i = 0; i < spacing; i++)
+                        text += " ";
+                    Serial.println(text);
+                    matrix.setTextColor(brightness);
+                    matrix.fillScreen(0);
+                    matrix.updateFrameBuffer();
+                    // return;
+                    string_len = text.length();
+                    text_x = 0; // Initial text position = off right edge
+                    text_y = 1;
+                    matrix.setTextWrap(false);
 
-            // Get text dimensions to determine X coord where scrolling resets
-            
-            matrix.getTextBounds(text, 0, 0, &ignore, &ignore, &w, &h);
-            // Serial.print("Text size: "); Serial.println(w);
-            max_strings = (matrix.width() / w) + 2;
-            // Serial.println(max_strings);
-    
-            for(i = 0; i<max_strings; i++){
-                x_positions[i] = (w*i);//+matrix_width;
-                x_positions_init[i] = (w*i);//+matrix_width;
-            }
-            spawn_position = (max_strings-1)*w;
-        }
-        else{
-            matrix.fillScreen(0);
-            matrix.updateFrameBuffer();
-            
-            for(i = 0; i<max_strings; i++){
-                matrix.setCursor(x_positions[i], text_y);
-                matrix.print(text); // write the letter
-                --x_positions[i];
-            }
-            for(i = 0; i<max_strings; i++){
-                if(x_positions[i] == -w){
-                    x_positions[i] = spawn_position;
+                    // Get text dimensions to determine X coord where scrolling resets
+
+                    matrix.getTextBounds(text, 0, 0, &ignore, &ignore, &w, &h);
+                    // Serial.print("Text size: "); Serial.println(w);
+                    max_strings = (matrix.width() / w) + 2;
+                    // Serial.println(max_strings);
+
+                    for (i = 0; i < max_strings; i++)
+                    {
+                        x_positions[i] = (w * i);      //+matrix_width;
+                        x_positions_init[i] = (w * i); //+matrix_width;
+                    }
+                    spawn_position = (max_strings - 1) * w;
+                }
+                else
+                {
+                    matrix.fillScreen(0);
+                    matrix.updateFrameBuffer();
+
+                    for (i = 0; i < max_strings; i++)
+                    {
+                        matrix.setCursor(x_positions[i], text_y);
+                        matrix.print(text); // write the letter
+                        --x_positions[i];
+                    }
+                    for (i = 0; i < max_strings; i++)
+                    {
+                        if (x_positions[i] == -w)
+                        {
+                            x_positions[i] = spawn_position;
+                        }
+                    }
+                    matrix.setTextColor(brightness);
+                    matrix.updateFrameBuffer();
+                    delay(speed);
                 }
             }
-            matrix.setTextColor(brightness);
-            matrix.updateFrameBuffer();
-            delay(speed);
         }
-    
     }
-    
-    
 
     // while(1){
         
