@@ -1,11 +1,20 @@
+/* Color Theme Swatches in Hex */
+:root {
+  --main-bg-color: #093640;
+  --secondary-bg-color: #406973;
+  --text-color: #C1D4D9;
+  --selected-color: #F24535;
+  --highlight-color: #D94E41;
+}
+
 body {
-    background-color: black;
-    color: yellow;
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
     font-family:'Courier New', Courier, monospace;
 }
 
 h1 {
-    color: red;
+    color: var(--text-color);
 }
 
 textarea {
@@ -87,20 +96,20 @@ textarea {
   
   .tab {
     /* width: 100%; */
-    color: white;
+    color: black;
     overflow: hidden;
   }
   .tab-label {
     display: flex;
     justify-content: space-between;
     padding: 1em;
-    background: red;
+    background: var(--selected-color);
     font-weight: bold;
     cursor: pointer;
     /* Icon */
   }
   .tab-label:hover {
-    background: firebrick;
+    background: var(--highlight-color);
   }
   .tab-label::after {
     content: "❯";
@@ -112,8 +121,8 @@ textarea {
   .tab-content {
     max-height: 0;
     padding: 0 1em;
-    color: #2c3e50;
-    background: white;
+    color: black; /*var(--text-color);*/
+    background: white; /*var(--secondary-bg-color);*/
     transition: all 0.35s;
   }
   .tab-close {
@@ -121,15 +130,15 @@ textarea {
     justify-content: flex-end;
     padding: 1em;
     font-size: 0.75em;
-    background: red;
+    background: var(--selected-color);
     cursor: pointer;
   }
   .tab-close:hover {
-    background: firebrick;
+    background: var(--highlight-color);
   }
   
   input:checked + .tab-label {
-    background: firebrick;
+    background: var(--selected-color);
   }
   input:checked + .tab-label::after {
     transform: rotate(90deg);
@@ -147,11 +156,11 @@ textarea {
   
   .form-range {
       width: 100%;
-      background-color: #000000;
+      background-color: var(--secondary-bg-color);
   }
 
-
   /* Styling the input range */
+/* 
   input[type=range] {
   height: 31px;
   -webkit-appearance: none;
@@ -240,4 +249,4 @@ input[type=range]:focus::-ms-fill-lower {
 }
 input[type=range]:focus::-ms-fill-upper {
   background: #FF0000;
-}
+} */
