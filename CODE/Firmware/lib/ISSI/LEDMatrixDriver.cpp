@@ -298,6 +298,7 @@ void LEDMatrixDriver::scroll(scrollDirection direction, bool wrap)
 
 
 void LEDMatrixDriver::writePixelLow(uint8_t x, uint8_t y, uint8_t pwm){
+	if(x < 0 || y < 0) return;
 	if(IS31FL3741addrmap[y][x][1]) //page 1
 		page1buffer[IS31FL3741addrmap[y][x][0]] = pwm;
 	else

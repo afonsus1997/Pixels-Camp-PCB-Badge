@@ -677,7 +677,7 @@ void Adafruit_GFX::drawBitmap(int16_t x, int16_t y,
         for(int16_t i=0; i<w; i++) {
             if(i & 7) byte <<= 1;
             else      byte   = pgm_read_byte(&bitmap[j * byteWidth + i / 8]);
-            if(byte & 0x80) writePixel(x+i, y, color);
+            if(byte & 0x80 && y >= 0 && x >= 0) writePixel(x+i, y, color);
         }
     }
     endWrite();
