@@ -19,6 +19,8 @@ int speed = 50;
 int brightness = 5;
 volatile bool scroll = true;
 volatile bool annoyingDog = false;
+volatile bool bounceAnimation = false;
+volatile int iSecret;
 
 /***
  * VERY TEMPORARY
@@ -82,39 +84,43 @@ void setBrightness(int brightness){
     matrix.updateFrameBuffer();
 }
 
-void animation(int speed, int framerate, bool shake)
+int animation(int speed, int framerate, bool shake, int y)
 {
-    int iSecret;
-    srand (time(NULL));
+    iSecret = rand() % 2;
+    Serial.println("iSecret: " + String(iSecret));
 
-	int y = 0;
 	matrix.fillScreen(0);	
-	for (y; y < 33-9; y++) {
-        iSecret = rand() % 2;
-        Serial.println(iSecret);
+	//for (y; y < 33-9; y++) {
+    if (!bounceAnimation){
+        if (y == 33-9-1) bounceAnimation = true;
 		matrix.fillScreen(0);
 		matrix.drawBitmap(iSecret, -y, epd_bitmap_allArray[0], 39, 9+y, brightness);
         matrix.updateFrameBuffer();
+        y++;
 		delay(speed);
 	}
-    for(y; y >= 0; y--){
-        iSecret = rand() % 2;
+    //for(y; y >= 0; y--){
+    else {
+        if (y == 0) bounceAnimation = false;
 		matrix.fillScreen(0);
 		matrix.drawBitmap(iSecret, -y, epd_bitmap_allArray[0], 39, 9+y, brightness);
         matrix.updateFrameBuffer();
+        y--;
 		delay(speed);
     }
+    return y;
 }
 
 
 void vMatrixTask(){
+    srand (time(NULL));
     int text_y = 1;
     uint16_t w, h;
     int16_t ignore;
     int max_strings;
     int x_positions[10];
     int x_positions_init[10];
-    int i;
+    int i, y = 0;
     int spawn_position;
     portBASE_TYPE xStatusQ;
     // String text = "The quick brown fox jumps over the lazy dog ";   // A message to scroll
@@ -154,7 +160,7 @@ void vMatrixTask(){
         if (scroll)
         {
             if (annoyingDog)
-                animation(30, 1, true);
+                y = animation(30, 1, true, y);
             else {
                 /***
                  * I'll refactor this later.
