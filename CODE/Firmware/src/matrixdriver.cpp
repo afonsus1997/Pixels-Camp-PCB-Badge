@@ -3,6 +3,7 @@
 #include <Arduino.h>
 #include "../include/boardpins.h"
 #include "bitmaps.h"
+#include "amongus.h"
 #define byte uint8_t
 
 #define XSIZE 9
@@ -86,15 +87,18 @@ void setBrightness(int brightness){
 
 int animation(int speed, int framerate, bool shake, int y)
 {
-    iSecret = rand() % 5;
+    int padding = -10; //default 1
+    if (shake) iSecret = rand() % 5;
+    else iSecret = 0;
     // Serial.println("iSecret: " + String(iSecret));
 
 	matrix.fillScreen(0);	
 	//for (y; y < 33-9; y++) {
     if (!bounceAnimation){
-        if (y == 33-9-1) bounceAnimation = true;
+        if (y == 33-9-padding) bounceAnimation = true;
 		matrix.fillScreen(0);
-		matrix.drawBitmap(iSecret, -y, epd_bitmap_allArray[currentFrame], 39, 9+y, brightness);
+		// matrix.drawBitmap(iSecret, -y, epd_bitmap_allArray[currentFrame], 39, 9+y, brightness);
+		matrix.drawBitmap(iSecret, -y, amongusallArray[currentFrame], 39, 9+y, brightness);
         matrix.updateFrameBuffer();
         y++;
 		delay(speed);
@@ -103,12 +107,12 @@ int animation(int speed, int framerate, bool shake, int y)
     else {
         if (y == 0) bounceAnimation = false;
 		matrix.fillScreen(0);
-		matrix.drawBitmap(iSecret, -y, epd_bitmap_allArray[currentFrame], 39, 9+y, brightness);
+		matrix.drawBitmap(iSecret, -y, amongusallArray[currentFrame], 39, 9+y, brightness);
         matrix.updateFrameBuffer();
         y--;
 		delay(speed);
     }
-    currentFrame = (currentFrame+1) % epd_bitmap_allArray_LEN;
+    currentFrame = (currentFrame+1) % amongusallArray_LEN;
     return y;
 }
 
