@@ -85,11 +85,14 @@ var grid = function(numberPerSideX, numberPerSideY, size, pixelsPerSideX, pixels
         function(e){
             var id = e.target.id;
             if(id){
-                console.log(id);
                 let cell = document.getElementById(id);
+                let cell_number = parseInt(id.substring(1));
+                let x = Math.floor(cell_number / 9);
+                let y = cell_number % 9;
+                console.log("(" + x + ", " + y + ")");
                 if(cell.getAttribute("fill") == "green")
                     cell.setAttribute("fill", "white");
-                else cell.setAttribute("fill", "green"); 
+                else cell.setAttribute("fill", "green");
                 //alert(id.substring(1));
             }
         },
