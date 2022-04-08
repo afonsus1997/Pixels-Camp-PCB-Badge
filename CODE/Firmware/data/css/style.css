@@ -37,6 +37,7 @@ textarea {
     ".  text-box        ."
     ".  text-template   ."
     ".  sliders         ."
+    ".  canvas-grid     ."
     ".  center-footer   .";
     grid-column-gap: 0px;
     grid-row-gap: 25px;
@@ -53,6 +54,7 @@ textarea {
         "text-box"
         "text-template"
         "sliders"
+        "canvas-grid"
         "center-footer";
         grid-column-gap: 0px;
         grid-row-gap: 60px;
@@ -79,6 +81,10 @@ textarea {
     grid-template-rows: repeat(3, 1fr);
     width: 100%;
 
+}
+
+.canvas-grid {
+  grid-area: canvas-grid;
 }
 
 .tabs input {
